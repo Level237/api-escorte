@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('body__shapes', function (Blueprint $table) {
+        Schema::create('memberships', function (Blueprint $table) {
             $table->id();
+            $table->string('membership_name');
+            $table->string("period");
             $table->timestamps();
         });
     }
@@ -22,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('body__shapes');
+        Schema::dropIfExists('memberships');
     }
 };

@@ -1,6 +1,7 @@
 <?php
 
-use App\Models\Role;
+use App\Models\Escort;
+use App\Models\Skin_color;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -13,18 +14,18 @@ return new class extends Migration
     public function up(): void
     {
         Schema::disableForeignKeyConstraints();
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('escort_physicals', function (Blueprint $table) {
             $table->id();
-            $table->string('username');
-            $table->string('email')->unique()->nullable();
-            $table->foreignIdFor(Role::class)
+            $table->foreignIdFor(Escort::class)
             ->constrained()
             ->restrictOnUpdate()
             ->restrictOnDelete();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string("phone_number");
-            $table->string('password');
-            $table->rememberToken();
+            $table->foreignIdFor(Skin_color::class)
+            ->constrained()
+            ->restrictOnUpdate()
+            ->restrictOnDelete();
+            $table->bigInteger("height_id")->nullable();
+            $table->bigInteger("weight_id")->nullable();
             $table->timestamps();
         });
     }
@@ -34,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('escort_physicals');
     }
 };
