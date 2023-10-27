@@ -20,8 +20,8 @@ class User extends Authenticatable
     protected $fillable = [
         'username',
         'email',
-        'role_id',
         'phone_number',
+        'role_id',
         'password',
     ];
 
@@ -44,4 +44,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function findForPassport($username) {
+        return $this->where('phone_number','=', $username)->first();
+    }
 }

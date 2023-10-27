@@ -43,7 +43,22 @@ return [
         'api' => [
             'driver' => 'passport',
             'provider' => 'users',
+            'hash' =>false,
         ],
+
+        'providers' => [
+            'users' => [
+                'driver' => 'eloquent',
+        'model' => App\User::class,
+             ],
+         ],
+         'password' => [
+            'users' => [
+             'provider' => 'users',
+             'table' => 'password_reset',
+             'expire' => 60,
+         ],
+       ],
     ],
 
     /*

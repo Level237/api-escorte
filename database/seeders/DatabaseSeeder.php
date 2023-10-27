@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        
+
         $path = 'database/sql_files/countries.sql';
         DB::unprepared(file_get_contents($path));
         $this->command->info('Country table seeded!');
@@ -26,6 +26,9 @@ class DatabaseSeeder extends Seeder
         DB::unprepared(file_get_contents($path));
         $this->command->info('Quarter table seeded!');
 
+        $path = 'database/sql_files/client_oauth.sql';
+        DB::unprepared(file_get_contents($path));
+        $this->command->info('client table seeded!');
          $this->call([
             RoleSeeder::class,
             UserSeeder::class,
@@ -33,8 +36,8 @@ class DatabaseSeeder extends Seeder
             MemberShipSeeder::class,
         ]);
 
-       
 
-     
+
+
     }
 }
