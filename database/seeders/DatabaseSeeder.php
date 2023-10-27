@@ -28,7 +28,11 @@ class DatabaseSeeder extends Seeder
             RoleSeeder::class,
             UserSeeder::class,
             ServiceSeeder::class,
-            MemberShipSeeder::class
+            MemberShipSeeder::class,
+            SkinColorSeeder::class,
+            EscorteSeeder::class,
+            Weightseeder::class,
+            Heightseeder::class
         ]);
     }
 }
