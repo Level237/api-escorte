@@ -24,9 +24,16 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
         Passport::tokensCan([
-            "admin",
-            "escort",
-            "user"
+            'user' => 'User',
+            'escort' => 'User',
+            'admin' => 'User',
         ]);
+        Passport::personalAccessClient(
+            config('passport.personal_access_client.id')
+        );
+
+        Passport::personalAccessClient(
+            config('passport.personal_access_client.secret')
+        );
     }
 }
