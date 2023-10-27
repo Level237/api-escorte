@@ -1,14 +1,10 @@
 <?php
-/**
- * Seeder for User Table
- * Created on 25 October 2023
- * Author : Frank Zohim
-*/
+
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -17,18 +13,28 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        
+        $path = 'database/sql_files/countries.sql';
+        DB::unprepared(file_get_contents($path));
+        $this->command->info('Country table seeded!');
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        $path = 'database/sql_files/towns.sql';
+        DB::unprepared(file_get_contents($path));
+        $this->command->info('Town table seeded!');
+
+        $path = 'database/sql_files/quarters.sql';
+        DB::unprepared(file_get_contents($path));
+        $this->command->info('Quarter table seeded!');
 
          $this->call([
             RoleSeeder::class,
             UserSeeder::class,
             ServiceSeeder::class,
-            MemberShipSeeder::class
+            MemberShipSeeder::class,
         ]);
+
+       
+
+     
     }
 }
