@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CreateUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/test', function(Request $request){
     return "From the API";
 });
+
+Route::post('/user', [CreateUserController::class, 'createUser']);
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();

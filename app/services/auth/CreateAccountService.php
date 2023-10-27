@@ -3,6 +3,7 @@
 namespace App\services\auth;
 
 use App\Interface\auth\NewAccountInterface;
+use App\Models\User;
 
 class CreateAccountService implements NewAccountInterface{
 
