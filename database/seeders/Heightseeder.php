@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
-class Heightseeder extends Seeder
+class HeightSeeder extends Seeder
 {
     /**
      * Run the database seeds.

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('memberships', function (Blueprint $table) {
             $table->id();
-            $table->string('membership_name');
+            $table->string('membership_name')->unique();
             $table->string("period");
              $table->string("price");
             $table->timestamps();
