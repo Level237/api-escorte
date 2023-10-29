@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\auth\LoginController;
+use App\Http\Controllers\Api\User\CurrentUserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CreateUserController;
@@ -29,8 +30,10 @@ Route::prefix('search')->group(function(){
 
 Route::post('/user', [CreateUserController::class, 'createUser']);
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+
 
 Route::post('/login',[LoginController::class,'login']);
+
+Route::middleware('auth:api')->prefix('v1')->group(function(){
+    Route::get('/currentUser',[CurrentUserController::class,'currentUser']);
+});

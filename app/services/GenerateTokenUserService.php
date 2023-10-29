@@ -34,7 +34,7 @@ class GenerateTokenUserService implements GenerateTokenInterface{
         'oauth/token',
         'POST'
     );
-    return Route::dispatch($token);;
+    return Route::dispatch($token);
         }
     }
 

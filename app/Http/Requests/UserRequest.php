@@ -34,17 +34,17 @@ class UserRequest extends FormRequest
      */
     public function rules(): array
     {
-        
-        
+
+
 
         return [
-            'username' => ['required', 'string', 'unique:App\Models\User', 
+            'username' => ['required', 'string', 'unique:App\Models\User',
             function (string $attribute, mixed $value, Closure $fail) {
             if ($value == trim($value) && str_contains($value, ' ')) {
                 $fail("The {$attribute} should not contains spaces.");
             }
         },],
-            'phone_number' => ['required', 'string'],
+            'phone_number' => ['required', 'string','unique:App\Models\User'],
             'password' => ['required', 'string', 'min:6', 'max:30'],
             'role_id' =>['required','exists:App\Models\Role,id'],
         ];
