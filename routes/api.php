@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\User\LogoutController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CreateUserController;
+use App\Http\Controllers\LocationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,19 @@ use App\Http\Controllers\CreateUserController;
 
 Route::get('/test', function(Request $request){
     return "From the API";
+});
+
+// SEARCH GROUP ROUTES
+Route::prefix('search')->group(function(){
+
+
+});
+
+
+// LISTING GROUP ROUTES
+Route::prefix('list')->group(function(){
+
+    Route::get('/locations', [LocationController::class, 'index']);
 });
 
 Route::post('/user', [CreateUserController::class, 'createUser']);
