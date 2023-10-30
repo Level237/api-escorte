@@ -25,6 +25,13 @@ Route::get('/test', function(Request $request){
 // SEARCH GROUP ROUTES
 Route::prefix('search')->group(function(){
     
+   
+});
+
+
+// LISTING GROUP ROUTES
+Route::prefix('list')->group(function(){
+    
     Route::get('/locations', [LocationController::class, 'index']);
 });
 

@@ -27,12 +27,22 @@ class LocationController extends Controller
                         $quartersIn[$i++] = $quarter->id;
                     }
 
-                    $town['locals'] =  DB::table('escorts')
+                    //Getting escorts by quarter
+                    $locals =  DB::table('escorts')
                             ->join('quarters', 'escorts.quarter_id', '=','quarters.id')
                             ->select('quarter_name','quarter_id', DB::raw('count(*) as total'))
                             ->whereIn('quarter_id', $quartersIn)
                             ->groupBy('quarter_name')
                             ->get();
+
+                    //Getting escort by town
+                    $sum = 0;
+                    foreach($locals as $local){
+                        $sum += $local->total;
+                    }
+
+                    $town['numberEscort'] = $sum;
+                    $town['locals'] = $locals;
                             return $town;
 
                 })->reject(function($town){ //Removing all towns with no escorts
