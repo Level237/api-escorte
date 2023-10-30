@@ -2,26 +2,52 @@
 
 namespace App\Http\Controllers;
 use App\Models\Escort;
+use App\Models\Town;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+use Illuminate\Support\Arr;
 
 class LocationController extends Controller
 {
     public function index(){
 
-        $locations = DB::table('escorts')
-                 ->select('quarter_id', DB::raw('count(*) as total'))
-                 ->groupBy('quarter_id')
-                 ->get();
+        try{
 
-        if($locations){
-           
-             return response($locations, 200)
+                //Retrieving all towns
+                $locations = Town::all();
+
+                //Loop into the collections with map method
+                $locations = $locations->map(function($town){
+                
+                    $quarters = Town::find($town->id)->quarters()->get();
+                    $quartersIn = [];
+                    $i = 0;
+                    foreach($quarters as $quarter){
+                        $quartersIn[$i++] = $quarter->id;
+                    }
+
+                    $town['locals'] =  DB::table('escorts')
+                            ->join('quarters', 'escorts.quarter_id', '=','quarters.id')
+                            ->select('quarter_name','quarter_id', DB::raw('count(*) as total'))
+                            ->whereIn('quarter_id', $quartersIn)
+                            ->groupBy('quarter_name')
+                            ->get();
+                            return $town;
+
+                })->reject(function($town){ //Removing all towns with no escorts
+                    return $town->locals->count() == 0;
+                });
+
+                return response($locations, 200)
                   ->header('Content-Type', 'application/json');
+        
         }
-        else{
+
+        catch(e){
             return response("{error:Unable to fetch location}", 500)
                   ->header('Content-Type', 'application/json');
         }
+        
     }
 }

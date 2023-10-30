@@ -210,6 +210,84 @@ class EscortSeeder extends Seeder
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
+            [
+                
+                'whatsapp_number'=>'652526396',
+                'year_of_birth'=>'01/04/1994',
+                'sexuality'=>'Lesbienne',
+                'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
+                'isVerified'=>1,
+                'country_id' => 31,
+                'quarter_id' => 32,
+                'photo'=> 'leslie.jpg',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
+            [
+                
+                'whatsapp_number'=>'659859632',
+                'year_of_birth'=>'01/04/1995',
+                'sexuality'=>'Lesbienne',
+                'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
+                'isVerified'=>1,
+                'country_id' => 31,
+                'quarter_id' => 32,
+                'photo'=> 'leslie.jpg',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
+            [
+                
+                'whatsapp_number'=>'69697496',
+                'year_of_birth'=>'01/04/1995',
+                'sexuality'=>'Lesbienne',
+                'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
+                'isVerified'=>1,
+                'country_id' => 31,
+                'quarter_id' => 32,
+                'photo'=> 'leslie.jpg',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
+            [
+                
+                'whatsapp_number'=>'678967412',
+                'year_of_birth'=>'01/04/1995',
+                'sexuality'=>'Lesbienne',
+                'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
+                'isVerified'=>1,
+                'country_id' => 31,
+                'quarter_id' => 33,
+                'photo'=> 'leslie.jpg',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
+            [
+                
+                'whatsapp_number'=>'671967412',
+                'year_of_birth'=>'01/04/1995',
+                'sexuality'=>'Lesbienne',
+                'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
+                'isVerified'=>1,
+                'country_id' => 31,
+                'quarter_id' => 33,
+                'photo'=> 'leslie.jpg',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
+            [
+                
+                'whatsapp_number'=>'695967412',
+                'year_of_birth'=>'01/04/1998',
+                'sexuality'=>'Lesbienne',
+                'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
+                'isVerified'=>1,
+                'country_id' => 31,
+                'quarter_id' => 34,
+                'photo'=> 'leslie.jpg',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
         ];
         //Storing Data
         DB::table('escorts')->insert($data);
