@@ -24,7 +24,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille noire vivant a Douala disponible pour vous satisafaire',
                 'isVerified'=>1,
                 'country_id' => 31,
-                'quarter_id' => 2,
+                'quarter_id' => 1,
                 'photo'=> 'sandra.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -36,7 +36,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>1,
                 'country_id' => 31,
-                'quarter_id' => 3,
+                'quarter_id' => 1,
                 'photo'=> 'vanessa.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -49,7 +49,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>1,
                 'country_id' => 31,
-                'quarter_id' => 6,
+                'quarter_id' => 1,
                 'photo'=> 'leslie.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -62,7 +62,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>1,
                 'country_id' => 31,
-                'quarter_id' => 7,
+                'quarter_id' => 1,
                 'photo'=> 'leslie.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -75,7 +75,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>1,
                 'country_id' => 31,
-                'quarter_id' => 10,
+                'quarter_id' => 6,
                 'photo'=> 'leslie.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -88,7 +88,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>1,
                 'country_id' => 31,
-                'quarter_id' => 2,
+                'quarter_id' => 6,
                 'photo'=> 'leslie.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -101,7 +101,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>1,
                 'country_id' => 14,
-                'quarter_id' => 7,
+                'quarter_id' => 6,
                 'photo'=> 'leslie.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -114,7 +114,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>1,
                 'country_id' => 31,
-                'quarter_id' => 10,
+                'quarter_id' => 7,
                 'photo'=> 'leslie.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -127,7 +127,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>1,
                 'country_id' => 31,
-                'quarter_id' => 12,
+                'quarter_id' => 7,
                 'photo'=> 'leslie.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -140,7 +140,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>1,
                 'country_id' => 31,
-                'quarter_id' => 15,
+                'quarter_id' => 7,
                 'photo'=> 'leslie.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -153,7 +153,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>1,
                 'country_id' => 31,
-                'quarter_id' => 25,
+                'quarter_id' => 8,
                 'photo'=> 'leslie.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -166,7 +166,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>1,
                 'country_id' => 31,
-                'quarter_id' => 16,
+                'quarter_id' => 8,
                 'photo'=> 'leslie.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -179,7 +179,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>1,
                 'country_id' => 31,
-                'quarter_id' => 14,
+                'quarter_id' => 8,
                 'photo'=> 'leslie.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -192,7 +192,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>1,
                 'country_id' => 31,
-                'quarter_id' => 20,
+                'quarter_id' => 8,
                 'photo'=> 'leslie.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -205,7 +205,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>1,
                 'country_id' => 31,
-                'quarter_id' => 11,
+                'quarter_id' => 22,
                 'photo'=> 'leslie.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
