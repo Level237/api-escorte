@@ -37,7 +37,8 @@ class DatabaseSeeder extends Seeder
             SkinColorSeeder::class,
             EscortSeeder::class,
             Weightseeder::class,
-            Heightseeder::class
+            Heightseeder::class,
+            AnnouncementSeeder::class
         ]);
 
 

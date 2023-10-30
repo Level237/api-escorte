@@ -1,12 +1,11 @@
 <?php
 
-use App\Models\Membership;
-use App\Models\Country;
-use App\Models\Quarter;
-use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\User;
+use App\Models\Town;
+use App\Models\AnnouncementCategory;
 
 return new class extends Migration
 {
@@ -15,27 +14,27 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::disableForeignKeyConstraints();
-        Schema::create('escorts', function (Blueprint $table) {
+        Schema::create('announcements', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(User::class)
             ->constrained()
             ->restrictOnUpdate()
             ->restrictOnDelete();
-            $table->string('whatsapp_number');
-            $table->string("sexuality");
-            $table->string("year_of_birth");
+
+            $table->foreignIdFor(Town::class)
+            ->constrained()
+            ->restrictOnUpdate()
+            ->restrictOnDelete();
+
+            $table->foreignIdFor(AnnouncementCategory::class)
+            ->constrained()
+            ->restrictOnUpdate()
+            ->restrictOnDelete();
+
+            $table->boolean('type');
+            $table->string('title');
             $table->string('description');
-            $table->string("photo");
-            $table->foreignIdFor(Country::class)
-            ->constrained()
-            ->restrictOnUpdate()
-            ->restrictOnDelete();
-            $table->foreignIdFor(Quarter::class)
-            ->constrained()
-            ->restrictOnUpdate()
-            ->restrictOnDelete();
-            $table->boolean("isVerified")->default(0);
+           
             $table->timestamps();
         });
     }
@@ -45,6 +44,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('escorts');
+        Schema::dropIfExists('announcements');
     }
 };

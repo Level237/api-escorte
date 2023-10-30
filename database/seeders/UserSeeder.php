@@ -94,6 +94,146 @@ class UserSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
               [
+                'username'=>'anna', 
+                'email'=>'anna@gmail.com', 
+                'role_id' => 2,
+                'phone_number' => "654011210",
+                'password' => Hash::make('password'),
+                'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
+              [
+                'username'=>'laura', 
+                'email'=>'laura@gmail.com', 
+                'role_id' => 2,
+                'phone_number' => "654011210",
+                'password' => Hash::make('password'),
+                'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
+              [
+                'username'=>'victoire', 
+                'email'=>'victoire@gmail.com', 
+                'role_id' => 2,
+                'phone_number' => "654011210",
+                'password' => Hash::make('password'),
+                'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
+              [
+                'username'=>'judith', 
+                'email'=>'judith@gmail.com', 
+                'role_id' => 2,
+                'phone_number' => "654011210",
+                'password' => Hash::make('password'),
+                'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
+              [
+                'username'=>'theresa', 
+                'email'=>'theresa@gmail.com', 
+                'role_id' => 2,
+                'phone_number' => "654011210",
+                'password' => Hash::make('password'),
+                'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
+              [
+                'username'=>'miranda', 
+                'email'=>'miranda@gmail.com', 
+                'role_id' => 2,
+                'phone_number' => "654011210",
+                'password' => Hash::make('password'),
+                'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
+              [
+                'username'=>'cynthia', 
+                'email'=>'cynthia@gmail.com', 
+                'role_id' => 2,
+                'phone_number' => "654011210",
+                'password' => Hash::make('password'),
+                'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
+              [
+                'username'=>'brenda', 
+                'email'=>'brenda@gmail.com', 
+                'role_id' => 2,
+                'phone_number' => "654011210",
+                'password' => Hash::make('password'),
+                'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
+              [
+                'username'=>'melissa', 
+                'email'=>'melissa@gmail.com', 
+                'role_id' => 2,
+                'phone_number' => "654011210",
+                'password' => Hash::make('password'),
+                'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
+              [
+                'username'=>'irene', 
+                'email'=>'irene@gmail.com', 
+                'role_id' => 2,
+                'phone_number' => "654011210",
+                'password' => Hash::make('password'),
+                'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
+              [
+                'username'=>'flore', 
+                'email'=>'flore@gmail.com', 
+                'role_id' => 2,
+                'phone_number' => "654011210",
+                'password' => Hash::make('password'),
+                'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
+              [
+                'username'=>'rita', 
+                'email'=>'rita@gmail.com', 
+                'role_id' => 2,
+                'phone_number' => "654011210",
+                'password' => Hash::make('password'),
+                'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
+              [
+                'username'=>'orchelle', 
+                'email'=>'orchelle@gmail.com', 
+                'role_id' => 2,
+                'phone_number' => "654011210",
+                'password' => Hash::make('password'),
+                'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
+              [
+                'username'=>'jordy', 
+                'email'=>'jordy@gmail.com', 
+                'role_id' => 2,
+                'phone_number' => "654011210",
+                'password' => Hash::make('password'),
+                'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
+              [
                 'username'=>'patrick', 
                 'email'=>'patrick@gmail.com', 
                 'role_id' => 3,
