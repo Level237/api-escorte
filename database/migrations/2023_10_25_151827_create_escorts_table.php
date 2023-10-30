@@ -22,14 +22,12 @@ return new class extends Migration
             $table->string("year_of_birth");
             $table->string('description');
             $table->string("photo");
-            $table->foreignIdFor(Country::class)
-            ->constrained()
-            ->restrictOnUpdate()
-            ->restrictOnDelete();
             $table->foreignIdFor(Quarter::class)
             ->constrained()
             ->restrictOnUpdate()
             ->restrictOnDelete();
+            $table->boolean('isCompleted')->default(0);
+            $table->bigInteger("body_shape_id")->nullable();
             $table->boolean("isVerified")->default(0);
             $table->timestamps();
         });
