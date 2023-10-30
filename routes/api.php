@@ -1,12 +1,13 @@
 <?php
 
-use App\Http\Controllers\Api\auth\LoginController;
-use App\Http\Controllers\Api\User\CurrentUserController;
-use App\Http\Controllers\Api\User\LogoutController;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CreateUserController;
 use App\Http\Controllers\LocationController;
+use App\Http\Controllers\CreateUserController;
+use App\Http\Controllers\Api\auth\LoginController;
+use App\Http\Controllers\Api\User\LogoutController;
+use App\Http\Controllers\Api\User\CurrentUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +49,18 @@ Route::middleware('auth:api')->prefix('v1')->group(function(){
     Route::post('/logout',[LogoutController::class,'logout']);
 });
 
-//endpoint escort
+//route admin
+Route::middleware(['auth:api','scopes:admin'])->prefix('v1')->group(function(){
 
+});
+
+//routes escort
+Route::middleware(['auth:api','scopes:escort'])->prefix('v1')->group(function(){
+
+});
+
+//routes escort
+Route::middleware(['auth:api','scopes:customer'])->prefix('v1')->group(function(){
+
+});
 

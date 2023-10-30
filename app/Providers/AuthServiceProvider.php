@@ -35,5 +35,6 @@ class AuthServiceProvider extends ServiceProvider
         Passport::personalAccessClient(
             config('passport.personal_access_client.secret')
         );
+
     }
 }
