@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('whatsapp_number');
             $table->string("sexuality");
             $table->string("year_of_birth")->nullable();
-            $table->string('description');
+            $table->string('description')->nullable();
             $table->string("photo");
             $table->foreignIdFor(Quarter::class)
             ->constrained()

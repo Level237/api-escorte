@@ -3,7 +3,7 @@ namespace App\services\escort;
 
 class ProfileCompleteService{
 
-    public function addProfile(){
+    public function addProfile($data){
 
     }
 }

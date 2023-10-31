@@ -24,8 +24,6 @@ class ProfileCompleteRequest extends FormRequest
         return [
             'whatsapp_number'=>'required',
         'sexuality'=>'required',
-        'description'=>'required',
-        'photo'=>'required',
         'quarter_id'=>'required',
         ];
     }
