@@ -5,7 +5,11 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LocationController;
+<<<<<<< HEAD
 use App\Http\Controllers\CheckEmailController;
+=======
+use App\Http\Controllers\AnnouncementController;
+>>>>>>> 10b2232c750d3018a89973fb1b089dec3c71004d
 use App\Http\Controllers\CreateUserController;
 use App\Http\Controllers\VerifyCodeController;
 use App\Http\Controllers\NewPasswordController;
@@ -32,6 +36,18 @@ Route::prefix('search')->group(function(){
 
 
 });
+
+// ANNOUNCEMENT GROUP ROUTES
+Route::get('/announcements', [AnnouncementController::class, 'index']);
+Route::get('/announcements/{id}', [AnnouncementController::class, 'show']);
+Route::post('/announcements', [AnnouncementController::class, 'store']);
+Route::put('/announcements/{id}', [AnnouncementController::class, 'update']);
+Route::delete('/announcements/{id}', [AnnouncementController::class, 'delete']);
+Route::get('/announcementsTown',[AnnouncementController::class, 'getAnnouncesByTown']);
+// Route::get('/announcementsTown',function(){
+//     return 'API here';
+// });
+
 
 
 

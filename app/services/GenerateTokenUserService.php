@@ -4,7 +4,7 @@ namespace App\services;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Interface\GenerateTokenInterface;
+use App\Interfaces\GenerateTokenInterface;
 
 class GenerateTokenUserService implements GenerateTokenInterface{
 
