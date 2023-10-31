@@ -42,9 +42,5 @@ class DatabaseSeeder extends Seeder
             AnnouncementSeeder::class,
             BodyShapeSeeder::class
         ]);
-
-
-
-
     }
 }
