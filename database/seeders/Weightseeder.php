@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
-class Weightseeder extends Seeder
+class WeightSeeder extends Seeder
 {
     /**
      * Run the database seeds.

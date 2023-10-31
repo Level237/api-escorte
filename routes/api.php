@@ -1,11 +1,17 @@
 <?php
 
+
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LocationController;
 use App\Http\Controllers\CheckEmailController;
 use App\Http\Controllers\CreateUserController;
+use App\Http\Controllers\VerifyCodeController;
+use App\Http\Controllers\NewPasswordController;
 use App\Http\Controllers\Api\auth\LoginController;
-
+use App\Http\Controllers\Api\User\LogoutController;
+use App\Http\Controllers\Api\User\CurrentUserController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -21,11 +27,49 @@ Route::get('/test', function(Request $request){
     return "From the API";
 });
 
-Route::post('/user', [CreateUserController::class, 'createUser']);
+// SEARCH GROUP ROUTES
+Route::prefix('search')->group(function(){
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+
 });
 
 
+
 Route::post('checkemail',[CheckEmailController::class,'Checkemail']);
+Route::post('verifycode', [VerifyCodeController::class, 'Verifycode']);
+Route::post('newpassword', [NewPasswordController:: class, 'Newpassword']);
+
+// LISTING GROUP ROUTES
+Route::prefix('list')->group(function(){
+
+    Route::get('/locations', [LocationController::class, 'index']);
+});
+
+Route::post('/user', [CreateUserController::class, 'createUser']);
+
+
+
+Route::post('/login',[LoginController::class,'login']);
+
+// endpoint simple user
+Route::middleware('auth:api')->prefix('v1')->group(function(){
+    Route::get('/currentUser',[CurrentUserController::class,'currentUser']);
+    Route::post('/logout',[LogoutController::class,'logout']);
+});
+
+//route admin
+Route::middleware(['auth:api','scopes:admin'])->prefix('v1')->group(function(){
+
+});
+
+//routes escort
+Route::middleware(['auth:api','scopes:escort'])->prefix('v1')->group(function(){
+
+Route::post('/addProfile',[ProfileCompleteController::class,'addProfile']);
+
+});
+
+//routes escort
+Route::middleware(['auth:api','scopes:customer'])->prefix('v1')->group(function(){
+
+});

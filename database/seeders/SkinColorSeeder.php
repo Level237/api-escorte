@@ -9,7 +9,7 @@ use Carbon\Carbon;
 
 
 
-class Skincolorseeder extends Seeder
+class SkinColorSeeder extends Seeder
 {
     /**
      * Run the database seeds.
