@@ -1,15 +1,21 @@
 <?php
 
+
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LocationController;
+<<<<<<< HEAD
+use App\Http\Controllers\CheckEmailController;
+=======
 use App\Http\Controllers\AnnouncementController;
+>>>>>>> 10b2232c750d3018a89973fb1b089dec3c71004d
 use App\Http\Controllers\CreateUserController;
+use App\Http\Controllers\VerifyCodeController;
+use App\Http\Controllers\NewPasswordController;
 use App\Http\Controllers\Api\auth\LoginController;
 use App\Http\Controllers\Api\User\LogoutController;
 use App\Http\Controllers\Api\User\CurrentUserController;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -43,6 +49,11 @@ Route::get('/announcementsTown',[AnnouncementController::class, 'getAnnouncesByT
 // });
 
 
+
+
+Route::post('checkemail',[CheckEmailController::class,'Checkemail']);
+Route::post('verifycode', [VerifyCodeController::class, 'Verifycode']);
+Route::post('newpassword', [NewPasswordController:: class, 'Newpassword']);
 
 // LISTING GROUP ROUTES
 Route::prefix('list')->group(function(){
@@ -78,5 +89,3 @@ Route::post('/addProfile',[ProfileCompleteController::class,'addProfile']);
 Route::middleware(['auth:api','scopes:customer'])->prefix('v1')->group(function(){
 
 });
-
-
