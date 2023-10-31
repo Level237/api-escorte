@@ -5,17 +5,16 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LocationController;
-<<<<<<< HEAD
 use App\Http\Controllers\CheckEmailController;
-=======
-use App\Http\Controllers\AnnouncementController;
->>>>>>> 10b2232c750d3018a89973fb1b089dec3c71004d
 use App\Http\Controllers\CreateUserController;
+
 use App\Http\Controllers\VerifyCodeController;
 use App\Http\Controllers\NewPasswordController;
+use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\Api\auth\LoginController;
 use App\Http\Controllers\Api\User\LogoutController;
 use App\Http\Controllers\Api\User\CurrentUserController;
+use App\Http\Controllers\Api\Escort\ProfileCompleteController;
 /*
 |--------------------------------------------------------------------------
 | API Routes

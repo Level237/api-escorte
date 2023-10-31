@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use App\Models\Image;
+use App\Models\User;
 
+use App\Models\Image;
 use App\Models\Country;
 use App\Models\Quarter;
 use App\Models\Service;
@@ -24,6 +25,8 @@ class Escort extends Model
         'description',
         'photo',
         'quarter_id',
+        'user_id',
+        'isCompleted',
         'isVerified'
     ];
 
@@ -42,5 +45,9 @@ class Escort extends Model
 
     public function services():BelongsToMany{
         return $this->belongsToMany(Service::class);
+    }
+
+    public function User():BelongsTo{
+        return $this->belongsTo(User::class);
     }
 }
