@@ -2,8 +2,8 @@
 
 namespace App\services\auth;
 
-use App\Interface\auth\LoginInterface;
-use App\Repository\auth\LoginRepository;
+use App\Interfaces\auth\LoginInterface;
+use App\Repositories\auth\LoginRepository;
 
 class LoginService implements LoginInterface{
 

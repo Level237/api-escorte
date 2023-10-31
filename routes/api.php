@@ -4,6 +4,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LocationController;
+use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\CreateUserController;
 use App\Http\Controllers\Api\auth\LoginController;
 use App\Http\Controllers\Api\User\LogoutController;
@@ -29,6 +30,18 @@ Route::prefix('search')->group(function(){
 
 
 });
+
+// ANNOUNCEMENT GROUP ROUTES
+Route::get('/announcements', [AnnouncementController::class, 'index']);
+Route::get('/announcements/{id}', [AnnouncementController::class, 'show']);
+Route::post('/announcements', [AnnouncementController::class, 'store']);
+Route::put('/announcements/{id}', [AnnouncementController::class, 'update']);
+Route::delete('/announcements/{id}', [AnnouncementController::class, 'delete']);
+Route::get('/announcementsTown',[AnnouncementController::class, 'getAnnouncesByTown']);
+// Route::get('/announcementsTown',function(){
+//     return 'API here';
+// });
+
 
 
 // LISTING GROUP ROUTES
