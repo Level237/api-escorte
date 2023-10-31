@@ -5,10 +5,11 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LocationController;
-use App\Http\Controllers\CheckEmailController;
+
 use App\Http\Controllers\CreateUserController;
 
 use App\Http\Controllers\VerifyCodeController;
+use App\Http\Controllers\CheckEmailController;
 use App\Http\Controllers\NewPasswordController;
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\Api\auth\LoginController;
