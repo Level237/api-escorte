@@ -72,9 +72,7 @@ class AnnouncementController extends Controller
     {
        
         try{
-               return response()->json([
-                    'data' => $this->announcementRepository->getAnnouncementsByTown()
-                ]);
+               return response()->json($this->announcementRepository->getAnnouncementsByTown());
         }
         catch(e){
             return response("{error:Unable to fetch data}", 500)

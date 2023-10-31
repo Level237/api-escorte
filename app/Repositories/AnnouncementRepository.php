@@ -54,7 +54,7 @@ class AnnouncementRepository implements AnnouncementInterface
 
          //loop over the collection and fake the number of announcement by town
         $data->map(function($element){
-            $element->totalAnnounces = $element->totalAnnounces*30 + rand(20,25) ;
+            $element->totalAnnounces = $element->totalAnnounces*30 +  ceil($element->totalAnnounces*12/11);
             return $element;
 
         });
