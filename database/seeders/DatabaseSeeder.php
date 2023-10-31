@@ -38,7 +38,9 @@ class DatabaseSeeder extends Seeder
             EscortSeeder::class,
             Weightseeder::class,
             Heightseeder::class,
-            AnnouncementSeeder::class
+            AnnouncementSeeder::class,
+            AnnoucementCategorySeeder::class,
+            BodyShapeSeeder::class
         ]);
 
 
