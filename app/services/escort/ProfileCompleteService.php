@@ -2,6 +2,7 @@
 namespace App\services\escort;
 
 use App\Repositories\escort\AddProfileRepository;
+use App\Repositories\escort\AddServicesRepository;
 use Illuminate\Support\Facades\Auth;
 
 class ProfileCompleteService{
@@ -10,7 +11,7 @@ class ProfileCompleteService{
 
 
 
-        $pathImage='profile/'.time() . '.' . $request->file('photo')->getClientOriginalExtension();
+        $pathImage='profile/'.time().'-'.$request->file('photo')->getClientOriginalName();
         $data=[
             'whatsapp_number'=>$request->whatsapp_number,
             'sexuality'=>$request->sexuality,
@@ -27,7 +28,9 @@ class ProfileCompleteService{
             $data['body_shape_id']=$request->body_shape_id;
         }
         $addProfileRepository=(new AddProfileRepository())->addProfile($data,$request->file('photo'));
-
+        if(isset($addProfileRepository) && isset($request->services)){
+            $newServices=(new AddServicesRepository())->addServices($request->services,$addProfileRepository);
+        }
         return $addProfileRepository;
     }
 }
