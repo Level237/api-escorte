@@ -29,7 +29,7 @@ class LocationController extends Controller
 
                     //Getting escorts by quarter
                     $locals =  DB::table('escorts')
-                            ->join('quarters', 'escorts.quarter_id', '=','quarters.id')
+                            ->join('quarters', 'quarters.id', '=','escorts.quarter_id')
                             ->select('quarter_name','quarter_id', DB::raw('count(*) as total'))
                             ->whereIn('quarter_id', $quartersIn)
                             ->groupBy('quarter_name')
