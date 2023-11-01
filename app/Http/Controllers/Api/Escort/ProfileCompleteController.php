@@ -12,11 +12,10 @@ class ProfileCompleteController extends Controller
     public function addProfile(ProfileCompleteRequest $request){
 
         try{
-            $data=$request;
-            $profileCompleService=(new ProfileCompleteService())->addProfile($data);
-            return $request;
+            $profileCompleteService=(new ProfileCompleteService())->addProfile($request);
+            return $profileCompleteService;
         }catch(\Exception $e){
-
+           return $e->getMessage();
         }
     }
 }
