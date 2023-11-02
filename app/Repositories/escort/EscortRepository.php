@@ -4,6 +4,8 @@ namespace App\Repositories\Escort;
 
 use App\Interfaces\Escorts\EscortInterface;
 use App\Models\Escort;
+use App\Models\Quarter;
+use App\Models\Town;
 use Illuminate\Support\Facades\DB;
 
 class EscortRepository implements EscortInterface 
@@ -30,20 +32,20 @@ class EscortRepository implements EscortInterface
 
     public function getEscortsWithTownName()
     {
-        $data = DB::table('Escorts')
-         ->join('towns', 'towns.id', '=','Escorts.town_id')
-                            ->select('town_id','town_name', DB::raw('count(*) as totalAnnounces'))
-                            ->groupBy('town_name')
-                            ->orderBy('totalAnnounces', 'DESC')
-                            ->get();
+        $escorts = $this->getAllEscorts();
 
-         //loop over the collection and fake the number of Escort by town
-        $data->map(function($element){
-            $element->totalAnnounces = $element->totalAnnounces*30 +  ceil($element->totalAnnounces*12/11);
-            return $element;
+        //  //loop over the collection and fake the number of Escort by town
+        $escorts->map(function($escort){
+           
+             //Retrieving town name and quarter
+             $quarter = Quarter::find($escort->quarter_id);
+
+             $escort['town'] = $quarter->town->town_name;
+             $escort['quarter'] = $quarter->quarter_name;
+             return $escort;
 
         });
-        return $data;
+        return $escorts;
                             
     }
 

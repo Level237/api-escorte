@@ -66,11 +66,11 @@ class EscortController extends Controller
         return response()->json(null, Response::HTTP_NO_CONTENT);
     }
 
-    public function getAnnouncesByTown(): JsonResponse 
+    public function indexWithTownName(): JsonResponse 
     {
        
         try{
-               return response()->json($this->EscortRepository->getEscortsByTown());
+               return response()->json($this->EscortRepository->getEscortsWithTownName());
         }
         catch(e){
             return response("{error:Unable to fetch data}", 500)

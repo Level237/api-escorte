@@ -41,7 +41,7 @@ Route::prefix('search')->group(function(){
 
 
 // ESCORTS GROUP ROUTES
-Route::get('/escorts',[EscortController::class, 'index']);
+Route::get('/escorts',[EscortController::class, 'indexWithTownName']);
 
 // ANNOUNCEMENT GROUP ROUTES
 Route::get('/announcements', [AnnouncementController::class, 'index']);
