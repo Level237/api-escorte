@@ -8,6 +8,8 @@ use App\Http\Controllers\LocationController;
 
 use App\Http\Controllers\CreateUserController;
 
+use App\Http\Controllers\Escorts\EscortController;
+
 use App\Http\Controllers\VerifyCodeController;
 use App\Http\Controllers\CheckEmailController;
 use App\Http\Controllers\NewPasswordController;
@@ -36,6 +38,10 @@ Route::prefix('search')->group(function(){
 
 
 });
+
+
+// ESCORTS GROUP ROUTES
+Route::get('/escorts',[EscortController::class, 'index']);
 
 // ANNOUNCEMENT GROUP ROUTES
 Route::get('/announcements', [AnnouncementController::class, 'index']);
