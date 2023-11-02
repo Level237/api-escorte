@@ -42,6 +42,9 @@ class EscortRepository implements EscortInterface
 
              $escort['town'] = $quarter->town->town_name;
              $escort['quarter'] = $quarter->quarter_name;
+
+             //Retrieving Escort username
+             $escort['username'] = $escort->User->username;
              return $escort;
 
         });

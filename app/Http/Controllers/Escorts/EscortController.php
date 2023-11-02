@@ -40,9 +40,7 @@ class EscortController extends Controller
     {
         $EscortId = $request->route('id');
 
-        return response()->json([
-            'data' => $this->EscortRepository->getEscortById($EscortId)
-        ]);
+        return response()->json($this->EscortRepository->getEscortById($EscortId));
     }
 
     public function update(Request $request): JsonResponse 
