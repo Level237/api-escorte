@@ -309,7 +309,7 @@ class AnnouncementSeeder extends Seeder
             ],
             [
                 'user_id'=>1,
-                'town_id'=>10,
+                'town_id'=>1,
                 'announcement_category_id'=>3,
                 'type'=>1,
                 'title'=>Str::random(30),

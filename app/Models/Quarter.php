@@ -19,7 +19,7 @@ class Quarter extends Model
      /**
      * Get the town that owns the quarter.
      */
-    public function town(): BelongsTo
+    public function town()
     {
         return $this->belongsTo(Town::class);
     }
