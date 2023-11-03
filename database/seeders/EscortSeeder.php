@@ -30,6 +30,7 @@ class EscortSeeder extends Seeder
                 'sexuality'=>'Heterosexuelle',
                 'description'=>'Je suis une jolie fille noire vivant a Douala disponible pour vous satisafaire',
                 'isVerified'=>0,
+                'isCompleted'=>1,
                 'quarter_id' => 1,
                 'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=15&t=es',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
@@ -49,6 +50,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>0,
                 'quarter_id' => 1,
+                'isCompleted'=>1,
                 'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=11&t=es',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -67,6 +69,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>0,
                 'quarter_id' => 1,
+                'isCompleted'=>1,
                 'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=18&t=es',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -85,6 +88,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>0,
                 'quarter_id' => 1,
+                'isCompleted'=>1,
                 'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=1&t=es',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -103,6 +107,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>0,
                 'quarter_id' => 6,
+                'isCompleted'=>1,
                 'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=9&t=es',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -121,6 +126,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>0,
                 'quarter_id' => 6,
+                'isCompleted'=>1,
                 'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=19&t=es',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -139,6 +145,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>0,
                 'quarter_id' => 6,
+                'isCompleted'=>1,
                 'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=2&t=es',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -157,6 +164,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>0,
                 'quarter_id' => 7,
+                'isCompleted'=>1,
                 'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=10&t=es',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -168,6 +176,7 @@ class EscortSeeder extends Seeder
                 "height_id"=>1,
                 "weight_id"=>2,
                 'shape_id'=>1,
+                'isCompleted'=>1,
                 "escort_name"=>"Bangala Domain",
                 'whatsapp_number'=>'658789652',
                 'age'=>'25',
@@ -186,6 +195,7 @@ class EscortSeeder extends Seeder
                 "height_id"=>1,
                 "weight_id"=>2,
                 'shape_id'=>3,
+                'isCompleted'=>1,
                 "escort_name"=>"Ta Baiseuse Bami",
                 'whatsapp_number'=>'696365241',
                 'age'=>'12',
@@ -211,6 +221,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>0,
                 'quarter_id' => 8,
+                'isCompleted'=>1,
                 'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=8&t=es',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -229,6 +240,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>0,
                 'quarter_id' => 8,
+                'isCompleted'=>1,
                 'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=5&t=es',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -247,6 +259,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>0,
                 'quarter_id' => 8,
+                'isCompleted'=>1,
                 'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=17&t=es',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -265,6 +278,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>0,
                 'quarter_id' => 8,
+                'isCompleted'=>1,
                 'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=14&t=es',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -283,6 +297,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>0,
                 'quarter_id' => 22,
+                'isCompleted'=>1,
                 'photo'=> 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRprjwQEoJL6htgncl7KuxQzZTFhb_gYuOU4yLtKMnJgcGVuffsg0cLPYzFT4rib0n8f9A&usqp=CAU',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -301,6 +316,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>0,
                 'quarter_id' => 32,
+                'isCompleted'=>1,
                 'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=7&t=es',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -319,6 +335,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>0,
                 'quarter_id' => 32,
+                'isCompleted'=>1,
                 'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=8&t=es',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
