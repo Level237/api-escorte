@@ -6,19 +6,25 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LocationController;
 
+use App\Http\Controllers\CheckEmailController;
+
 use App\Http\Controllers\CreateUserController;
 
-use App\Http\Controllers\Escorts\EscortController;
-
 use App\Http\Controllers\VerifyCodeController;
-use App\Http\Controllers\CheckEmailController;
 use App\Http\Controllers\NewPasswordController;
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\Api\auth\LoginController;
+use App\Http\Controllers\Escorts\EscortController;
 use App\Http\Controllers\Api\User\LogoutController;
+use App\Http\Controllers\Api\List\ListSkinController;
+use App\Http\Controllers\Api\List\ListTownController;
+use App\Http\Controllers\Api\List\ListShapeController;
+use App\Http\Controllers\Api\List\ListEthnicController;
+use App\Http\Controllers\Api\List\ListHeightController;
+use App\Http\Controllers\Api\List\ListWeightController;
 use App\Http\Controllers\Api\User\CurrentUserController;
+use App\Http\Controllers\Api\List\ListQuaterByTownController;
 use App\Http\Controllers\Api\Escort\ProfileCompleteController;
-use App\Http\Controllers\Api\ListEthnicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +38,13 @@ use App\Http\Controllers\Api\ListEthnicController;
 */
 
 Route::get('/list/ethnics',[ListEthnicController::class,'list']);
+Route::get('/list/skinColor',[ListSkinController::class,'list']);
+Route::get('/list/towns',[ListTownController::class,'list']);
+Route::get('/list/quarterByTown/{id}',[ListQuaterByTownController::class,'list']);
+Route::get('/list/shape',[ListShapeController::class,'list']);
+Route::get('/list/height',[ListHeightController::class,'list']);
+Route::get('/list/weight',[ListWeightController::class,'list']);
+
 
 Route::get('/test', function(Request $request){
     return "From the API";

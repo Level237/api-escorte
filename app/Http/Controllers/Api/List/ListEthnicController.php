@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\Api\List;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\ListEthnicResource;
