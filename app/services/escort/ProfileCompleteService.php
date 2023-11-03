@@ -33,7 +33,7 @@ class ProfileCompleteService{
             Auth::guard('api')->user()->email=$request->email;
         }
         $addProfileRepository=(new AddProfileRepository())->addProfile($data,$request->file('photo'));
-        if(isset($addProfileRepository)){
+        if(isset($addProfileRepository)&& $request->services){
             $newServices=(new AddServicesRepository())->addServices($request->services,$addProfileRepository);
         }
         return $addProfileRepository;
