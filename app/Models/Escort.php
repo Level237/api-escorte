@@ -7,6 +7,8 @@ use App\Models\User;
 use App\Models\Image;
 use App\Models\Shape;
 use App\Models\Ethnic;
+use App\Models\Height;
+use App\Models\Weight;
 use App\Models\Country;
 use App\Models\Quarter;
 use App\Models\Service;
@@ -65,5 +67,13 @@ class Escort extends Model
 
     public function shape():BelongsTo{
         return $this->belongsTo(Shape::class);
+    }
+
+    public function height():BelongsTo{
+        return $this->belongsTo(Height::class);
+    }
+
+    public function weight():BelongsTo{
+        return $this->belongsTo(Weight::class);
     }
 }
