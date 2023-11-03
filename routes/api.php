@@ -18,6 +18,8 @@ use App\Http\Controllers\Api\auth\LoginController;
 use App\Http\Controllers\Api\User\LogoutController;
 use App\Http\Controllers\Api\User\CurrentUserController;
 use App\Http\Controllers\Api\Escort\ProfileCompleteController;
+use App\Http\Controllers\Api\ListEthnicController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -28,6 +30,8 @@ use App\Http\Controllers\Api\Escort\ProfileCompleteController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+
+Route::get('/list/ethnics',[ListEthnicController::class,'list']);
 
 Route::get('/test', function(Request $request){
     return "From the API";
