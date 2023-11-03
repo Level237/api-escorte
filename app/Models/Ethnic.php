@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Shape extends Model
+class Ethnic extends Model
 {
     use HasFactory;
 
-    protected $fillable=[
-        'shape_name'
+    protected   $fillable=[
+        'ethnic_name'
     ];
 
     public function escort():HasMany{

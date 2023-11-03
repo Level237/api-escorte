@@ -22,10 +22,19 @@ class ProfileCompleteRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'escort_name'=>'required',
             'whatsapp_number'=>'required',
         'sexuality'=>'required',
         'quarter_id'=>'required',
-        'photo'=>'required'
+        'photo'=>'required',
+        "age"=>"required",
+        'description'=>"required",
+        "quarter_id"=>"required",
+        "shape_id"=>"required",
+        "ethnic_id"=>"required",
+        'height_id'=>"required",
+        'weight_id'=>"required",
+        "skin_color_id"=>"required",
         ];
     }
 }

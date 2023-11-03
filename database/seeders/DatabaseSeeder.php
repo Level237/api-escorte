@@ -35,12 +35,13 @@ class DatabaseSeeder extends Seeder
             ServiceSeeder::class,
             MemberShipSeeder::class,
             SkinColorSeeder::class,
-            EscortSeeder::class,
+            EthnicSeeder::class,
+            BodyShapeSeeder::class,
             Weightseeder::class,
             Heightseeder::class,
+            EscortSeeder::class,
             AnnouncementCategorySeeder::class,
             AnnouncementSeeder::class,
-            BodyShapeSeeder::class
         ]);
     }
 }
