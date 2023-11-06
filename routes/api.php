@@ -25,6 +25,7 @@ use App\Http\Controllers\Api\List\ListWeightController;
 use App\Http\Controllers\Api\List\ListServiceController;
 use App\Http\Controllers\Api\User\CurrentUserController;
 use App\Http\Controllers\Api\List\ListQuaterByTownController;
+use App\Http\Controllers\Api\List\ListAdsCategoryController;
 use App\Http\Controllers\Api\Escort\ProfileCompleteController;
 
 /*
@@ -38,6 +39,7 @@ use App\Http\Controllers\Api\Escort\ProfileCompleteController;
 |
 */
 
+Route::get('/list/categories',[ListAdsCategoryController::class,'list']);
 Route::get('/list/ethnics',[ListEthnicController::class,'list']);
 Route::get('/list/skinColor',[ListSkinController::class,'list']);
 Route::get('/list/towns',[ListTownController::class,'list']);
