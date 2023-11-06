@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api\Ads;
 use App\Http\Controllers\Controller;
-use App\Models\Announcement;
+use App\Models\AnnouncementImage;
 use Illuminate\Http\Request;
 use App\Http\Requests\ImageRequest;
 use Carbon\Carbon;
@@ -21,7 +21,6 @@ class CreateImageAdsController extends Controller
             //Validation passed, processing with storage
 
             $image = $request->file('file');
-            $name = "toto";
             $extension = $image->getClientOriginalExtension();
 
             $allowedfileExtension=['jpg','png','jpeg'];
@@ -29,14 +28,14 @@ class CreateImageAdsController extends Controller
             $check = in_array($extension,$allowedfileExtension);
 
             //Storing file in disk
-            $fileName = time().'_'.$image->getClientOriginalName().'.'.$image->getClientOriginalExtension();
-            $image->storeAs('product-images', $fileName);
+            $fileName = $request->ads_id.'_'.time().'_'.$image->getClientOriginalName();
+            $image->storeAs('public/ads/'.$request->ads_id, $fileName);
 
             //Add image to database (product_images table)
-                // $productImage = new \App\Models\productImage;
-                // $productImage->path = $fileName;
-                // $productImage->product_id = $product->id;
-                // $productImage->save();
+            $adsImage = new \App\Models\AnnouncementImage;
+            $adsImage->path = $fileName;
+            $adsImage->announcement_id = $request->ads_id;
+            $adsImage->save();
 
 
             return response('{success : Image received}', 200)

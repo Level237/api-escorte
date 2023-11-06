@@ -38,7 +38,7 @@ class AdsRequest extends FormRequest
             'category_id' => ['required','exists:App\Models\AnnouncementCategory,id'],
             'type' => ['required', 'boolean'],
             'title' => ['required', 'string', 'min:10', 'max:30'],
-            'description' => ['required', 'string', 'min:30', 'max:100'],
+            'description' => ['required', 'string', 'max:100'],
         ];
     }
 }
