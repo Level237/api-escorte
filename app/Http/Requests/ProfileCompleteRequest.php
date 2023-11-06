@@ -26,7 +26,7 @@ class ProfileCompleteRequest extends FormRequest
             'whatsapp_number'=>'required',
         'sexuality'=>'required',
         'quarter_id'=>'required',
-        'photo'=>'required',
+        //'photo'=>'required',
         "age"=>"required",
         'description'=>"required",
         "quarter_id"=>"required",

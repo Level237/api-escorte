@@ -22,6 +22,7 @@ use App\Http\Controllers\Api\List\ListShapeController;
 use App\Http\Controllers\Api\List\ListEthnicController;
 use App\Http\Controllers\Api\List\ListHeightController;
 use App\Http\Controllers\Api\List\ListWeightController;
+use App\Http\Controllers\Api\List\ListServiceController;
 use App\Http\Controllers\Api\User\CurrentUserController;
 use App\Http\Controllers\Api\List\ListQuaterByTownController;
 use App\Http\Controllers\Api\Escort\ProfileCompleteController;
@@ -44,7 +45,7 @@ Route::get('/list/quarterByTown/{id}',[ListQuaterByTownController::class,'list']
 Route::get('/list/shape',[ListShapeController::class,'list']);
 Route::get('/list/height',[ListHeightController::class,'list']);
 Route::get('/list/weight',[ListWeightController::class,'list']);
-
+Route::get('/list/services',[ListServiceController::class,'list']);
 
 Route::get('/test', function(Request $request){
     return "From the API";
@@ -105,9 +106,10 @@ Route::middleware(['auth:api','scopes:admin'])->prefix('v1')->group(function(){
 //routes escort
 Route::middleware(['auth:api','scopes:escort'])->prefix('v1')->group(function(){
 
-Route::post('/addProfile',[ProfileCompleteController::class,'addProfile']);
+    Route::post('/addProfile',[ProfileCompleteController::class,'addProfile']);
 
 });
+
 
 //routes escort
 Route::middleware(['auth:api','scopes:customer'])->prefix('v1')->group(function(){

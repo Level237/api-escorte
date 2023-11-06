@@ -12,7 +12,8 @@ class AddProfileRepository{
         $newEscort=Escort::create($data);
 
         if(isset($newEscort)){
-            $saveInFolder=(new SaveInFolderService())->saveIn($request,'profile');
+            $image_path = $request->store('products', 'public');
+            //$saveInFolder=(new SaveInFolderService())->saveIn($request,'profile');
         }
 
         return $newEscort;

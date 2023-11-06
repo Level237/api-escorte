@@ -24,7 +24,7 @@ class SaveInFolderService implements SaveInFolderInterface{
 
          */
 
-        $imageName = time().'-'.$request->getClientOriginalName();
+        $imageName = time().'-'.$request;
 
         $destinationPath = public_path('storage/profile/');
 
