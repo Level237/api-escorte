@@ -27,6 +27,8 @@ use App\Http\Controllers\Api\User\CurrentUserController;
 use App\Http\Controllers\Api\List\ListQuaterByTownController;
 use App\Http\Controllers\Api\List\ListAdsCategoryController;
 use App\Http\Controllers\Api\Escort\ProfileCompleteController;
+use App\Http\Controllers\Api\Ads\CreateAdsController;
+use App\Http\Controllers\Api\Ads\CreateImageAdsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,11 +67,8 @@ Route::get('/escorts',[EscortController::class, 'indexWithTownName']);
 Route::get('/escorts/{id}',[EscortController::class, 'show']);
 
 // ANNOUNCEMENT GROUP ROUTES
-Route::get('/announcements', [AnnouncementController::class, 'index']);
-Route::get('/announcements/{id}', [AnnouncementController::class, 'show']);
-Route::post('/announcements', [AnnouncementController::class, 'store']);
-Route::put('/announcements/{id}', [AnnouncementController::class, 'update']);
-Route::delete('/announcements/{id}', [AnnouncementController::class, 'delete']);
+Route::post('/ads', [CreateAdsController::class, 'createAds']);
+Route::post('/ads/image', [CreateImageAdsController::class, 'createImages']);
 Route::get('/announcementsTown',[AnnouncementController::class, 'getAnnouncesByTown']);
 // Route::get('/announcementsTown',function(){
 //     return 'API here';
@@ -88,6 +87,7 @@ Route::prefix('list')->group(function(){
     Route::get('/locations', [LocationController::class, 'index']);
 });
 
+//User Group route
 Route::post('/user', [CreateUserController::class, 'createUser']);
 
 
