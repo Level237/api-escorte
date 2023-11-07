@@ -2,11 +2,17 @@
 
 namespace App\Repositories\escort;
 
+use App\Models\Escort;
+
 class AddServicesRepository{
 
     public function addServices($dataService,$newEscort){
-        foreach($dataService as $serviceId){
-            $newEscort->services()->attach($serviceId);
-        }
+
+        $escort=Escort::find($newEscort['id']);
+
+            $escort->services()->attach($dataService);
+            //return $serviceId;
+
+        return $escort;
     }
 }

@@ -11,7 +11,8 @@ class ProfileCompleteService{
 
 
 
-        $pathImage='profile/'.time().'-'.$request->file('photo')->getClientOriginalName();
+
+        $pathImage='profile/'.time().'-'.$request->photo->getClientOriginalName();
         $data=[
             "escort_name"=>$request->escort_name,
             'whatsapp_number'=>$request->whatsapp_number,
@@ -19,8 +20,8 @@ class ProfileCompleteService{
             'quarter_id'=>$request->quarter_id,
             'user_id'=>Auth::guard('api')->user()->id,
             'photo'=>$pathImage,
-            "year_of_birth"=>$request->year_of_birth,
-            'body_shape_id'=>$request->body_shape_id,
+            "age"=>$request->age,
+            'shape_id'=>$request->shape_id,
             "ethnic_id"=>$request->ethnic_id,
             "description"=>$request->description,
             "height_id"=>$request->height_id,
@@ -32,9 +33,11 @@ class ProfileCompleteService{
         if(isset($request->email) && Auth::guard('api')->user()->email ==null){
             Auth::guard('api')->user()->email=$request->email;
         }
-        $addProfileRepository=(new AddProfileRepository())->addProfile($data,$request->file('photo'));
+        $addProfileRepository=(new AddProfileRepository())->addProfile($data,$request->photo);
         if(isset($addProfileRepository)&& $request->services){
+
             $newServices=(new AddServicesRepository())->addServices($request->services,$addProfileRepository);
+
         }
         return $addProfileRepository;
     }
