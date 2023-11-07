@@ -40,7 +40,7 @@ return new class extends Migration
             ->constrained()
             ->restrictOnUpdate()
             ->restrictOnDelete();
-            $table->boolean('isCompleted')->default(0);
+            $table->boolean('isCompleted');
             $table->foreignIdFor(Shape::class)
             ->constrained()
             ->restrictOnUpdate()

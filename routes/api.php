@@ -30,6 +30,7 @@ use App\Http\Controllers\Api\Escort\ProfileCompleteController;
 use App\Http\Controllers\Api\Ads\CreateAdsController;
 use App\Http\Controllers\Api\Ads\CreateImageAdsController;
 use App\Http\Controllers\Api\Escort\AttachEscortServiceController;
+use App\Http\Controllers\Api\Escort\EscortIsCompletedOrNotController;
 
 /*
 |--------------------------------------------------------------------------
@@ -110,6 +111,7 @@ Route::middleware(['auth:api','scopes:escort'])->prefix('v1')->group(function(){
 
     Route::post('/addProfile',[ProfileCompleteController::class,'addProfile']);
     Route::post('/attach/services',[AttachEscortServiceController::class,'attach']);
+    Route::get('/CompleteOrNot',[EscortIsCompletedOrNotController::class,"isCompletedOrNot"]);
 });
 
 

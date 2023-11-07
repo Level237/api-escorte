@@ -23,9 +23,10 @@ class UserSeeder extends Seeder
          //Data to store
         $data = [
             [
-                'username'=>'delanofofe', 
-                'email'=>'delanofofe@gmail.com', 
+                'username'=>'delanofofe',
+                'email'=>'delanofofe@gmail.com',
                 'role_id' => 1,
+
                 'phone_number' => "675824349",
                 'password' => Hash::make('password'),
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
@@ -33,8 +34,8 @@ class UserSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
              [
-                'username'=>'level237', 
-                'email'=>'martin@gmail.com', 
+                'username'=>'level237',
+                'email'=>'martin@gmail.com',
                 'role_id' => 1,
                 'phone_number' => "690394365",
                 'password' => Hash::make('password'),
@@ -43,8 +44,8 @@ class UserSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'username'=>'franknyawa', 
-                'email'=>'franknyawa@gmail.com', 
+                'username'=>'franknyawa',
+                'email'=>'franknyawa@gmail.com',
                 'role_id' => 1,
                 'phone_number' => "693374160",
                 'password' => Hash::make('password'),
@@ -54,8 +55,8 @@ class UserSeeder extends Seeder
             ],
 
              [
-                'username'=>'admin', 
-                'email'=>'temerprodesign@yahoo.fr', 
+                'username'=>'admin',
+                'email'=>'temerprodesign@yahoo.fr',
                 'role_id' => 1,
                 'phone_number' => "698829217",
                 'password' => Hash::make('password'),
@@ -64,8 +65,8 @@ class UserSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
               [
-                'username'=>'maeve', 
-                'email'=>'maeve@gmail.com', 
+                'username'=>'maeve',
+                'email'=>'maeve@gmail.com',
                 'role_id' => 2,
                 'phone_number' => "694145298",
                 'password' => Hash::make('password'),
@@ -74,8 +75,8 @@ class UserSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
               [
-                'username'=>'leila', 
-                'email'=>'leila@gmail.com', 
+                'username'=>'leila',
+                'email'=>'leila@gmail.com',
                 'role_id' => 2,
                 'phone_number' => "671375860",
                 'password' => Hash::make('password'),
@@ -84,8 +85,8 @@ class UserSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
               [
-                'username'=>'sheila', 
-                'email'=>'sheila@gmail.com', 
+                'username'=>'sheila',
+                'email'=>'sheila@gmail.com',
                 'role_id' => 2,
                 'phone_number' => "654011210",
                 'password' => Hash::make('password'),
@@ -94,8 +95,8 @@ class UserSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
               [
-                'username'=>'anna', 
-                'email'=>'anna@gmail.com', 
+                'username'=>'anna',
+                'email'=>'anna@gmail.com',
                 'role_id' => 2,
                 'phone_number' => "654011210",
                 'password' => Hash::make('password'),
@@ -104,8 +105,8 @@ class UserSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
               [
-                'username'=>'laura', 
-                'email'=>'laura@gmail.com', 
+                'username'=>'laura',
+                'email'=>'laura@gmail.com',
                 'role_id' => 2,
                 'phone_number' => "654011210",
                 'password' => Hash::make('password'),
@@ -114,8 +115,8 @@ class UserSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
               [
-                'username'=>'victoire', 
-                'email'=>'victoire@gmail.com', 
+                'username'=>'victoire',
+                'email'=>'victoire@gmail.com',
                 'role_id' => 2,
                 'phone_number' => "654011210",
                 'password' => Hash::make('password'),
@@ -124,8 +125,8 @@ class UserSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
               [
-                'username'=>'judith', 
-                'email'=>'judith@gmail.com', 
+                'username'=>'judith',
+                'email'=>'judith@gmail.com',
                 'role_id' => 2,
                 'phone_number' => "654011210",
                 'password' => Hash::make('password'),
@@ -134,8 +135,8 @@ class UserSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
               [
-                'username'=>'theresa', 
-                'email'=>'theresa@gmail.com', 
+                'username'=>'theresa',
+                'email'=>'theresa@gmail.com',
                 'role_id' => 2,
                 'phone_number' => "654011210",
                 'password' => Hash::make('password'),
@@ -144,8 +145,8 @@ class UserSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
               [
-                'username'=>'miranda', 
-                'email'=>'miranda@gmail.com', 
+                'username'=>'miranda',
+                'email'=>'miranda@gmail.com',
                 'role_id' => 2,
                 'phone_number' => "654011210",
                 'password' => Hash::make('password'),
@@ -154,8 +155,8 @@ class UserSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
               [
-                'username'=>'cynthia', 
-                'email'=>'cynthia@gmail.com', 
+                'username'=>'cynthia',
+                'email'=>'cynthia@gmail.com',
                 'role_id' => 2,
                 'phone_number' => "654011210",
                 'password' => Hash::make('password'),
@@ -164,8 +165,8 @@ class UserSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
               [
-                'username'=>'brenda', 
-                'email'=>'brenda@gmail.com', 
+                'username'=>'brenda',
+                'email'=>'brenda@gmail.com',
                 'role_id' => 2,
                 'phone_number' => "654011210",
                 'password' => Hash::make('password'),
@@ -174,8 +175,8 @@ class UserSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
               [
-                'username'=>'melissa', 
-                'email'=>'melissa@gmail.com', 
+                'username'=>'melissa',
+                'email'=>'melissa@gmail.com',
                 'role_id' => 2,
                 'phone_number' => "654011210",
                 'password' => Hash::make('password'),
@@ -184,8 +185,8 @@ class UserSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
               [
-                'username'=>'irene', 
-                'email'=>'irene@gmail.com', 
+                'username'=>'irene',
+                'email'=>'irene@gmail.com',
                 'role_id' => 2,
                 'phone_number' => "654011210",
                 'password' => Hash::make('password'),
@@ -194,8 +195,8 @@ class UserSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
               [
-                'username'=>'flore', 
-                'email'=>'flore@gmail.com', 
+                'username'=>'flore',
+                'email'=>'flore@gmail.com',
                 'role_id' => 2,
                 'phone_number' => "654011210",
                 'password' => Hash::make('password'),
@@ -204,8 +205,8 @@ class UserSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
               [
-                'username'=>'rita', 
-                'email'=>'rita@gmail.com', 
+                'username'=>'rita',
+                'email'=>'rita@gmail.com',
                 'role_id' => 2,
                 'phone_number' => "654011210",
                 'password' => Hash::make('password'),
@@ -214,8 +215,8 @@ class UserSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
               [
-                'username'=>'orchelle', 
-                'email'=>'orchelle@gmail.com', 
+                'username'=>'orchelle',
+                'email'=>'orchelle@gmail.com',
                 'role_id' => 2,
                 'phone_number' => "654011210",
                 'password' => Hash::make('password'),
@@ -224,8 +225,8 @@ class UserSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
               [
-                'username'=>'jordy', 
-                'email'=>'jordy@gmail.com', 
+                'username'=>'jordy',
+                'email'=>'jordy@gmail.com',
                 'role_id' => 2,
                 'phone_number' => "654011210",
                 'password' => Hash::make('password'),
@@ -234,8 +235,8 @@ class UserSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
               [
-                'username'=>'patrick', 
-                'email'=>'patrick@gmail.com', 
+                'username'=>'patrick',
+                'email'=>'patrick@gmail.com',
                 'role_id' => 3,
                 'phone_number' => "652289261",
                 'password' => Hash::make('password'),
@@ -244,8 +245,8 @@ class UserSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
               [
-                'username'=>'max', 
-                'email'=>'max@gmail.com', 
+                'username'=>'max',
+                'email'=>'max@gmail.com',
                 'role_id' => 3,
                 'phone_number' => "655653525",
                 'password' => Hash::make('password'),
@@ -254,8 +255,8 @@ class UserSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
               [
-                'username'=>'paulin', 
-                'email'=>'paulin@gmail.com', 
+                'username'=>'paulin',
+                'email'=>'paulin@gmail.com',
                 'role_id' => 3,
                 'phone_number' => "697585962",
                 'password' => Hash::make('password'),
@@ -263,7 +264,7 @@ class UserSeeder extends Seeder
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
-              
+
         ];
 
         //Storing Data
