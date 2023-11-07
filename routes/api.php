@@ -29,6 +29,7 @@ use App\Http\Controllers\Api\List\ListAdsCategoryController;
 use App\Http\Controllers\Api\Escort\ProfileCompleteController;
 use App\Http\Controllers\Api\Ads\CreateAdsController;
 use App\Http\Controllers\Api\Ads\CreateImageAdsController;
+use App\Http\Controllers\Api\Escort\AttachEscortServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -109,7 +110,7 @@ Route::middleware(['auth:api','scopes:admin'])->prefix('v1')->group(function(){
 Route::middleware(['auth:api','scopes:escort'])->prefix('v1')->group(function(){
 
     Route::post('/addProfile',[ProfileCompleteController::class,'addProfile']);
-
+    Route::post('/attach/services',[AttachEscortServiceController::class,'attach']);
 });
 
 

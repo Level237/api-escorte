@@ -35,7 +35,9 @@ class ProfileCompleteService{
         }
         $addProfileRepository=(new AddProfileRepository())->addProfile($data,$request->photo);
         if(isset($addProfileRepository)&& $request->services){
+
             $newServices=(new AddServicesRepository())->addServices($request->services,$addProfileRepository);
+
         }
         return $addProfileRepository;
     }

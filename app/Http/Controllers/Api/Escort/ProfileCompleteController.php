@@ -12,8 +12,8 @@ class ProfileCompleteController extends Controller
     public function addProfile(ProfileCompleteRequest $request){
 
         try{
-            //$profileCompleteService=(new ProfileCompleteService())->addProfile($request);
-            return $request;
+            $profileCompleteService=(new ProfileCompleteService())->addProfile($request);
+            return response()->json(["message"=>"Profile escort complete successfully","completed"=>true,"escort"=>$profileCompleteService],201);
         }catch(\Exception $e){
            return $e->getMessage();
         }
