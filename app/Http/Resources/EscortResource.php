@@ -16,6 +16,7 @@ class EscortResource extends JsonResource
     {
         return [
             'id' => (string) $this->id,
+            'user' => $this->user,
             'escort_name' => $this->escort_name,
             'whatsapp_number' => $this->whatsapp_number,
             'sexuality' => $this->sexuality,
@@ -24,6 +25,7 @@ class EscortResource extends JsonResource
             'photo' => $this->photo,
             'isVerified' => $this->isVerified,
             'quarter' => $this->quarter->quarter_name,
+            'town' => $this->quarter->town->town_name,
             'shape' => $this->shape->shape_name,
             'ethnic' => $this->ethnic->ethnic_name,
             'height' => $this->height->height_name,
