@@ -13,6 +13,7 @@ use App\Models\Country;
 use App\Models\Quarter;
 use App\Models\Service;
 use App\Models\Escort_physical;
+use App\Models\Skin_color;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -75,5 +76,9 @@ class Escort extends Model
 
     public function weight():BelongsTo{
         return $this->belongsTo(Weight::class);
+    }
+
+    public function skin_color():BelongsTo{
+        return $this->belongsTo(Skin_color::class);
     }
 }

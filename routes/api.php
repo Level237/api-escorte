@@ -64,8 +64,7 @@ Route::prefix('search')->group(function(){
 
 
 // ESCORTS GROUP ROUTES
-Route::get('/escorts',[EscortController::class, 'indexWithTownName']);
-Route::get('/escorts/{id}',[EscortController::class, 'show']);
+Route::apiResource('/escorts', EscortController::class);
 
 // ANNOUNCEMENT GROUP ROUTES
 Route::post('/ads', [CreateAdsController::class, 'createAds']);
