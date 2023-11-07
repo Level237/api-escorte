@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Escorts;
 use App\Http\Controllers\Controller;
 use App\Repositories\Escort\EscortRepository;
+use App\Models\Escort;
+use App\Http\Resources\EscortResource;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -16,9 +18,9 @@ class EscortController extends Controller
         $this->EscortRepository = $EscortRepository;
     }
 
-    public function index(): JsonResponse 
+    public function index()
     {
-        return response()->json($this->EscortRepository->getAllEscorts());
+        return EscortResource::collection(Escort::all());
     }
 
     public function store(Request $request): JsonResponse 
@@ -36,11 +38,9 @@ class EscortController extends Controller
         );
     }
 
-    public function show(Request $request): JsonResponse 
+    public function show(Escort $escort)
     {
-        $EscortId = $request->route('id');
-
-        return response()->json($this->EscortRepository->getEscortById($EscortId));
+        return new EscortResource($escort);
     }
 
     public function update(Request $request): JsonResponse 
