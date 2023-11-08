@@ -92,7 +92,7 @@ Route::prefix('list')->group(function(){
 
 //User Group route
 Route::post('/user', [CreateUserController::class, 'createUser']);
-Route::post('/verify/question',[VerifyQuestionController::class,'verify']);
+Route::post('/verify/phone',[VerifyQuestionController::class,'verify']);
 
 
 Route::post('/login',[LoginController::class,'login']);
@@ -101,6 +101,7 @@ Route::post('/login',[LoginController::class,'login']);
 Route::middleware('auth:api')->prefix('v1')->group(function(){
     Route::get('/currentUser',[CurrentUserController::class,'currentUser']);
     Route::post('/choice/questions',[ChoiceQuestionController::class,'choice']);
+
     Route::post('/logout',[LogoutController::class,'logout']);
 });
 

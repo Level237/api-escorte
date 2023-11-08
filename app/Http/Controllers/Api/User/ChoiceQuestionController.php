@@ -22,11 +22,12 @@ class ChoiceQuestionController extends Controller
 
 
         $user->questions()->attach($request->question_id,['answer'=>$request->answer]);
-            Auth::guard('api')->user()->isSecure=1;
-        return response()->json(["message"=>$user->questions]);
+        $user->isSecure=1;
+        $user->save();
+        return response()->json(["message"=>"questions added sucessfully"],200);
         }catch(Exception $e){
 
-            return response()->json(["message"=>$e->getMessage()]);
+            return response()->json(["message"=>$e->getMessage()],400);
         }
 
     }
