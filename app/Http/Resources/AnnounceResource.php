@@ -18,11 +18,13 @@ class AnnounceResource extends JsonResource
             'id' => (string) $this->id,
             'user' => $this->user,
             'category' => $this->category,
-            'town' => $this->town,
+            'town' => $this->user->Escort[0]->quarter->town,
+            'quarter' => $this->user->Escort[0]->quarter,
+            'ethnie' => $this->user->Escort[0]->ethnic,
             'type' => $this->type,
             'title' => $this->title,
             'description' => $this->description,
-            'accepted-customer' => $this->accepted,
+            'accepted' => $this->accepted,
             'location' => $this->location
         ];
     }
