@@ -18,502 +18,602 @@ class AnnouncementSeeder extends Seeder
         $data = [
 
             [
-                'user_id'=>2,
+                'user_id'=>5,
                 'town_id'=>1,
                 'announcement_category_id'=>1,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Baisseuse italienne',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>6,
                 'town_id'=>1,
                 'announcement_category_id'=>2,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>"J'ai été vilaine, ma fessé stp",
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>7,
                 'town_id'=>1,
                 'announcement_category_id'=>1,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Ta lycéenne, viens jouer au prof',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>8,
                 'town_id'=>1,
                 'announcement_category_id'=>2,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Une bassa fontaine',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>9,
                 'town_id'=>1,
                 'announcement_category_id'=>2,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Ta bassa aux fesses douces',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>10,
                 'town_id'=>1,
                 'announcement_category_id'=>2,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Viens soumettre ta panthere',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>11,
                 'town_id'=>1,
                 'announcement_category_id'=>2,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Jouissance vaginale',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>12,
                 'town_id'=>1,
                 'announcement_category_id'=>2,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Viens taper ta pute bassa',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>13,
                 'town_id'=>1,
                 'announcement_category_id'=>2,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Viens croquer une file brune Eton',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>14,
                 'town_id'=>1,
                 'announcement_category_id'=>2,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Ton chocolat blanc',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>15,
                 'town_id'=>2,
                 'announcement_category_id'=>1,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Baise annale',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>16,
                 'town_id'=>2,
                 'announcement_category_id'=>3,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Pipe avec léchage de noyaux',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>17,
                 'town_id'=>2,
                 'announcement_category_id'=>2,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Jouissance faciale',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
-                'town_id'=>2,
-                'announcement_category_id'=>3,
-                'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
-                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
-            ],
-            [
-                'user_id'=>1,
-                'town_id'=>2,
-                'announcement_category_id'=>2,
-                'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
-                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
-            ],
-            [
-                'user_id'=>1,
+                'user_id'=>8,
                 'town_id'=>2,
                 'announcement_category_id'=>3,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Baiseuse ProMax',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>19,
                 'town_id'=>2,
                 'announcement_category_id'=>2,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>"Pipe jouissance buccale",
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>20,
+                'town_id'=>2,
+                'announcement_category_id'=>3,
+                'type'=>1,
+                'title'=>'Seins debout, fille brune à déguster',
+                'Description'=>"Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘",
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
+            [
+                'user_id'=>21,
                 'town_id'=>2,
                 'announcement_category_id'=>2,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'La salope sim1 & sim2',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>5,
                 'town_id'=>2,
                 'announcement_category_id'=>2,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Baiseusse aux gros seins',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>6,
                 'town_id'=>2,
                 'announcement_category_id'=>2,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Ta libelulle brune',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>7,
+                'town_id'=>2,
+                'announcement_category_id'=>2,
+                'type'=>1,
+                'title'=>'Un plasir a couper le souffle',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
+            [
+                'user_id'=>8,
                 'town_id'=>7,
                 'announcement_category_id'=>2,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>"Le plaisir c'est ici",
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>9,
                 'town_id'=>7,
                 'announcement_category_id'=>2,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Viens glisser dans mes cuisses',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>10,
                 'town_id'=>7,
                 'announcement_category_id'=>2,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Ta Eton au gros cul',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>11,
                 'town_id'=>7,
                 'announcement_category_id'=>3,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Ta baiseuse fontaine',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>12,
                 'town_id'=>7,
                 'announcement_category_id'=>2,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Partouze de couple',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>13,
                 'town_id'=>7,
                 'announcement_category_id'=>3,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Ta salope obeissante',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>14,
                 'town_id'=>7,
                 'announcement_category_id'=>2,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Viens conduire ta mercedez',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>15,
                 'town_id'=>7,
                 'announcement_category_id'=>3,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Petite Yaris',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>16,
                 'town_id'=>7,
                 'announcement_category_id'=>2,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Pimentiere de luxe',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>17,
                 'town_id'=>1,
                 'announcement_category_id'=>3,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>"Baise sans remords",
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>18,
                 'town_id'=>28,
                 'announcement_category_id'=>2,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Viens baiser ta fille',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>19,
                 'town_id'=>28,
                 'announcement_category_id'=>1,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Lécheuse de tétons 😘',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>20,
                 'town_id'=>28,
                 'announcement_category_id'=>1,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Apoutchou sexy maquereau',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>21,
                 'town_id'=>28,
                 'announcement_category_id'=>1,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Pinneuse bonne bosse',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>5,
                 'town_id'=>17,
                 'announcement_category_id'=>1,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Partouze ce soir ',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>6,
                 'town_id'=>17,
                 'announcement_category_id'=>1,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Ta collégienne 😘',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>7,
                 'town_id'=>17,
                 'announcement_category_id'=>1,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'La nuit du sexe 2 🤤',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>8,
                 'town_id'=>17,
                 'announcement_category_id'=>2,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Bangala ++ 🍆',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>9,
                 'town_id'=>17,
                 'announcement_category_id'=>2,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>"Croqueuse de penis 🍆",
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>10,
                 'town_id'=>17,
                 'announcement_category_id'=>2,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Lécheuse🤤pro💦🍆',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>11,
                 'town_id'=>4,
                 'announcement_category_id'=>3,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>"Viens realiser tes fantasmes",
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>12,
                 'town_id'=>4,
                 'announcement_category_id'=>3,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Tu vas hurler de plaisir',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>13,
                 'town_id'=>4,
                 'announcement_category_id'=>3,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Baiseuse professionnelle',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>14,
                 'town_id'=>4,
                 'announcement_category_id'=>3,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Skinny aux gros seins',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>15,
                 'town_id'=>4,
                 'announcement_category_id'=>3,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'sensualité fatale❤️❤️❤️',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>16,
                 'town_id'=>4,
                 'announcement_category_id'=>3,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>"Ton bb bio 😘",
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>17,
                 'town_id'=>4,
                 'announcement_category_id'=>3,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>"Suceuse de bite",
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>18,
                 'town_id'=>4,
                 'announcement_category_id'=>3,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>"Baiseuse de luxe",
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>19,
                 'town_id'=>25,
                 'announcement_category_id'=>3,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Ta pineuse aux seins pointus',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'user_id'=>1,
+                'user_id'=>20,
                 'town_id'=>25,
                 'announcement_category_id'=>3,
                 'type'=>1,
-                'title'=>Str::random(30),
-                'Description'=>Str::random(80),
+                'title'=>'Viens baiser une vraie salope',
+                'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
+Je suis une petite salope au cul serré disponible pour toi.
+Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],

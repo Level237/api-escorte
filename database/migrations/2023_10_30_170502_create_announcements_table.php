@@ -34,6 +34,8 @@ return new class extends Migration
             $table->boolean('type');
             $table->string('title');
             $table->string('description');
+            $table->string('accepted')->default('Hommes');
+            $table->string('location')->default('Reçoit ou se déplace');
            
             $table->timestamps();
         });
