@@ -31,6 +31,8 @@ use App\Http\Controllers\Api\Ads\CreateAdsController;
 use App\Http\Controllers\Api\Ads\CreateImageAdsController;
 use App\Http\Controllers\Api\Escort\AttachEscortServiceController;
 use App\Http\Controllers\Api\Escort\EscortIsCompletedOrNotController;
+use App\Http\Controllers\Api\User\ChoiceQuestionController;
+use App\Http\Controllers\Api\User\VerifyQuestionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -90,7 +92,7 @@ Route::prefix('list')->group(function(){
 
 //User Group route
 Route::post('/user', [CreateUserController::class, 'createUser']);
-
+Route::post('/verify/question',[VerifyQuestionController::class,'verify']);
 
 
 Route::post('/login',[LoginController::class,'login']);
@@ -98,6 +100,7 @@ Route::post('/login',[LoginController::class,'login']);
 // endpoint simple user
 Route::middleware('auth:api')->prefix('v1')->group(function(){
     Route::get('/currentUser',[CurrentUserController::class,'currentUser']);
+    Route::post('/choice/questions',[ChoiceQuestionController::class,'choice']);
     Route::post('/logout',[LogoutController::class,'logout']);
 });
 
