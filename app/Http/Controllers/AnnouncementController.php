@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Resources\AnnounceResource;
+use App\Models\Announcement;
 use App\Repositories\AnnouncementRepository;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -16,11 +17,9 @@ class AnnouncementController extends Controller
         $this->announcementRepository = $announcementRepository;
     }
 
-    public function index(): JsonResponse 
+    public function index()
     {
-        return response()->json([
-            'data' => $this->announcementRepository->getAllannouncements()
-        ]);
+        return AnnounceResource::collection(Announcement::all());
     }
 
     public function store(Request $request): JsonResponse 
@@ -38,13 +37,9 @@ class AnnouncementController extends Controller
         );
     }
 
-    public function show(Request $request): JsonResponse 
+    public function show(Announcement $announce) 
     {
-        $announcementId = $request->route('id');
-
-        return response()->json([
-            'data' => $this->announcementRepository->getAnnouncementById($announcementId)
-        ]);
+       return new AnnounceResource($announce);
     }
 
     public function update(Request $request): JsonResponse 
