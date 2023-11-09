@@ -12,14 +12,13 @@ class VerifyQuestionController extends Controller
     public function verify(Request $request){
 
         $user=User::where('phone_number',$request->phone_number)->first();
-        $question=Question::find(2);
         $questions=$user->questions;
 
         if($user->isSecure==0){
-            return response()->json(["message"=>"You don't have yet securise your account"]);
+            return response()->json(["error"=>true,"message"=>"You don't have yet securise your account"],404);
         }else{
 
-            return response()->json(['question'=>$questions]);
+            return response()->json(['question'=>$questions],200);
         }
 
     }
