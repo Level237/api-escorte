@@ -32,7 +32,7 @@ class QuestionSeeder extends Seeder
 
             ],
             [
-                "question_name'=>'Quel est votre nom d'enfance?",
+                "question_name"=>"Quel est votre nom d'enfance?",
 
             ],
         ];
