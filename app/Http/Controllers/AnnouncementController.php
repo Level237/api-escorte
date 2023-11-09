@@ -22,6 +22,11 @@ class AnnouncementController extends Controller
         return AnnounceResource::collection(Announcement::all());
     }
 
+    public function getAdsByTown($townId)
+    {
+        return AnnounceResource::collection(Announcement::where('town_id', $townId)->get());
+    }
+
     public function store(Request $request): JsonResponse 
     {
         $announcementDetails = $request->only([
