@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\Ads;
 use App\Http\Controllers\Controller;
 use App\Models\Announcement;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\AdsRequest;
 use Carbon\Carbon;
@@ -48,12 +49,13 @@ class CreateAdsController extends Controller
         $validatedData=$request->validated();
 
         //Validation passed, processing with storage
-
+       
         $ads = new Announcement;
         $ads->user_id = $request->user_id;
-        $ads->town_id = $request->town_id;
+        $ads->town_id = User::find($request->user_id)->Escort[0]->quarter->town->id;
         $ads->announcement_category_id = $request->category_id;
-        $ads->type= $request->type;
+        $ads->accepted= $request->accepted;
+        $ads->location = $request->location;
         $ads->title = $request->title;
         $ads->description = $request->description;
     
