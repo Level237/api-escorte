@@ -31,6 +31,9 @@ use App\Http\Controllers\Api\Ads\CreateAdsController;
 use App\Http\Controllers\Api\Ads\CreateImageAdsController;
 use App\Http\Controllers\Api\Escort\AttachEscortServiceController;
 use App\Http\Controllers\Api\Escort\EscortIsCompletedOrNotController;
+use App\Http\Controllers\Api\List\ListQuestionController;
+use App\Http\Controllers\Api\User\ChoiceQuestionController;
+use App\Http\Controllers\Api\User\VerifyQuestionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,6 +60,7 @@ Route::get('/test', function(Request $request){
     return "From the API";
 });
 
+Route::get('question/{id}',[ListQuestionController::class,'filter']);
 // SEARCH GROUP ROUTES
 Route::prefix('search')->group(function(){
 
@@ -88,11 +92,13 @@ Route::post('newpassword', [NewPasswordController:: class, 'Newpassword']);
 Route::prefix('list')->group(function(){
 
     Route::get('/locations', [LocationController::class, 'index']);
+    Route::get('/questions',[ListQuestionController::class,'list']);
 });
+
 
 //User Group route
 Route::post('/user', [CreateUserController::class, 'createUser']);
-
+Route::post('/verify/phone',[VerifyQuestionController::class,'verify']);
 
 
 Route::post('/login',[LoginController::class,'login']);
@@ -100,6 +106,8 @@ Route::post('/login',[LoginController::class,'login']);
 // endpoint simple user
 Route::middleware('auth:api')->prefix('v1')->group(function(){
     Route::get('/currentUser',[CurrentUserController::class,'currentUser']);
+    Route::post('/choice/questions',[ChoiceQuestionController::class,'choice']);
+
     Route::post('/logout',[LogoutController::class,'logout']);
 });
 
