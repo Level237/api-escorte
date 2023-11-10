@@ -129,7 +129,10 @@ INSERT INTO `quarters` (`id`, `quarter_name`, `town_id`, `created_at`, `updated_
 (87, 'Mutengene', 17, '2020-10-23 16:39:01', '2020-10-23 16:39:01'),
 (88, 'Negeme', 17, '2020-10-23 06:08:56', '2020-10-23 06:08:56'),
 (89, 'Tiko', 17, '2020-10-23 06:08:56', '2020-10-23 06:08:56'),
-(90, 'Victoria', 17, '2020-10-23 06:08:56', '2020-10-23 06:08:56');
+(90, 'Victoria', 17, '2020-10-23 06:08:56', '2020-10-23 06:08:56'),
+(91, 'Banego', 7, '2020-10-23 06:08:56', '2020-10-23 06:08:56'),
+(92, 'Tamdja', 7, '2020-10-23 06:08:56', '2020-10-23 06:08:56'),
+(93, 'Kamkop', 7, '2020-10-23 06:08:56', '2020-10-23 06:08:56');
 
 --
 -- Indexes for dumped tables
@@ -150,13 +153,4 @@ INSERT INTO `quarters` (`id`, `quarter_name`, `town_id`, `created_at`, `updated_
 -- AUTO_INCREMENT for table `quarters`
 --
 ALTER TABLE `quarters`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
-
---
--- Constraints for dumped tables
---
-
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;

@@ -31,7 +31,6 @@ return new class extends Migration
             ->restrictOnUpdate()
             ->restrictOnDelete();
             $table->boolean('status')->default('0');
-            $table->boolean('type');
             $table->string('title');
             $table->string('description');
             $table->string('accepted')->default('Hommes');
