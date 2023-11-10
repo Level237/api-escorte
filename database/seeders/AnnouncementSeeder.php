@@ -503,7 +503,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
             ],
             [
                 'user_id'=>15,
-                'town_id'=>4,
+                'town_id'=>2,
                 'announcement_category_id'=>3,
                 'title'=>'sensualité fatale❤️❤️❤️',
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
