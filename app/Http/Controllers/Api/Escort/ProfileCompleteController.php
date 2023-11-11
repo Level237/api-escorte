@@ -13,7 +13,7 @@ class ProfileCompleteController extends Controller
 
         try{
             $profileCompleteService=(new ProfileCompleteService())->addProfile($request);
-            return response()->json(["message"=>"Profile escort complete successfully","completed"=>true,"escort"=>$profileCompleteService],201);
+            return response()->json(["message"=>"Profile escort complete successfully","completed"=>1,"escort"=>$profileCompleteService],201);
         }catch(\Exception $e){
            return $e->getMessage();
         }
