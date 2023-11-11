@@ -38,7 +38,8 @@ class Escort extends Model
         'quarter_id',
         'user_id',
         'isCompleted',
-        'isVerified'
+        'isVerified',
+        'genre'
     ];
 
 

@@ -32,6 +32,7 @@ return new class extends Migration
             $table->string("age");
             $table->string('description');
             $table->string("photo");
+            $table->boolean("genre")->default(0);
             $table->foreignIdFor(Quarter::class)
             ->constrained()
             ->restrictOnUpdate()
