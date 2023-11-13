@@ -34,6 +34,7 @@ use App\Http\Controllers\Api\Escort\EscortIsCompletedOrNotController;
 use App\Http\Controllers\Api\List\ListQuestionController;
 use App\Http\Controllers\Api\User\ChoiceQuestionController;
 use App\Http\Controllers\Api\User\VerifyQuestionController;
+use App\Http\Controllers\Api\Escort\GetEscortController;
 
 /*
 |--------------------------------------------------------------------------
@@ -122,6 +123,7 @@ Route::middleware(['auth:api','scopes:escort'])->prefix('v1')->group(function(){
     Route::post('/addProfile',[ProfileCompleteController::class,'addProfile']);
     Route::post('/attach/services',[AttachEscortServiceController::class,'attach']);
     Route::get('/CompleteOrNot',[EscortIsCompletedOrNotController::class,"isCompletedOrNot"]);
+    Route::get('/getEscort',[GetEscortController::class,'getEscort']);
 });
 
 

@@ -6,8 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\auth\LoginRequest;
 use App\Models\User;
 use App\Repositories\GetClientRepository;
-use App\services\auth\LoginService;
-use App\services\GenerateTokenUserService;
+use App\Services\Auth\LoginService;
+use App\Services\GenerateTokenUserService;
 use Illuminate\Http\Request;
 
 class LoginController extends Controller
