@@ -35,6 +35,7 @@ class ProfileCompleteRequest extends FormRequest
         'height_id'=>"required",
         'weight_id'=>"required",
         "skin_color_id"=>"required",
+        "genre"=>"required"
         ];
     }
 }

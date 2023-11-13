@@ -27,6 +27,7 @@ class ProfileCompleteService{
             "height_id"=>$request->height_id,
             "weight_id"=>$request->weight_id,
             "skin_color_id"=>$request->skin_color_id,
+            "genre"=>$request->genre,
             "isCompleted"=>1
         ];
 

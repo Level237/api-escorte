@@ -15,9 +15,9 @@ class VerifyAnswerController extends Controller
         foreach($questions as $question){
             if($question->id==$request->question_id){
                  if($question->pivot->answer==$request->answer){
-                     return response()->json(['success'=>true],200);
+                     return response()->json(['code'=>1],200);
                  }else{
-                    return response()->json(['success'=>false],500);
+                    return response()->json(['code'=>0],500);
                  }
             }
          }

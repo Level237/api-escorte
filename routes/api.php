@@ -16,6 +16,7 @@ use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\Api\auth\LoginController;
 use App\Http\Controllers\Escorts\EscortController;
 use App\Http\Controllers\Api\User\LogoutController;
+use App\Http\Controllers\Api\Ads\CreateAdsController;
 use App\Http\Controllers\Api\List\ListSkinController;
 use App\Http\Controllers\Api\List\ListTownController;
 use App\Http\Controllers\Api\List\ListShapeController;
@@ -24,17 +25,18 @@ use App\Http\Controllers\Api\List\ListHeightController;
 use App\Http\Controllers\Api\List\ListWeightController;
 use App\Http\Controllers\Api\List\ListServiceController;
 use App\Http\Controllers\Api\User\CurrentUserController;
-use App\Http\Controllers\Api\List\ListQuaterByTownController;
-use App\Http\Controllers\Api\List\ListAdsCategoryController;
-use App\Http\Controllers\Api\Escort\ProfileCompleteController;
-use App\Http\Controllers\Api\Ads\CreateAdsController;
-use App\Http\Controllers\Api\Ads\CreateImageAdsController;
-use App\Http\Controllers\Api\Escort\AttachEscortServiceController;
-use App\Http\Controllers\Api\Escort\EscortIsCompletedOrNotController;
 use App\Http\Controllers\Api\List\ListQuestionController;
+use App\Http\Controllers\Api\User\VerifyAnswerController;
+use App\Http\Controllers\Api\Ads\CreateImageAdsController;
 use App\Http\Controllers\Api\User\ChoiceQuestionController;
 use App\Http\Controllers\Api\User\VerifyQuestionController;
+use App\Http\Controllers\Api\List\ListAdsCategoryController;
+use App\Http\Controllers\Api\List\ListQuaterByTownController;
+use App\Http\Controllers\Api\Escort\ProfileCompleteController;
+use App\Http\Controllers\Api\Escort\AttachEscortServiceController;
+use App\Http\Controllers\Api\Escort\EscortIsCompletedOrNotController;
 use App\Http\Controllers\Api\Escort\GetEscortController;
+use App\Http\Controllers\Api\User\ChangePasswordController;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,6 +64,8 @@ Route::get('/test', function(Request $request){
 });
 
 Route::get('question/{id}',[ListQuestionController::class,'filter']);
+Route::post('question/verify',[VerifyAnswerController::class,'verifyAnswer']);
+Route::post('change/password',[ChangePasswordController::class,'resetPassword']);
 // SEARCH GROUP ROUTES
 Route::prefix('search')->group(function(){
 
