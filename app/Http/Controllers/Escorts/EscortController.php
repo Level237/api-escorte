@@ -75,4 +75,10 @@ class EscortController extends Controller
                   ->header('Content-Type', 'application/json');
         }
     }
+
+    public function displayProfil($path)
+    {
+       return response()->download(storage_path('app\public\profile\\'. $path));
+
+    }
 }

@@ -12,7 +12,7 @@ class ProfileCompleteService{
 
 
 
-        $pathImage='profile/'.time().'-'.$request->photo->getClientOriginalName();
+        $pathImage=time().'-'.$request->photo->getClientOriginalName();
         $data=[
             "escort_name"=>$request->escort_name,
             'whatsapp_number'=>$request->whatsapp_number,
