@@ -1,6 +1,6 @@
 <?php
 
-namespace App\services\auth;
+namespace App\Services\Auth;
 
 use App\Interfaces\auth\LoginInterface;
 use App\Repositories\auth\LoginRepository;
