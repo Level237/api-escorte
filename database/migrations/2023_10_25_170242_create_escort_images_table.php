@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('escort_images', function (Blueprint $table) {
+        Schema::create('escort_image', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Escort::class)
                 ->constrained()

@@ -62,7 +62,7 @@ Route::get('/list/height',[ListHeightController::class,'list']);
 Route::get('/list/weight',[ListWeightController::class,'list']);
 Route::get('/list/services',[ListServiceController::class,'list']);
 
-Route::get('/displayprofil/{path}',[EscortController::class,'displayProfil']);
+Route::get('/displayprofil/{id}/{path}',[EscortController::class,'displayProfil']);
 
 
 Route::get('/test', function(Request $request){

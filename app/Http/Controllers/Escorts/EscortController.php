@@ -76,9 +76,9 @@ class EscortController extends Controller
         }
     }
 
-    public function displayProfil($path)
+    public function displayProfil($id, $path)
     {
-       return response()->download(storage_path('app\public\profile\\'. $path));
+       return response()->download(storage_path('app\public\escorts\\'.$id.'\\'. $path));
 
     }
 }

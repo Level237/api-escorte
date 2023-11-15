@@ -42,7 +42,9 @@ class DatabaseSeeder extends Seeder
             EscortSeeder::class,
             AnnouncementCategorySeeder::class,
             AnnouncementSeeder::class,
-            QuestionSeeder::class
+            QuestionSeeder::class,
+            ImageSeeder::class,
+            EscortImageSeeder::class
         ]);
     }
 }

@@ -30,7 +30,8 @@ class EscortResource extends JsonResource
             'ethnic' => $this->ethnic->ethnic_name,
             'height' => $this->height->height_name,
             'weight' => $this->weight->weight_name,
-            'skin_color' => $this->skin_color->skin_color_name
+            'skin_color' => $this->skin_color->skin_color_name,
+            'images' => $this->images
         ];
     }
 }
