@@ -11,8 +11,8 @@ class ProfileCompleteService{
 
 
 
-
-        $pathImage=time().'-'.$request->photo->getClientOriginalName();
+        $photo=$request->file('photo');
+        $pathImage="profile/".$photo->getClientOriginalName();
         $data=[
             "escort_name"=>$request->escort_name,
             'whatsapp_number'=>$request->whatsapp_number,
@@ -34,7 +34,7 @@ class ProfileCompleteService{
         if(isset($request->email) && Auth::guard('api')->user()->email ==null){
             Auth::guard('api')->user()->email=$request->email;
         }
-        $addProfileRepository=(new AddProfileRepository())->addProfile($data,$request->photo);
+        $addProfileRepository=(new AddProfileRepository())->addProfile($data,$photo);
         if(isset($addProfileRepository)&& $request->services){
 
             $newServices=(new AddServicesRepository())->addServices($request->services,$addProfileRepository);

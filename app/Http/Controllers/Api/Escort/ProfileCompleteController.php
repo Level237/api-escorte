@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api\Escort;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProfileCompleteRequest;
-use App\services\escort\ProfileCompleteService;
+use App\Services\Escort\ProfileCompleteService;
 use Illuminate\Http\Request;
 
 class ProfileCompleteController extends Controller

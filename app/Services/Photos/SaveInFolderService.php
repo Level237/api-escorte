@@ -11,10 +11,10 @@ use App\Interfaces\Photos\SaveInFolderInterface;
 
 class SaveInFolderService implements SaveInFolderInterface{
 
-    public function saveIn($request, string $folderName)
+    public function saveIn($photo, string $folderName)
     {
 
-        $image = Image::make($request);
+        $image = Image::make($photo);
         $i=Image::make(public_path("logo.png"));
         $i->resize(300, 300);
         $i->blur();
@@ -24,7 +24,7 @@ class SaveInFolderService implements SaveInFolderInterface{
 
          */
 
-        $imageName = time().'-'.$request->getClientOriginalName();
+        $imageName = $photo->getClientOriginalName();
 
         $destinationPath = public_path('storage/profile/');
 
