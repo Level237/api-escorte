@@ -25,6 +25,7 @@ return new class extends Migration
                 ->cascadeOnUpdate()
                 ->cascadeOnDelete();
             $table->string('answer');
+            $table->timestamp('suspended_at')->nullable();
             $table->timestamps();
         });
     }
