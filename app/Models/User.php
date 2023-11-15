@@ -57,6 +57,12 @@ class User extends Authenticatable
         $this->save();
     }
 
+    public function activate()
+    {
+        $this->suspended_at = null;
+        $this->save();
+    }
+
     public function findForPassport($username) {
         return $this->where('phone_number','=', $username)->first();
     }
