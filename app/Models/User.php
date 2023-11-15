@@ -51,6 +51,12 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+    public function ban()
+    {
+        $this->suspended_at = now();
+        $this->save();
+    }
+
     public function findForPassport($username) {
         return $this->where('phone_number','=', $username)->first();
     }
