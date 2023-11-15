@@ -55,7 +55,7 @@ class User extends Authenticatable
         return $this->where('phone_number','=', $username)->first();
     }
 
-    public function Role():HasOne{
+    public function role():HasOne{
         return $this->hasOne(Role::class);
     }
 

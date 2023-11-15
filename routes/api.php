@@ -36,6 +36,7 @@ use App\Http\Controllers\Api\Escort\ProfileCompleteController;
 use App\Http\Controllers\Api\Escort\AttachEscortServiceController;
 use App\Http\Controllers\Api\Escort\EscortIsCompletedOrNotController;
 use App\Http\Controllers\Api\Escort\GetEscortController;
+use App\Http\Controllers\Api\List\ListUserController;
 use App\Http\Controllers\Api\User\ChangePasswordController;
 
 /*
@@ -122,6 +123,7 @@ Route::middleware('auth:api')->prefix('v1')->group(function(){
 //route admin
 Route::middleware(['auth:api','scopes:admin'])->prefix('v1')->group(function(){
 
+    Route::get('users',[ListUserController::class,'listUser']);
 });
 
 //routes escort
