@@ -38,6 +38,7 @@ use App\Http\Controllers\Api\Escort\EscortIsCompletedOrNotController;
 use App\Http\Controllers\Api\Escort\GetEscortController;
 use App\Http\Controllers\Api\List\ListRoleController;
 use App\Http\Controllers\Api\List\ListUserController;
+use App\Http\Controllers\Api\User\ActivateAccountController;
 use App\Http\Controllers\Api\User\ChangePasswordController;
 use App\Http\Controllers\Api\User\SuspendAccountController;
 
@@ -127,9 +128,11 @@ Route::middleware(['auth:api','ban'])->prefix('v1')->group(function(){
 Route::middleware(['auth:api','scopes:admin'])->prefix('v1')->group(function(){
 
     Route::get('users',[ListUserController::class,'listUser']);
+    Route::get('users/ban',[ListUserController::class,'listUserSuspend']);
     Route::get('users/role/{id}',[ListUserController::class,'listUserByRole']);
     Route::get('roles',[ListRoleController::class,'listRole']);
     Route::post('suspend/user/{id}',[SuspendAccountController::class,'ban']);
+    Route::post('activate/user/{id}',[ActivateAccountController::class,'activate']);
 });
 
 //routes escort
