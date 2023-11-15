@@ -39,6 +39,7 @@ use App\Http\Controllers\Api\Escort\GetEscortController;
 use App\Http\Controllers\Api\List\ListRoleController;
 use App\Http\Controllers\Api\List\ListUserController;
 use App\Http\Controllers\Api\User\ChangePasswordController;
+use App\Http\Controllers\Api\User\SuspendAccountController;
 
 /*
 |--------------------------------------------------------------------------
@@ -114,7 +115,7 @@ Route::post('/verify/phone',[VerifyQuestionController::class,'verify']);
 Route::post('/login',[LoginController::class,'login']);
 
 // endpoint simple user
-Route::middleware('auth:api')->prefix('v1')->group(function(){
+Route::middleware(['auth:api','ban'])->prefix('v1')->group(function(){
     Route::get('/currentUser',[CurrentUserController::class,'currentUser']);
     Route::post('/choice/questions',[ChoiceQuestionController::class,'choice']);
 
@@ -127,10 +128,11 @@ Route::middleware(['auth:api','scopes:admin'])->prefix('v1')->group(function(){
     Route::get('users',[ListUserController::class,'listUser']);
     Route::get('users/role/{id}',[ListUserController::class,'listUserByRole']);
     Route::get('roles',[ListRoleController::class,'listRole']);
+    Route::post('suspend/user/{id}',[SuspendAccountController::class,'ban']);
 });
 
 //routes escort
-Route::middleware(['auth:api','scopes:escort'])->prefix('v1')->group(function(){
+Route::middleware(['auth:api','scopes:escort','ban'])->prefix('v1')->group(function(){
 
     Route::post('/addProfile',[ProfileCompleteController::class,'addProfile']);
     Route::post('/attach/services',[AttachEscortServiceController::class,'attach']);
