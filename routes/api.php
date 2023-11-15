@@ -125,6 +125,7 @@ Route::middleware('auth:api')->prefix('v1')->group(function(){
 Route::middleware(['auth:api','scopes:admin'])->prefix('v1')->group(function(){
 
     Route::get('users',[ListUserController::class,'listUser']);
+    Route::get('users/role/{id}',[ListUserController::class,'listUserByRole']);
     Route::get('roles',[ListRoleController::class,'listRole']);
 });
 

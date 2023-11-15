@@ -14,4 +14,10 @@ class ListUserController extends Controller
 
         return $users;
     }
+
+    public function listUserByRole($id){
+        $users=ListUserResource::collection(User::where('role_id',$id)->get());
+
+        return $users;
+    }
 }
