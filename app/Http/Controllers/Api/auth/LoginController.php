@@ -27,9 +27,14 @@ class LoginController extends Controller
             }
             $data = request()->only('phone_number','password');
            $loginUser=(new LoginService())->login($data);
-           $client=(new GetClientRepository())->getClient();
+           if(isset($loginUser->suspended_at)){
+            return response()->json(["code"=>203,'message'=>"votre compte à été suspendu veuillez contactez l'administrateur"],403);
+        }else{
+            $client=(new GetClientRepository())->getClient();
            $tokenUser=(new GenerateTokenUserService())->generate($client,$loginUser,$data['password'],$request);
            return $tokenUser;
+        }
+
         }catch(\Exception $e){
             return response()->json([
                 'success' => false,
