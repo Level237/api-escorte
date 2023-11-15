@@ -27,6 +27,11 @@ class AnnouncementController extends Controller
         return AnnounceResource::collection(Announcement::where('town_id', $townId)->get());
     }
 
+    public function AdsByUser($userId)
+    {
+        return AnnounceResource::collection(Announcement::where('user_id', $userId)->get());
+    }
+
     public function store(Request $request): JsonResponse 
     {
         $announcementDetails = $request->only([

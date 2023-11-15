@@ -83,6 +83,7 @@ Route::apiResource('/escorts', EscortController::class);
 
 // ANNOUNCEMENT GROUP ROUTES
 Route::apiResource('/announces', AnnouncementController::class);
+Route::get('/userAds/{id}', [AnnouncementController::class,'AdsByUser']);
 Route::get('/adstown/{id}', [AnnouncementController::class,'getAdsByTown']);
 Route::post('/ads', [CreateAdsController::class, 'createAds']);
 Route::post('/ads/image', [CreateImageAdsController::class, 'createImages']);
