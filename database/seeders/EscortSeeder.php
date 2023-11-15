@@ -32,7 +32,7 @@ class EscortSeeder extends Seeder
                 'isVerified'=>0,
                 'isCompleted'=>1,
                 'quarter_id' => 1,
-                'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=15&t=es',
+                'photo'=> '1-1523698.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -51,7 +51,7 @@ class EscortSeeder extends Seeder
                 'isVerified'=>0,
                 'quarter_id' => 1,
                 'isCompleted'=>1,
-                'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=11&t=es',
+                'photo'=> '2-142536.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -70,7 +70,7 @@ class EscortSeeder extends Seeder
                 'isVerified'=>0,
                 'quarter_id' => 1,
                 'isCompleted'=>1,
-                'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=18&t=es',
+                'photo'=> '3-141411.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -89,7 +89,7 @@ class EscortSeeder extends Seeder
                 'isVerified'=>0,
                 'quarter_id' => 6,
                 'isCompleted'=>1,
-                'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=1&t=es',
+                'photo'=> '4-101011.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -108,7 +108,7 @@ class EscortSeeder extends Seeder
                 'isVerified'=>0,
                 'quarter_id' => 6,
                 'isCompleted'=>1,
-                'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=9&t=es',
+                'photo'=> '5-555550.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -127,7 +127,7 @@ class EscortSeeder extends Seeder
                 'isVerified'=>0,
                 'quarter_id' => 8,
                 'isCompleted'=>1,
-                'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=19&t=es',
+                'photo'=> '6-666662.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -146,7 +146,7 @@ class EscortSeeder extends Seeder
                 'isVerified'=>0,
                 'quarter_id' => 8,
                 'isCompleted'=>1,
-                'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=2&t=es',
+                'photo'=> '7-777774.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -165,7 +165,7 @@ class EscortSeeder extends Seeder
                 'isVerified'=>0,
                 'quarter_id' => 22,
                 'isCompleted'=>1,
-                'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=10&t=es',
+                'photo'=> '8-888880.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -184,7 +184,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>0,
                 'quarter_id' => 32,
-                'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=7&t=es',
+                'photo'=> '9-999993.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -203,7 +203,7 @@ class EscortSeeder extends Seeder
                 'description'=>'Je suis une jolie fille brune vivant a Yaounde disponible pour vous satisafaire',
                 'isVerified'=>0,
                 'quarter_id' => 32,
-                'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=4&t=es',
+                'photo'=> '10-101010.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -222,7 +222,7 @@ class EscortSeeder extends Seeder
                 'isVerified'=>0,
                 'quarter_id' => 39,
                 'isCompleted'=>1,
-                'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=8&t=es',
+                'photo'=> '11-111110.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -241,7 +241,7 @@ class EscortSeeder extends Seeder
                 'isVerified'=>0,
                 'quarter_id' => 39,
                 'isCompleted'=>1,
-                'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=5&t=es',
+                'photo'=> '12-121213.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -260,7 +260,7 @@ class EscortSeeder extends Seeder
                 'isVerified'=>0,
                 'quarter_id' => 41,
                 'isCompleted'=>1,
-                'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=17&t=es',
+                'photo'=> '13-131313.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -279,7 +279,7 @@ class EscortSeeder extends Seeder
                 'isVerified'=>0,
                 'quarter_id' => 46,
                 'isCompleted'=>1,
-                'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=14&t=es',
+                'photo'=> '14-141410.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -298,7 +298,7 @@ class EscortSeeder extends Seeder
                 'isVerified'=>0,
                 'quarter_id' => 92,
                 'isCompleted'=>1,
-                'photo'=> 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRprjwQEoJL6htgncl7KuxQzZTFhb_gYuOU4yLtKMnJgcGVuffsg0cLPYzFT4rib0n8f9A&usqp=CAU',
+                'photo'=> '15-151518.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -317,7 +317,7 @@ class EscortSeeder extends Seeder
                 'isVerified'=>0,
                 'quarter_id' => 92,
                 'isCompleted'=>1,
-                'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=7&t=es',
+                'photo'=> '16-161610.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -336,7 +336,7 @@ class EscortSeeder extends Seeder
                 'isVerified'=>0,
                 'quarter_id' => 93,
                 'isCompleted'=>1,
-                'photo'=> 'https://premiummod.com/demoimages/img.php?imgid=8&t=es',
+                'photo'=> '17-171711.jpg',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
