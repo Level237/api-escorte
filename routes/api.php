@@ -127,6 +127,7 @@ Route::middleware(['auth:api','ban'])->prefix('v1')->group(function(){
 Route::middleware(['auth:api','scopes:admin'])->prefix('v1')->group(function(){
 
     Route::get('users',[ListUserController::class,'listUser']);
+    Route::get('users/ban',[ListUserController::class,'listUserSuspend']);
     Route::get('users/role/{id}',[ListUserController::class,'listUserByRole']);
     Route::get('roles',[ListRoleController::class,'listRole']);
     Route::post('suspend/user/{id}',[SuspendAccountController::class,'ban']);

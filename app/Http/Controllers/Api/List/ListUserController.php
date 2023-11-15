@@ -15,6 +15,12 @@ class ListUserController extends Controller
         return $users;
     }
 
+    public function listUserSuspend(){
+        $users=ListUserResource::collection(User::where('suspended_at',"!=",null)->get());
+
+        return $users;
+    }
+
     public function listUserByRole($id){
         $users=ListUserResource::collection(User::where('role_id',$id)->where('suspended_at',"=",null)->get());
 
