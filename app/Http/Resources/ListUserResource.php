@@ -20,6 +20,7 @@ class ListUserResource extends JsonResource
             'username'=>$this->username,
             'email'=>$this->email,
             'phone_number'=>$this->phone_number,
+            'suspended_at'=>$this->suspended_at,
             'role'=>Role::where('id',$this->role_id)->get('role_name')->first(),
         ];
     }
