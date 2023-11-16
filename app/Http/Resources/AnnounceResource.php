@@ -25,7 +25,8 @@ class AnnounceResource extends JsonResource
             'title' => $this->title,
             'description' => $this->description,
             'accepted' => $this->accepted,
-            'location' => $this->location
+            'location' => $this->location,
+            'images' => $this->images
         ];
     }
 }

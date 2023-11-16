@@ -44,7 +44,8 @@ class DatabaseSeeder extends Seeder
             AnnouncementSeeder::class,
             QuestionSeeder::class,
             ImageSeeder::class,
-            EscortImageSeeder::class
+            EscortImageSeeder::class,
+            AnnouncementImageSeeder::class
         ]);
     }
 }

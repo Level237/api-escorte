@@ -4,6 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use App\Models\Announcement;
+use App\Models\Image;
 
 return new class extends Migration
 {
@@ -12,13 +13,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('announcement_images', function (Blueprint $table) {
+        Schema::create('announcement_image', function (Blueprint $table) {
             $table->id();
+
             $table->foreignIdFor(Announcement::class)
             ->constrained()
             ->restrictOnUpdate()
             ->restrictOnDelete();
-            $table->string('path');
+
+            $table->foreignIdFor(Image::class)
+                ->constrained()
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
             $table->timestamps();
         });
     }
@@ -28,6 +34,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('announcement_images');
+        Schema::dropIfExists('announcement_image');
     }
 };

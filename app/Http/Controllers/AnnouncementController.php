@@ -84,4 +84,10 @@ class AnnouncementController extends Controller
                   ->header('Content-Type', 'application/json');
         }
     }
+
+    public function displayAdsImage($id, $path)
+    {
+       return response()->download(storage_path('app\public\ads\\'.$id.'\\'. $path));
+
+    }
 }

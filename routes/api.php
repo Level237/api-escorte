@@ -64,6 +64,7 @@ Route::get('/list/weight',[ListWeightController::class,'list']);
 Route::get('/list/services',[ListServiceController::class,'list']);
 
 Route::get('/displayprofil/{id}/{path}',[EscortController::class,'displayProfil']);
+Route::get('/displayadsimage/{id}/{path}',[AnnouncementController::class,'displayAdsImage']);
 
 
 Route::get('/test', function(Request $request){
