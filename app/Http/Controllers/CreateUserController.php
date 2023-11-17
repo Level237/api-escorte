@@ -14,13 +14,13 @@ class CreateUserController extends Controller
 {
 
     public function createUser(UserRequest $request){
-       
+
 
         $recaptcha_response = $request->input('recaptcha');
-        
+
 
         if (is_null($recaptcha_response)) {
-    
+
              return response("{error:Please Complete the Recaptcha to proceed}", 400)
                   ->header('Content-Type', 'application/json');
         }
@@ -42,7 +42,7 @@ class CreateUserController extends Controller
            return response("{error:Please Complete the Recaptcha Again to proceed}", 400)
                   ->header('Content-Type', 'application/json');
 
-        } 
+        }
 
         $validatedData=$request->validated();
 
@@ -53,9 +53,9 @@ class CreateUserController extends Controller
         $user->role_id = $request->role_id;
         $user->phone_number = $request->phone_number;
         $user->password = Hash::make($request->password);
-    
+
         if($user->save()){
-           
+
              return response($user, 200)
                   ->header('Content-Type', 'application/json');
         }

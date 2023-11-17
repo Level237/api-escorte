@@ -13,6 +13,7 @@ use App\Http\Controllers\CreateUserController;
 use App\Http\Controllers\VerifyCodeController;
 use App\Http\Controllers\NewPasswordController;
 use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\Api\Admin\NewUserController;
 use App\Http\Controllers\Api\auth\LoginController;
 use App\Http\Controllers\Escorts\EscortController;
 use App\Http\Controllers\Api\User\LogoutController;
@@ -134,6 +135,7 @@ Route::middleware(['auth:api','scopes:admin'])->prefix('v1')->group(function(){
     Route::get('roles',[ListRoleController::class,'listRole']);
     Route::post('suspend/user/{id}',[SuspendAccountController::class,'ban']);
     Route::post('activate/user/{id}',[ActivateAccountController::class,'activate']);
+    Route::post('user/new',[NewUserController::class,'newUser']);
 });
 
 //routes escort
