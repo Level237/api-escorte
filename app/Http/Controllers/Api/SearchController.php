@@ -18,6 +18,7 @@ class SearchController extends Controller
                 ->select('escorts.id','escorts.escort_name','ethnics.ethnic_name','skin_colors.skin_color_name','shapes.shape_name','quarters.quarter_name','escorts.description')
                 ->orWhere('escorts.escort_name','like',"%$term%")
                 ->orWhere('escorts.description','like',"%$term%")
+                ->orWhere('shapes.shape_name','like',"%$term%")
                 ->orWhere('ethnics.ethnic_name','like',"%$term%")
                 ->orWhere('skin_colors.skin_color_name','like',"%$term%")
                 ->orWhere('quarters.quarter_name','like',"%$term%")
