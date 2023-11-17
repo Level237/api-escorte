@@ -69,4 +69,24 @@ class CreateAdsController extends Controller
                   ->header('Content-Type', 'application/json');
         }
     }
+
+    public function update(Request $request){
+
+        $ad = Announcement::findOrFail($request->id);
+        if(!$ad)
+            return response('Ads not found', 400)
+                  ->header('Content-Type', 'application/json');
+        else{
+
+            $ad->announcement_category_id = $request->category_id;
+            $ad->accepted= $request->accepted;
+            $ad->location = $request->location;
+            $ad->title = $request->title;
+            $ad->description = $request->description;
+            $ad->save();
+             return response($ad, 200)
+                  ->header('Content-Type', 'application/json');
+        }
+          
+    }
 }
