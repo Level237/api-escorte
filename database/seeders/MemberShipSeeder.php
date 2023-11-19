@@ -44,7 +44,7 @@ class MemberShipSeeder extends Seeder
               [
                 'membership_name'=>'Extra-vip',
                 'period'=>'90',
-                'price' => '10.000',
+                'price' => '10000',
                 'credit_id'=>3,
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
