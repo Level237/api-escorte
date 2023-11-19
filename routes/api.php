@@ -18,6 +18,7 @@ use App\Http\Controllers\Api\auth\LoginController;
 use App\Http\Controllers\Escorts\EscortController;
 use App\Http\Controllers\Api\User\LogoutController;
 use App\Http\Controllers\Api\Ads\CreateAdsController;
+use App\Http\Controllers\Api\Ads\DeleteAdsController;
 use App\Http\Controllers\Api\List\ListSkinController;
 use App\Http\Controllers\Api\List\ListTownController;
 use App\Http\Controllers\Api\List\ListShapeController;
@@ -92,6 +93,8 @@ Route::apiResource('/announces', AnnouncementController::class);
 Route::get('/userAds/{id}', [AnnouncementController::class,'AdsByUser']);
 Route::get('/adstown/{id}', [AnnouncementController::class,'getAdsByTown']);
 Route::post('/ads', [CreateAdsController::class, 'createAds']);
+Route::delete('/ads/{id}', [DeleteAdsController::class, 'delete']);
+Route::post('/ads/update', [CreateAdsController::class, 'update']);
 Route::post('/ads/image', [CreateImageAdsController::class, 'createImages']);
 Route::get('/announcementsTown',[AnnouncementController::class, 'getAnnouncesByTown']);
 // Route::get('/announcementsTown',function(){

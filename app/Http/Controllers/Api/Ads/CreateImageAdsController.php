@@ -32,13 +32,13 @@ class CreateImageAdsController extends Controller
             $image->storeAs('public/ads/'.$request->ads_id, $fileName);
 
             //Add image to database (product_images table)
-            $adsImage = new \App\Models\AnnouncementImage;
-            $adsImage->path = $fileName;
-            $adsImage->announcement_id = $request->ads_id;
-            $adsImage->save();
+            $image = new \App\Models\Image;
+            $image->path = $fileName;
+            $image->save();
+            $image->ads()->attach($request->ads_id);
 
 
-            return response('{success : Image received}', 200)
+            return response($image, 200)
                   ->header('Content-Type', 'application/json');
          
     }

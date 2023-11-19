@@ -15,7 +15,7 @@ class Image extends Model
         return $this->belongsToMany(Escort::class);
     }
 
-    public function ads():BelongsToMany{
+    public function ads(){
         return $this->belongsToMany(Announcement::class);
     }
 }
