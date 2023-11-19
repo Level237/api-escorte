@@ -26,4 +26,8 @@ class SearchController extends Controller
 
                 return response()->json(['result'=> $results],200);
     }
+
+    public function resultAdsCount($term){
+
+    }
 }
