@@ -2,6 +2,7 @@
 
 use App\Models\Credit;
 use App\Models\Payment;
+use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -20,6 +21,10 @@ return new class extends Migration
                 ->cascadeOnUpdate()
                 ->cascadeOnDelete();
             $table->foreignIdFor(Credit::class)
+                ->constrained()
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
+                $table->foreignIdFor(User::class)
                 ->constrained()
                 ->cascadeOnUpdate()
                 ->cascadeOnDelete();

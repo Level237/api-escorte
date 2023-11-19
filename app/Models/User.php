@@ -29,7 +29,8 @@ class User extends Authenticatable
         'phone_number',
         'role_id',
         'password',
-        'suspended_at'
+        'suspended_at',
+        'balance'
     ];
 
     /**

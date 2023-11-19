@@ -61,6 +61,6 @@ class CreditSeeder extends Seeder
         ];
 
         //Storing Data
-        DB::table('memberships')->insert($data);
+        DB::table('credits')->insert($data);
     }
 }

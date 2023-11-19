@@ -31,6 +31,7 @@ class DatabaseSeeder extends Seeder
         $this->command->info('client table seeded!');
          $this->call([
             RoleSeeder::class,
+            CreditSeeder::class,
             UserSeeder::class,
             ServiceSeeder::class,
             MemberShipSeeder::class,
