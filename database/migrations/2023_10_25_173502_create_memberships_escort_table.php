@@ -24,7 +24,9 @@ return new class extends Migration
             ->constrained()
             ->restrictOnUpdate()
             ->restrictOnDelete();
-            $table->timestamp('expire_at')->nullable();
+            $table->string('remaining_Credits');
+            $table->timestamp('expire_at');
+            $table->boolean('status');
             $table->timestamps();
         });
     }
