@@ -42,4 +42,19 @@ class CreateImageAdsController extends Controller
                   ->header('Content-Type', 'application/json');
          
     }
+
+     public function delete($id){
+
+        $image = Image::findOrFail($id);
+        if(!$image)
+            return response('Image not found', 400)
+                  ->header('Content-Type', 'application/json');
+        else{
+            $image->delete();
+             return response("Image delete successfully", 200)
+                  ->header('Content-Type', 'application/json');
+        }
+       
+      
+    }
 }
