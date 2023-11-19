@@ -26,6 +26,8 @@ return new class extends Migration
             $table->string('password');
             $table->boolean('isSecure')->default(0);
             $table->rememberToken();
+            $table->string('credits_number')->default(0);
+            $table->string('remaining_Credits')->nullable();
             $table->timestamp('suspended_at')->nullable();
             $table->timestamps();
         });
