@@ -14,7 +14,7 @@ class MakePayment
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public $data;
+    public $data=[];
     /**
      * Create a new event instance.
      */

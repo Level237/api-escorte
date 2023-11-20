@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Api\User;
 
-use App\Events\MakePayment;
+use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Credit;
 use App\Models\Membership;
+use App\Events\MakePayment;
 use Illuminate\Http\Request;
 use App\Models\Memberships_user;
 use Illuminate\Support\Facades\DB;
@@ -30,11 +31,19 @@ class SubscribeWithCreditController extends Controller
                     'payment_type'=>"credits",
                     'credits_number'=>$credit->credit
                 ];
-                event(new MakePayment($data));
+                $payment=event(new MakePayment($data));
+                $currentDateTime = Carbon::now();
+                $newDateTime = Carbon::now()->addDay(30);
+                $newDateTime->setTimezone('Africa/Douala');
                 DB::table('memberships_users')->insert([
                     'user_id'=>$user->id,
                     'membership_id'=>$memberShip_id,
+                    'payment_id'=>$payment[0]->id,
+                    'expire_at'=>$newDateTime,
+                    'status'=>1
                 ]);
+
+                return response()->json(["code"=>200,"message"=>"Soubscription au forfait $memberShip->membership_name avec success.","balance"=>"Solde restant $creditUser pièce(s)"]);
 
             }
         }
