@@ -1,10 +1,11 @@
 <?php
 
-use App\Models\Escort;
+use App\Models\User;
+use App\Models\Payment;
 use App\Models\Membership;
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -13,10 +14,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::disableForeignKeyConstraints();
-        Schema::create('memberships_escort', function (Blueprint $table) {
+        Schema::create('memberships_users', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Escort::class)
+            $table->foreignIdFor(User::class)
             ->constrained()
             ->restrictOnUpdate()
             ->restrictOnDelete();
@@ -24,7 +24,12 @@ return new class extends Migration
             ->constrained()
             ->restrictOnUpdate()
             ->restrictOnDelete();
-            $table->timestamp('expire_at')->nullable();
+            $table->foreignIdFor(Payment::class)
+            ->constrained()
+            ->restrictOnUpdate()
+            ->restrictOnDelete();
+            $table->timestamp('expire_at');
+            $table->boolean('status');
             $table->timestamps();
         });
     }
@@ -34,6 +39,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('memberships_escort');
+        Schema::dropIfExists('memberships_users');
     }
 };
