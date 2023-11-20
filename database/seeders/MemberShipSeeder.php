@@ -24,7 +24,7 @@ class MemberShipSeeder extends Seeder
          //Data to store
         $data = [
             [
-                'membership_name'=>'Premium',
+                'membership_name'=>'PREMIUM',
                 'period'=>'30',
                 'price' => '3000',
                 'credit_id'=>1,
@@ -34,7 +34,7 @@ class MemberShipSeeder extends Seeder
 
               [
                 'membership_name'=>'GOLD',
-                'period'=>'90',
+                'period'=>'30',
                 'price' => '5000',
                 'credit_id'=>2,
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
@@ -42,8 +42,8 @@ class MemberShipSeeder extends Seeder
             ],
 
               [
-                'membership_name'=>'Extra-vip',
-                'period'=>'90',
+                'membership_name'=>'ULTRA VIP',
+                'period'=>'30',
                 'price' => '10000',
                 'credit_id'=>3,
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
