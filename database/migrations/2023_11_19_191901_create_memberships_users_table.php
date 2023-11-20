@@ -29,7 +29,7 @@ return new class extends Migration
             ->restrictOnUpdate()
             ->restrictOnDelete();
             $table->timestamp('expire_at');
-            $table->boolean('status');
+            $table->boolean('status')->default(0);
             $table->timestamps();
         });
     }

@@ -43,6 +43,7 @@ use App\Http\Controllers\Api\List\ListUserController;
 use App\Http\Controllers\Api\SearchController;
 use App\Http\Controllers\Api\User\ActivateAccountController;
 use App\Http\Controllers\Api\User\ChangePasswordController;
+use App\Http\Controllers\Api\User\SubscribeWithCreditController;
 use App\Http\Controllers\Api\User\SuspendAccountController;
 
 /*
@@ -127,7 +128,7 @@ Route::post('/login',[LoginController::class,'login']);
 Route::middleware(['auth:api','ban'])->prefix('v1')->group(function(){
     Route::get('/currentUser',[CurrentUserController::class,'currentUser']);
     Route::post('/choice/questions',[ChoiceQuestionController::class,'choice']);
-
+    Route::post('subscribe/withCredit/{id}',[SubscribeWithCreditController::class,'subscribe']);
     Route::post('/logout',[LogoutController::class,'logout']);
 });
 
