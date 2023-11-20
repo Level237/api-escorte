@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories\escort;
+namespace App\Repositories\Escort;
 
 use App\Models\Escort;
 

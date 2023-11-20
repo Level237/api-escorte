@@ -1,8 +1,8 @@
 <?php
 namespace App\services\escort;
 
-use App\Repositories\escort\AddProfileRepository;
-use App\Repositories\escort\AddServicesRepository;
+use App\Repositories\Escort\AddProfileRepository;
+use App\Repositories\Escort\AddServicesRepository;
 use Illuminate\Support\Facades\Auth;
 
 class ProfileCompleteService{

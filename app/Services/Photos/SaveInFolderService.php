@@ -1,6 +1,6 @@
 <?php
 
-namespace App\services\Photos;
+namespace App\Services\Photos;
 
 
 
