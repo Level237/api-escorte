@@ -18,10 +18,6 @@ return new class extends Migration
             $table->string('membership_name')->unique();
             $table->string("period");
              $table->string("price");
-             $table->foreignIdFor(Credit::class)
-            ->constrained()
-            ->restrictOnUpdate()
-            ->restrictOnDelete();
             $table->timestamps();
         });
     }
