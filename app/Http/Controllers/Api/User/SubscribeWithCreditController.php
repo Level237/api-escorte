@@ -18,21 +18,21 @@ class SubscribeWithCreditController extends Controller
     public function subscribe($memberShip_id){
         $user=User::find(Auth::guard('api')->user()->id);
         $memberShip=Membership::find($memberShip_id);
-        $credit=Credit::find($memberShip->credit_id);
+        //$credit=Credit::find($memberShip->credit_id);
 
-        if($user->balance < $credit->credit){
+        if($user->balance < $memberShip->price){
             return response()->json(['code'=>500,'message'=>"votre nombre de crédit est insuffisant pour souscrire à cet abonnement"],500);
         }else{
-            $creditUser=$user->balance-$credit->credit;
+            $creditUser=$user->balance-$memberShip->price;
             $user->balance=$creditUser;
 
             if($user->save()){
                 $data=[
                     'payment_type'=>"credits",
-                    'credits_number'=>$credit->credit
+                    'price'=>$memberShip->price
                 ];
                 $payment=event(new MakePayment($data));
-                $currentDateTime = Carbon::now();
+                //$currentDateTime = Carbon::now();
                 $newDateTime = Carbon::now()->addDay(30);
                 $newDateTime->setTimezone('Africa/Douala');
                 DB::table('memberships_users')->insert([
