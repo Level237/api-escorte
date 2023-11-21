@@ -45,6 +45,7 @@ use App\Http\Controllers\Api\User\ActivateAccountController;
 use App\Http\Controllers\Api\User\ChangePasswordController;
 use App\Http\Controllers\Api\User\SubscribeWithCreditController;
 use App\Http\Controllers\Api\User\SuspendAccountController;
+use App\Http\Controllers\Api\Membership\MemberShipController;
 
 /*
 |--------------------------------------------------------------------------
@@ -88,6 +89,10 @@ Route::prefix('search')->group(function(){
 
 // ESCORTS GROUP ROUTES
 Route::apiResource('/escorts', EscortController::class);
+
+// MEMBERSHIP GROUP ROUTES
+Route::apiResource('/memberships', MemberShipController::class);
+
 
 // ANNOUNCEMENT GROUP ROUTES
 Route::apiResource('/announces', AnnouncementController::class);
