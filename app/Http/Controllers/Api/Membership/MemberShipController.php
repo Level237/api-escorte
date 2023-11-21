@@ -17,6 +17,7 @@ class MemberShipController extends Controller
 
     public function show($id)
     {
-        return MemberShipResource::collection(Membership::find($id));
+        $memberShip=Membership::find($id);
+        return $memberShip;
     }
 }
