@@ -30,7 +30,7 @@ return new class extends Migration
             ->constrained()
             ->restrictOnUpdate()
             ->restrictOnDelete();
-            $table->boolean('status')->default('0');
+            $table->boolean('status')->default(1);
             $table->boolean('isSubscribe')->default(0);
             $table->string('title');
             $table->string('description');
