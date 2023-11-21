@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Announcement;
 use App\Models\User;
 use App\Models\Payment;
 use App\Models\Membership;
@@ -25,6 +26,10 @@ return new class extends Migration
             ->restrictOnUpdate()
             ->restrictOnDelete();
             $table->foreignIdFor(Payment::class)
+            ->constrained()
+            ->restrictOnUpdate()
+            ->restrictOnDelete();
+            $table->foreignIdFor(Announcement::class)
             ->constrained()
             ->restrictOnUpdate()
             ->restrictOnDelete();

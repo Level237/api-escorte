@@ -30,12 +30,13 @@ return new class extends Migration
             ->constrained()
             ->restrictOnUpdate()
             ->restrictOnDelete();
-            $table->boolean('status')->default('0');
+            $table->boolean('status')->default(1);
+            $table->boolean('isSubscribe')->default(0);
             $table->string('title');
             $table->string('description');
             $table->string('accepted')->default('Hommes');
             $table->string('location')->default('Reçoit ou se déplace');
-           
+
             $table->timestamps();
         });
     }

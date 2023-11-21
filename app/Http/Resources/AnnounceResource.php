@@ -22,6 +22,7 @@ class AnnounceResource extends JsonResource
             'quarter' => $this->user->Escort[0]->quarter,
             'ethnie' => $this->user->Escort[0]->ethnic,
             'status' => $this->status,
+            'isSubscribe'=>$this->isSubscribe,
             'title' => $this->title,
             'description' => $this->description,
             'accepted' => $this->accepted,
