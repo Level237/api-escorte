@@ -44,6 +44,9 @@ class SubscribeWithCreditController extends Controller
                     //$currentDateTime = Carbon::now();
                     $newDateTime = Carbon::now()->addDay(30);
                     $newDateTime->setTimezone('Africa/Douala');
+                    $announcement->status=1;
+                    $announcement->isSubscribe=1;
+                    $announcement->save();
                     DB::table('memberships_users')->insert([
                         'user_id'=>$user->id,
                         'membership_id'=>$memberShip_id,
