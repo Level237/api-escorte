@@ -19,8 +19,10 @@ class MyPurchaseResource extends JsonResource
         return [
             'id'=>$this->id,
             'user_id'=>$this->user_id,
-            'payment'=>$this->payment,
-            'membership_type'=>$this->membership,
+            'payment_type'=>$this->payment->payment_type,
+            'membership_type'=>$this->membership->membership_name,
+            'membership_id'=>$this->membership->id,
+            'membership_price'=>$this->membership->price,
             'announce_id'=>$this->announcement->id,
             'announce_title'=>$this->announcement->title,
             'expire_at'=> Carbon::parse($this->expire_at)->format('d-m-Y H:i'),
