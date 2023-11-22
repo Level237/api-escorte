@@ -14,4 +14,6 @@ class Payment extends Model
         'credits_number',
         'price'
     ];
+
+
 }

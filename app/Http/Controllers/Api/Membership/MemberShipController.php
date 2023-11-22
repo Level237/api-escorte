@@ -45,6 +45,5 @@ class MemberShipController extends Controller
         $membership->delete();
         return response(null, 204);
     }
-
    
 }

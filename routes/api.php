@@ -46,6 +46,7 @@ use App\Http\Controllers\Api\User\ChangePasswordController;
 use App\Http\Controllers\Api\User\SubscribeWithCreditController;
 use App\Http\Controllers\Api\User\SuspendAccountController;
 use App\Http\Controllers\Api\Membership\MemberShipController;
+use App\Http\Controllers\Api\User\MyPurchaseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -92,7 +93,7 @@ Route::apiResource('/escorts', EscortController::class);
 
 // MEMBERSHIP GROUP ROUTES
 Route::apiResource('/memberships', MemberShipController::class);
-
+Route::get('/membership/{id}',[MemberShipController::class,'show']);
 
 // ANNOUNCEMENT GROUP ROUTES
 Route::apiResource('/announces', AnnouncementController::class);
@@ -135,6 +136,7 @@ Route::middleware(['auth:api','ban'])->prefix('v1')->group(function(){
     Route::post('/choice/questions',[ChoiceQuestionController::class,'choice']);
     Route::post('subscribe/withCredit/{id}/{announcement_id}',[SubscribeWithCreditController::class,'subscribe']);
     Route::post('/logout',[LogoutController::class,'logout']);
+    Route::get('purchases/user',[MyPurchaseController::class,'myPurchase']);
 });
 
 //route admin
