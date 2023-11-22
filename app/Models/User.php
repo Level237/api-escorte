@@ -83,7 +83,7 @@ class User extends Authenticatable
         return $this->belongsToMany(Question::class)->withPivot('answer');;
     }
 
-    public function purchaseMembership():BelongsTo{
-        return $this->belongsTo(Memberships_user::class);
+    public function purchaseMembership():HasMany{
+        return $this->hasMany(Memberships_user::class);
     }
 }

@@ -9,6 +9,7 @@ use App\Models\Announcement;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Memberships_user extends Model
 {
@@ -22,17 +23,19 @@ class Memberships_user extends Model
         'status'
     ];
 
-    public function memberships():HasMany{
-        return $this->hasMany(Membership::class);
+    protected $dates = ['expire_at'];
+
+    public function membership():BelongsTo{
+        return $this->belongsTo(Membership::class);
     }
-    public function payments():HasMany{
-        return $this->hasMany(Payment::class);
+    public function payment():BelongsTo{
+        return $this->belongsTo(Payment::class);
     }
-    public function announcements():HasMany{
-        return $this->hasMany(Announcement::class);
+    public function announcement():BelongsTo{
+        return $this->belongsTo(Announcement::class);
     }
 
-    public function users():HasMany{
-        return $this->hasMany(User::class);
+    public function user():BelongsTo{
+        return $this->belongsTo(User::class);
     }
 }
