@@ -36,7 +36,6 @@ class DatabaseSeeder extends Seeder
             ServiceSeeder::class,
             MemberShipSeeder::class,
             SkinColorSeeder::class,
-            EthnicSeeder::class,
             BodyShapeSeeder::class,
             Weightseeder::class,
             Heightseeder::class,

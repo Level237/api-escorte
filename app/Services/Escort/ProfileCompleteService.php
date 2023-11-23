@@ -9,20 +9,15 @@ class ProfileCompleteService{
 
     public function addProfile($request){
 
-
-
-        $photo=$request->file('photo');
-        $pathImage="profile/".$photo->getClientOriginalName();
         $data=[
             "escort_name"=>$request->escort_name,
             'whatsapp_number'=>$request->whatsapp_number,
             'sexuality'=>$request->sexuality,
             'quarter_id'=>$request->quarter_id,
             'user_id'=>Auth::guard('api')->user()->id,
-            'photo'=>$pathImage,
+            'photo'=>'set to null',
             "age"=>$request->age,
             'shape_id'=>$request->shape_id,
-            "ethnic_id"=>$request->ethnic_id,
             "description"=>$request->description,
             "height_id"=>$request->height_id,
             "weight_id"=>$request->weight_id,
@@ -34,7 +29,7 @@ class ProfileCompleteService{
         if(isset($request->email) && Auth::guard('api')->user()->email ==null){
             Auth::guard('api')->user()->email=$request->email;
         }
-        $addProfileRepository=(new AddProfileRepository())->addProfile($data,$photo);
+        $addProfileRepository=(new AddProfileRepository())->addProfile($data);
         if(isset($addProfileRepository)&& $request->services){
 
             $newServices=(new AddServicesRepository())->addServices($request->services,$addProfileRepository);

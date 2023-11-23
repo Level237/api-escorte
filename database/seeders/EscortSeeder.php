@@ -23,7 +23,6 @@ class EscortSeeder extends Seeder
                 "height_id"=>1,
                 "weight_id"=>2,
                 "escort_name"=>"Ta Baiseuse de luxe",
-                'ethnic_id'=>2,
                 'shape_id'=>1,
                 'whatsapp_number'=>'693103785',
                 'age'=>'20',
@@ -42,7 +41,6 @@ class EscortSeeder extends Seeder
                 "escort_name"=>"lèche Vagin automatique",
                 "height_id"=>1,
                 "weight_id"=>2,
-                'ethnic_id'=>2,
                 'shape_id'=>2,
                 'whatsapp_number'=>'698034224',
                 'age'=>'28',
@@ -61,7 +59,6 @@ class EscortSeeder extends Seeder
                 "height_id"=>1,
                 "weight_id"=>2,
                 "escort_name"=>"Pipe woman",
-                'ethnic_id'=>2,
                 'shape_id'=>3,
                 'whatsapp_number'=>'697434224',
                 'age'=>'19',
@@ -80,7 +77,6 @@ class EscortSeeder extends Seeder
                 "height_id"=>1,
                 "weight_id"=>2,
                 "escort_name"=>"mignon cul",
-                'ethnic_id'=>2,
                 'shape_id'=>1,
                 'whatsapp_number'=>'697256314',
                 'age'=>'20',
@@ -99,7 +95,6 @@ class EscortSeeder extends Seeder
                 "height_id"=>1,
                 "weight_id"=>2,
                 "escort_name"=>"Ta Saloppe de luxe",
-                'ethnic_id'=>2,
                 'shape_id'=>1,
                 'whatsapp_number'=>'657434226',
                 'age'=>'17',
@@ -114,7 +109,6 @@ class EscortSeeder extends Seeder
             ],
             [
                 'user_id' => 10,
-                'ethnic_id'=>2,
                 "height_id"=>1,
                 "weight_id"=>2,
                 "skin_color_id"=>1,
@@ -133,7 +127,6 @@ class EscortSeeder extends Seeder
             ],
             [
                 'user_id' => 11,
-                'ethnic_id'=>2,
                 "height_id"=>1,
                 "weight_id"=>2,
                 "skin_color_id"=>1,
@@ -156,7 +149,6 @@ class EscortSeeder extends Seeder
                 "weight_id"=>2,
                 "skin_color_id"=>1,
                 "escort_name"=>"Mignone Chatte",
-                'ethnic_id'=>2,
                 'shape_id'=>1,
                 'whatsapp_number'=>'651253696',
                 'age'=>'19',
@@ -172,7 +164,6 @@ class EscortSeeder extends Seeder
             [
                 'user_id' => 13,
                 "skin_color_id"=>1,
-                'ethnic_id'=>2,
                 "height_id"=>1,
                 "weight_id"=>2,
                 'shape_id'=>1,
@@ -191,7 +182,6 @@ class EscortSeeder extends Seeder
             [
                 'user_id' => 14,
                 "skin_color_id"=>1,
-                'ethnic_id'=>2,
                 "height_id"=>1,
                 "weight_id"=>2,
                 'shape_id'=>3,
@@ -212,7 +202,6 @@ class EscortSeeder extends Seeder
                 "skin_color_id"=>1,
                 "height_id"=>1,
                 "weight_id"=>2,
-                'ethnic_id'=>2,
                 'shape_id'=>2,
                 'whatsapp_number'=>'657968521',
                 "escort_name"=>"mangeuse de piment",
@@ -229,7 +218,6 @@ class EscortSeeder extends Seeder
             [
                 'user_id' => 16,
                 "skin_color_id"=>1,
-                'ethnic_id'=>2,
                 "height_id"=>1,
                 "weight_id"=>2,
                 'shape_id'=>1,
@@ -247,7 +235,6 @@ class EscortSeeder extends Seeder
             ],
             [
                 'user_id' => 17,
-                'ethnic_id'=>2,
                 "skin_color_id"=>1,
                 "height_id"=>1,
                 "weight_id"=>2,
@@ -266,7 +253,6 @@ class EscortSeeder extends Seeder
             ],
             [
                 'user_id' => 18,
-                'ethnic_id'=>1,
                 "height_id"=>1,
                 "weight_id"=>2,
                 "skin_color_id"=>1,
@@ -285,7 +271,6 @@ class EscortSeeder extends Seeder
             ],
             [
                 'user_id' => 19,
-                'ethnic_id'=>5,
                 "skin_color_id"=>2,
                 "height_id"=>1,
                 "weight_id"=>2,
@@ -304,7 +289,6 @@ class EscortSeeder extends Seeder
             ],
             [
                 'user_id' => 20,
-                'ethnic_id'=>4,
                 "height_id"=>1,
                 "weight_id"=>2,
                 "skin_color_id"=>1,
@@ -323,7 +307,6 @@ class EscortSeeder extends Seeder
             ],
             [
                 'user_id' => 21,
-                'ethnic_id'=>3,
                 "height_id"=>1,
                 "weight_id"=>2,
                 "skin_color_id"=>1,

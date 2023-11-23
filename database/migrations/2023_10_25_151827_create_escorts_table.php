@@ -37,10 +37,6 @@ return new class extends Migration
             ->constrained()
             ->restrictOnUpdate()
             ->restrictOnDelete();
-            $table->foreignIdFor(Ethnic::class)
-            ->constrained()
-            ->restrictOnUpdate()
-            ->restrictOnDelete();
             $table->boolean('isCompleted');
             $table->foreignIdFor(Shape::class)
             ->constrained()
