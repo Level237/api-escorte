@@ -27,7 +27,6 @@ class EscortResource extends JsonResource
             'quarter' => $this->quarter->quarter_name,
             'town' => $this->quarter->town->town_name,
             'shape' => $this->shape->shape_name,
-            'ethnic' => $this->ethnic->ethnic_name,
             'height' => $this->height->height_name,
             'weight' => $this->weight->weight_name,
             'skin_color' => $this->skin_color->skin_color_name,

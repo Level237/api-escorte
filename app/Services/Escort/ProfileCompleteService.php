@@ -18,7 +18,6 @@ class ProfileCompleteService{
             'photo'=>'set to null',
             "age"=>$request->age,
             'shape_id'=>$request->shape_id,
-            "ethnic_id"=>$request->ethnic_id,
             "description"=>$request->description,
             "height_id"=>$request->height_id,
             "weight_id"=>$request->weight_id,
