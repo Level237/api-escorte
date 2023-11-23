@@ -30,6 +30,7 @@ use App\Http\Controllers\Api\User\CurrentUserController;
 use App\Http\Controllers\Api\List\ListQuestionController;
 use App\Http\Controllers\Api\User\VerifyAnswerController;
 use App\Http\Controllers\Api\Ads\CreateImageAdsController;
+use App\Http\Controllers\Api\Escort\CreateImageEscortController;
 use App\Http\Controllers\Api\User\ChoiceQuestionController;
 use App\Http\Controllers\Api\User\VerifyQuestionController;
 use App\Http\Controllers\Api\List\ListAdsCategoryController;
@@ -152,12 +153,14 @@ Route::middleware(['auth:api','scopes:admin'])->prefix('v1')->group(function(){
 });
 
 //routes escort
+Route::post('/escort/image', [CreateImageEscortController::class, 'createImages']);
 Route::middleware(['auth:api','scopes:escort','ban'])->prefix('v1')->group(function(){
 
     Route::post('/addProfile',[ProfileCompleteController::class,'addProfile']);
     Route::post('/attach/services',[AttachEscortServiceController::class,'attach']);
     Route::get('/CompleteOrNot',[EscortIsCompletedOrNotController::class,"isCompletedOrNot"]);
     Route::get('/getEscort',[GetEscortController::class,'getEscort']);
+
 });
 
 
