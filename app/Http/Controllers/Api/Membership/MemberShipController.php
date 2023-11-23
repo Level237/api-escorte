@@ -14,8 +14,9 @@ class MemberShipController extends Controller
         return MemberShipResource::collection(Membership::all());
     }
 
-    public function show(Membership $membership){
-        return new MemberShipResource($membership);
+    public function show($id){
+        $membership=Membership::where('id',$id)->first();
+        return $membership;
     }
 
     public function store(MemberShipRequest $request){
@@ -45,5 +46,5 @@ class MemberShipController extends Controller
         $membership->delete();
         return response(null, 204);
     }
-   
+
 }
