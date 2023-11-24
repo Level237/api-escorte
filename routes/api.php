@@ -138,6 +138,7 @@ Route::middleware(['auth:api','ban'])->prefix('v1')->group(function(){
     Route::post('subscribe/withCredit/{id}/{announcement_id}',[SubscribeWithCreditController::class,'subscribe']);
     Route::post('/logout',[LogoutController::class,'logout']);
     Route::get('purchases/user',[MyPurchaseController::class,'myPurchase']);
+    Route::post('init/payment',[MyPurchaseController::class,'initPaymentMomo']);
 });
 
 //route admin

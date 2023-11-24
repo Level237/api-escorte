@@ -252,7 +252,7 @@ class UserSeeder extends Seeder
                 'password' => Hash::make('password'),
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+              'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
               [
                 'username'=>'patrick',
