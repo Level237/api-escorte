@@ -1,8 +1,7 @@
 <?php
 
 namespace App\Models;
-use Spatie\Searchable\Searchable;
-use Spatie\Searchable\SearchResult;
+
 
 use App\Models\User;
 
@@ -20,6 +19,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
 
 class Escort extends Model implements Searchable
 {

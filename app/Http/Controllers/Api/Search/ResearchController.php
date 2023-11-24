@@ -15,10 +15,11 @@ class ResearchController extends Controller
     public function search($term){
 
       $searchResults = (new Search())
+        ->registerModel(Announcement::class, 'title')
         ->registerModel(Escort::class, 'escort_name', 'sexuality')
         ->registerModel(Town::class, 'town_name')
         ->registerModel(Quarter::class, 'quarter_name')
-         ->registerModel(Announcement::class, 'title')
+         
         ->search($term);
 
        return response($searchResults, 200)
