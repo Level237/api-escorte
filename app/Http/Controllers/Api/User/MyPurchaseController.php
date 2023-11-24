@@ -41,4 +41,20 @@ class MyPurchaseController extends Controller
 
         return json_decode($response);
     }
+
+    public function verify($token){
+
+
+        $response=Http::acceptJson()->withBody(
+            json_encode(
+                [
+                    "apikey"=> "108089145655d2b949d7a99.42080516",
+                    "site_id"=>"5866009",
+                  "token"=>$token
+                  ]),'application/json')->post('https://api-checkout.cinetpay.com/v2/payment/check',[
+
+        ]);
+
+        return json_decode($response);
+    }
 }

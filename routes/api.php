@@ -141,6 +141,7 @@ Route::middleware(['auth:api','ban'])->prefix('v1')->group(function(){
     Route::post('/logout',[LogoutController::class,'logout']);
     Route::get('purchases/user',[MyPurchaseController::class,'myPurchase']);
     Route::post('init/payment',[MyPurchaseController::class,'initPaymentMomo']);
+    Route::post('verify/payment/{token}',[MyPurchaseController::class,'verify']);
 });
 
 //route admin
