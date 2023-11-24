@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Models;
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
 
 use App\Models\User;
 
@@ -19,7 +21,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-class Escort extends Model
+class Escort extends Model implements Searchable
 {
     use HasFactory;
 
@@ -82,4 +84,15 @@ class Escort extends Model
     public function skin_color():BelongsTo{
         return $this->belongsTo(Skin_color::class);
     }
+
+    public function getSearchResult(): SearchResult
+     {
+        $url = route('escorts.show', $this->id);
+     
+         return new \Spatie\Searchable\SearchResult(
+            $this,
+            $this->escort_name,
+            $url
+         );
+     }
 }
