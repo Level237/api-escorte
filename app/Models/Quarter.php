@@ -7,8 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
 
-class Quarter extends Model
+class Quarter extends Model implements Searchable
 {
     use HasFactory;
 
@@ -26,5 +28,21 @@ class Quarter extends Model
 
     public function escorts():HasMany{
         return $this->hasMany(Escort::class);
+    }
+
+    public function result(){
+        $result = $this->quarter_name.'('.$this->escorts()->count().' Escorts)';
+        return $result;
+    }
+
+    public function getSearchResult(): SearchResult
+    {
+        $url = route('escorts.show', $this->id);
+     
+         return new \Spatie\Searchable\SearchResult(
+            $this,
+            $this->result(),
+            $url
+         );
     }
 }

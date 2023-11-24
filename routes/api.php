@@ -42,6 +42,7 @@ use App\Http\Controllers\Api\Escort\GetEscortController;
 use App\Http\Controllers\Api\List\ListRoleController;
 use App\Http\Controllers\Api\List\ListUserController;
 use App\Http\Controllers\Api\SearchController;
+use App\Http\Controllers\Api\Search\ResearchController;
 use App\Http\Controllers\Api\User\ActivateAccountController;
 use App\Http\Controllers\Api\User\ChangePasswordController;
 use App\Http\Controllers\Api\User\SubscribeWithCreditController;
@@ -85,6 +86,7 @@ Route::post('change/password',[ChangePasswordController::class,'resetPassword'])
 Route::prefix('search')->group(function(){
 
     Route::get('/count/escort/results/{term}',[SearchController::class,'resultEscortCount']);
+    Route::get('single/{term}',[ResearchController::class,'search']);
 
 });
 
