@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\User;
 
+use App\Events\EventCheckSubscription;
 use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Membership;
@@ -18,6 +19,8 @@ use App\Http\Resources\MyPurchaseResource;
 class MyPurchaseController extends Controller
 {
     public function myPurchase(){
+
+        event(new EventCheckSubscription());
         $myPurchase=MyPurchaseResource::collection(Memberships_user::where('user_id',Auth::guard('api')->user()->id)->get());
 
         return $myPurchase;
