@@ -20,7 +20,7 @@ class SubscribeWithCreditController extends Controller
         $user=User::find(Auth::guard('api')->user()->id);
         $memberShip=Membership::find($memberShip_id);
         $announcement=Announcement::where('id',$announcement_id)->where('user_id',$user->id)->first();
-        $memberShipUser=Memberships_user::where('announcement_id',$announcement_id)->first();
+        //$memberShipUser=Memberships_user::where('announcement_id',$announcement_id)->first();
 
         if($user->balance < $memberShip->price){
             return response()->json(['code'=>500,'message'=>"votre nombre de crédit est insuffisant pour souscrire à cet abonnement"],500);
