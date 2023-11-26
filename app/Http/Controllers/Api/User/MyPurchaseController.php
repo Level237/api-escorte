@@ -59,7 +59,7 @@ class MyPurchaseController extends Controller
 
 
             $data=[
-                'payment_type'=>"credits",
+                'payment_type'=>"MOBILE_MONEY",
                 'price'=>$memberShip->price
             ];
             $payment=event(new MakePayment($data));
