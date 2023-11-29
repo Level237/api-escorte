@@ -20,7 +20,7 @@ class EscortController extends Controller
 
     public function index()
     {
-        return EscortResource::collection(Escort::all());
+        return EscortResource::collection(Escort::orderBy('id', 'DESC')->get());
     }
 
     public function store(Request $request): JsonResponse 
