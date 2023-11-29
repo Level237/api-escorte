@@ -5,29 +5,29 @@ use App\Interfaces\AnnouncementInterface;
 use App\Models\Announcement;
 use Illuminate\Support\Facades\DB;
 
-class AnnouncementRepository implements AnnouncementInterface 
+class AnnouncementRepository implements AnnouncementInterface
 {
-    public function getAllAnnouncements() 
+    public function getAllAnnouncements()
     {
         return Annoucement::all();
     }
 
-    public function getAnnouncementById($AnnouncementId) 
+    public function getAnnouncementById($AnnouncementId)
     {
         return Announcement::findOrFail($AnnouncementId);
     }
 
-    public function deleteAnnouncement($AnnouncementId) 
+    public function deleteAnnouncement($AnnouncementId)
     {
         Annoucement::destroy($AnnouncementId);
     }
 
-    public function createAnnouncement(array $AnnouncementDetails) 
+    public function createAnnouncement(array $AnnouncementDetails)
     {
         return Announcement::create($AnnouncementDetails);
     }
 
-    public function updateAnnouncement($AnnouncementId, array $newDetails) 
+    public function updateAnnouncement($AnnouncementId, array $newDetails)
     {
         return Announcement::whereId($AnnouncementId)->update($newDetails);
     }
@@ -46,7 +46,9 @@ class AnnouncementRepository implements AnnouncementInterface
     {
         $data = DB::table('announcements')
          ->join('towns', 'towns.id', '=','announcements.town_id')
-                            ->select('town_id','town_name', DB::raw('count(*) as totalAnnounces'))
+         ->join('memberships_users','memberships_users.announcement_id','=','announcements.id')
+                            ->select('town_id','town_name','memberships_users.membership_id', DB::raw('count(*) as totalAnnounces'))
+
                             ->groupBy('town_name')
                             ->orderBy('totalAnnounces', 'DESC')
                             ->get();
@@ -58,8 +60,8 @@ class AnnouncementRepository implements AnnouncementInterface
 
         });
         return $data;
-                            
+
     }
 
-  
+
 }
