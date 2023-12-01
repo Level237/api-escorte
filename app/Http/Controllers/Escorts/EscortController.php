@@ -23,6 +23,14 @@ class EscortController extends Controller
         return EscortResource::collection(Escort::orderBy('id', 'DESC')->get());
     }
 
+    public function escortByQuarter($quarterID)
+    {
+        return EscortResource::collection(Escort::where('quarter_id', $quarterID)->get());
+    }
+
+
+
+
     public function store(Request $request): JsonResponse 
     {
         $EscortDetails = $request->only([
