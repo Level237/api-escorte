@@ -52,6 +52,7 @@ use App\Http\Controllers\Api\PurchaseCreditController;
 use App\Http\Controllers\Api\User\MyPurchaseController;
 
 use App\Http\Controllers\Api\Contact\ContactController;
+use App\Http\Controllers\Payment\PaymentCurrentUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -149,6 +150,7 @@ Route::middleware(['auth:api','ban'])->prefix('v1')->group(function(){
     Route::get('purchases/user',[MyPurchaseController::class,'myPurchase']);
     Route::post('init/payment',[MyPurchaseController::class,'initPaymentMomo']);
     Route::post('verify/payment/{memberShip_id}/{announcement_id}',[MyPurchaseController::class,'verify']);
+    Route::get('payment/user',[PaymentCurrentUserController::class,'list']);
 });
 
 //route admin
