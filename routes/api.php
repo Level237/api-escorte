@@ -94,6 +94,7 @@ Route::prefix('search')->group(function(){
 
 // ESCORTS GROUP ROUTES
 Route::apiResource('/escorts', EscortController::class);
+Route::get('escortByQuarter/{quarterID}', [EscortController::class,'escortByQuarter'] );
 
 // MEMBERSHIP GROUP ROUTES
 Route::apiResource('/memberships', MemberShipController::class);
