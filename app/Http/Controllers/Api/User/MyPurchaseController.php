@@ -63,7 +63,8 @@ class MyPurchaseController extends Controller
 
             $data=[
                 'payment_type'=>"MOBILE_MONEY",
-                'price'=>$memberShip->price
+                'price'=>$memberShip->price,
+                'user_id'=>Auth::guard('api')->user()->id
             ];
             $payment=event(new MakePayment($data));
             //$currentDateTime = Carbon::now();

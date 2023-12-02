@@ -16,7 +16,8 @@ class PurchaseCreditController extends Controller
         if($user->save()){
             $data=[
                 'payment_type'=>"credit",
-                'price'=>$price
+                'price'=>$price,
+                'user_id'=>Auth::guard('api')->user()->id
             ];
 
             event(new MakePayment($data));
