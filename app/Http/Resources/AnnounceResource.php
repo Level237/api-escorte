@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Models\Memberships_user;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -27,7 +28,7 @@ class AnnounceResource extends JsonResource
             'description' => $this->description,
             'accepted' => $this->accepted,
             'location' => $this->location,
-            'images' => $this->images
+            'images' => $this->images,
         ];
     }
 }
