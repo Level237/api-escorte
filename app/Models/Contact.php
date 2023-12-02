@@ -14,5 +14,6 @@ class Contact extends Model
         'phone',
         'subject',
         'message',
+        'status'
     ];
 }

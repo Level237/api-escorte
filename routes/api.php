@@ -52,6 +52,7 @@ use App\Http\Controllers\Api\PurchaseCreditController;
 use App\Http\Controllers\Api\User\MyPurchaseController;
 
 use App\Http\Controllers\Api\Contact\ContactController;
+use App\Http\Controllers\Api\Report\ReportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -118,7 +119,8 @@ Route::get('/announcementsTown',[AnnouncementController::class, 'getAnnouncesByT
 //     return 'API here';
 // });
 
-
+// REPORT GROUP ROUTES
+Route::apiResource('/reports', ReportController::class);
 
 
 Route::post('checkemail',[CheckEmailController::class,'Checkemail']);
