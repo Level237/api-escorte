@@ -48,6 +48,7 @@ use App\Http\Controllers\Api\User\ChangePasswordController;
 use App\Http\Controllers\Api\User\SubscribeWithCreditController;
 use App\Http\Controllers\Api\User\SuspendAccountController;
 use App\Http\Controllers\Api\Membership\MemberShipController;
+use App\Http\Controllers\Api\PurchaseCreditController;
 use App\Http\Controllers\Api\User\MyPurchaseController;
 
 /*
@@ -160,6 +161,7 @@ Route::middleware(['auth:api','scopes:admin'])->prefix('v1')->group(function(){
 Route::post('/escort/image', [CreateImageEscortController::class, 'createImages']);
 Route::middleware(['auth:api','scopes:escort','ban'])->prefix('v1')->group(function(){
 
+    Route::post('/purchaseCredit/{price}',[PurchaseCreditController::class,'purchaseCredit']);
     Route::post('/addProfile',[ProfileCompleteController::class,'addProfile']);
     Route::post('/attach/services',[AttachEscortServiceController::class,'attach']);
     Route::get('/CompleteOrNot',[EscortIsCompletedOrNotController::class,"isCompletedOrNot"]);
