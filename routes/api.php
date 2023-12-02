@@ -50,6 +50,8 @@ use App\Http\Controllers\Api\User\SuspendAccountController;
 use App\Http\Controllers\Api\Membership\MemberShipController;
 use App\Http\Controllers\Api\User\MyPurchaseController;
 
+use App\Http\Controllers\Api\Contact\ContactController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -98,6 +100,9 @@ Route::get('escortByQuarter/{quarterID}', [EscortController::class,'escortByQuar
 // MEMBERSHIP GROUP ROUTES
 Route::apiResource('/memberships', MemberShipController::class);
 Route::get('/membership/{id}',[MemberShipController::class,'show']);
+
+// CONTACT GROUP ROUTES
+Route::apiResource('/contact', ContactController::class);
 
 // ANNOUNCEMENT GROUP ROUTES
 Route::apiResource('/announces', AnnouncementController::class);

@@ -5,7 +5,7 @@ use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Foundation\Http\FormRequest;
 
-class MemberShipRequest extends FormRequest
+class ContactRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -14,7 +14,7 @@ class MemberShipRequest extends FormRequest
     {
         return true;
     }
-
+     
     /**
      * Failed validation disable redirect
      *
@@ -25,6 +25,7 @@ class MemberShipRequest extends FormRequest
         throw new HttpResponseException(response()->json($validator->errors(), 400));
     }
 
+
     /**
      * Get the validation rules that apply to the request.
      *
@@ -32,10 +33,11 @@ class MemberShipRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            'membership_name' => ['required', 'string', 'unique:App\Models\MemberShip'],
-            'period' => ['required','integer'],
-            'price' => ['required','integer'], 
+         return [
+            'name' => ['required', 'string'],
+            'phone' => ['required','string'],
+            'subject' => ['required','string'], 
+            'message' => ['required','string'], 
         ];
     }
 }
