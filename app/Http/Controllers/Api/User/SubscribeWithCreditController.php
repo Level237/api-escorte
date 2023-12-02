@@ -38,7 +38,8 @@ class SubscribeWithCreditController extends Controller
                 if($user->save()){
                     $data=[
                         'payment_type'=>"credits",
-                        'price'=>$memberShip->price
+                        'price'=>$memberShip->price,
+                        'user_id'=>Auth::guard('api')->user()->id
                     ];
                     $payment=event(new MakePayment($data));
                     //$currentDateTime = Carbon::now();
