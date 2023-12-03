@@ -22,12 +22,10 @@ class ProfileUserListener
     /**
      * Handle the event.
      */
-    public function handle(ProfileUserEvent $event): void
+    public function handle(ProfileUserEvent $event)
     {
-        $escort=Escort::where('user_id',Auth::guard('api')->user()->id)->first();
         Profile_visit::create([
-            'escort_id'=>$escort->id,
-            'visited_at'=>now()
+            'escort_id'=>$event->escort->id,
         ]);
     }
 }

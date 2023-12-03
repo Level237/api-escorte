@@ -10,7 +10,7 @@ class Profile_visit extends Model
     use HasFactory;
 
     protected $fillable=[
-        'escort_id'
+        'escort_id',
     ];
 
 }

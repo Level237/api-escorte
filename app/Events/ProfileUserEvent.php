@@ -17,9 +17,10 @@ class ProfileUserEvent
     /**
      * Create a new event instance.
      */
-    public function __construct()
+    public $escort;
+    public function __construct($escort)
     {
-        //
+        $this->escort=$escort;
     }
 
     /**

@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Escorts;
+
+use App\Events\ProfileUserEvent;
 use App\Http\Controllers\Controller;
 use App\Repositories\Escort\EscortRepository;
 use App\Models\Escort;
@@ -48,6 +50,7 @@ class EscortController extends Controller
 
     public function show(Escort $escort)
     {
+        event(new ProfileUserEvent($escort));
         return new EscortResource($escort);
     }
 
