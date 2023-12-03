@@ -19,7 +19,7 @@ return new class extends Migration
             ->constrained()
             ->restrictOnUpdate()
             ->restrictOnDelete();
-            $table->timestamps();
+           $table->timestamp('visited_at');
         });
     }
 
