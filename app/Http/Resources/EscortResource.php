@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Models\Profile_visit;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -31,7 +32,8 @@ class EscortResource extends JsonResource
             'weight' => $this->weight->weight_name,
             'skin_color' => $this->skin_color->skin_color_name,
             'images' => $this->images,
-            'genre'=>$this->genre
+            'genre'=>$this->genre,
+            'visits'=>Profile_visit::where('escort_id',$this->id)->count()
         ];
     }
 }

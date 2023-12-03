@@ -14,7 +14,7 @@ class GetEscortController extends Controller
         $escort=Escort::where('user_id',$user)->first();
         return response(new EscortResource($escort), 200)
                   ->header('Content-Type', 'application/json');
-        
+
 
     }
 }
