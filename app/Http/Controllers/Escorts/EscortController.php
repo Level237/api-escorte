@@ -9,11 +9,11 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-class EscortController extends Controller 
+class EscortController extends Controller
 {
     private EscortRepository $EscortRepository;
 
-    public function __construct(EscortRepository $EscortRepository) 
+    public function __construct(EscortRepository $EscortRepository)
     {
         $this->EscortRepository = $EscortRepository;
     }
@@ -31,7 +31,7 @@ class EscortController extends Controller
 
 
 
-    public function store(Request $request): JsonResponse 
+    public function store(Request $request): JsonResponse
     {
         $EscortDetails = $request->only([
             'client',
@@ -51,7 +51,7 @@ class EscortController extends Controller
         return new EscortResource($escort);
     }
 
-    public function update(Request $request): JsonResponse 
+    public function update(Request $request): JsonResponse
     {
         $EscortId = $request->route('id');
         $EscortDetails = $request->only([
@@ -64,7 +64,7 @@ class EscortController extends Controller
         ]);
     }
 
-    public function destroy(Request $request): JsonResponse 
+    public function destroy(Request $request): JsonResponse
     {
         $EscortId = $request->route('id');
         $this->EscortRepository->deleteEscort($EscortId);
@@ -72,9 +72,9 @@ class EscortController extends Controller
         return response()->json(null, Response::HTTP_NO_CONTENT);
     }
 
-    public function indexWithTownName(): JsonResponse 
+    public function indexWithTownName(): JsonResponse
     {
-       
+
         try{
                return response()->json($this->EscortRepository->getEscortsWithTownName());
         }
@@ -86,7 +86,7 @@ class EscortController extends Controller
 
     public function displayProfil($id, $path)
     {
-       return response()->download(storage_path('app\public\escorts\\'.$id.'\\'. $path));
+       return response()->download(storage_path('app/public/escorts//'.$id.'//'. $path));
 
     }
 }
