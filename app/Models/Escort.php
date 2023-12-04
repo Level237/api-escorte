@@ -9,6 +9,7 @@ use App\Models\Image;
 use App\Models\Shape;
 use App\Models\Ethnic;
 use App\Models\Height;
+use App\Models\Review;
 use App\Models\Weight;
 use App\Models\Country;
 use App\Models\Quarter;
@@ -90,6 +91,10 @@ class Escort extends Model implements Searchable
 
     public function visits():HasMany{
         return $this->hasMany(Profile_visit::class);
+    }
+
+    public function reviews():HasMany{
+        return $this->hasMany(Review::class);
     }
 
     public function getSearchResult(): SearchResult

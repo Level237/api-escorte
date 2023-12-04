@@ -67,6 +67,9 @@ class User extends Authenticatable
         $this->save();
     }
 
+    public function reviews():HasMany{
+        return $this->hasMany(Review::class);
+    }
     public function findForPassport($username) {
         return $this->where('phone_number','=', $username)->first();
     }
