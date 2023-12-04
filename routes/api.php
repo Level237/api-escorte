@@ -53,6 +53,7 @@ use App\Http\Controllers\Api\User\MyPurchaseController;
 
 use App\Http\Controllers\Api\Contact\ContactController;
 use App\Http\Controllers\Api\Report\ReportController;
+use App\Http\Controllers\Api\User\ReviewUserController;
 use App\Http\Controllers\Payment\PaymentCurrentUserController;
 
 /*
@@ -182,5 +183,5 @@ Route::middleware(['auth:api','scopes:escort','ban'])->prefix('v1')->group(funct
 
 //routes escort
 Route::middleware(['auth:api','scopes:customer'])->prefix('v1')->group(function(){
-
+    Route::post('review/new/{escortId}',[ReviewUserController::class,'addReview']);
 });
