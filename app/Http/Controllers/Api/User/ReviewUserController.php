@@ -13,10 +13,10 @@ class ReviewUserController extends Controller
         $newReview=new Review;
         $newReview->user_id=Auth::guard('api')->user()->id;
         $newReview->escort_id=$escort_id;
-        $newReview->star=$request->star;
+        $newReview->stars=$request->stars;
         $newReview->comment=$request->comment;
         $newReview->save();
 
-        return response()->json(["code"=>200,"message"=>"message ajouté avec success"],200);
+        return response()->json(["code"=>200,"message"=>"reviews ajouté avec success"],200);
     }
 }

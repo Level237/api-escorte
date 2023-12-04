@@ -26,7 +26,7 @@ return new class extends Migration
             ->restrictOnDelete();
             $table->integer('stars')->default(0);
 			$table->string('comment');
-			$table->boolean('state');
+			$table->boolean('state')->default(1);
             $table->timestamps();
         });
     }

@@ -15,7 +15,7 @@ class Review extends Model
     protected $fillable=[
         'escort_id',
         'user_id',
-        'star',
+        'stars',
         'comment'
     ];
 
