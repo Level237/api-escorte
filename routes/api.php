@@ -67,6 +67,7 @@ use App\Http\Controllers\Payment\PaymentCurrentUserController;
 |
 */
 
+Route::get('list/reviews/{escortId}',[ReviewUserController::class,'getReview']);
 Route::get('/list/categories',[ListAdsCategoryController::class,'list']);
 Route::get('/list/ethnics',[ListEthnicController::class,'list']);
 Route::get('/list/skinColor',[ListSkinController::class,'list']);
