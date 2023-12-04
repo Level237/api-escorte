@@ -19,7 +19,8 @@ class ReviewResource extends JsonResource
             'user'=>$this->user->username,
             'escort_id'=>$this->escort_id,
             'stars'=>$this->stars,
-            'comment'=>$this->comment
+            'comment'=>$this->comment,
+            'created_at'=>$this->created_at->format('d-m-Y')
         ];
     }
 }
