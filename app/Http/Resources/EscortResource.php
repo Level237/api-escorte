@@ -32,6 +32,7 @@ class EscortResource extends JsonResource
             'weight' => $this->weight->weight_name,
             'skin_color' => $this->skin_color->skin_color_name,
             'images' => $this->images,
+            'services' => $this->services,
             'genre'=>$this->genre,
             'visits'=>Profile_visit::where('escort_id',$this->id)->count()
         ];
