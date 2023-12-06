@@ -117,6 +117,7 @@ Route::apiResource('/contact', ContactController::class);
 Route::apiResource('/announces', AnnouncementController::class);
 Route::get('/userAds/{id}', [AnnouncementController::class,'AdsByUser']);
 Route::get('/adstown/{id}', [AnnouncementController::class,'getAdsByTown']);
+Route::get('/adscategory/{categoryId}', [AnnouncementController::class,'getAdsByCategory']);
 Route::post('/ads', [CreateAdsController::class, 'createAds']);
 Route::delete('/ads/{id}', [DeleteAdsController::class, 'delete']);
 Route::post('/ads/update', [CreateAdsController::class, 'update']);
