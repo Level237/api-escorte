@@ -20,6 +20,7 @@ class AnnouncementSeeder extends Seeder
             [
                 'user_id'=>5,
                 'town_id'=>1,
+                'isSubscribe'=>1,
                 'announcement_category_id'=>1,
                 'title'=>'Baisseuse italienne',
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
@@ -31,6 +32,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
             [
                 'user_id'=>6,
                 'town_id'=>1,
+                'isSubscribe'=>1,
                 'announcement_category_id'=>2,
                 'title'=>"J'ai été vilaine, ma fessé stp",
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
@@ -42,6 +44,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
             [
                 'user_id'=>7,
                 'town_id'=>1,
+                'isSubscribe'=>1,
                 'announcement_category_id'=>1,
                 'title'=>'Ta lycéenne, viens jouer au prof',
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
@@ -53,6 +56,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
             [
                 'user_id'=>8,
                 'town_id'=>1,
+                'isSubscribe'=>1,
                 'announcement_category_id'=>2,
                 'title'=>'Une bassa fontaine',
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
@@ -65,6 +69,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'user_id'=>9,
                 'town_id'=>1,
                 'announcement_category_id'=>2,
+                'isSubscribe'=>1,
                 'title'=>'Ta bassa aux fesses douces',
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
@@ -567,7 +572,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
-            
+
         ];
 
         //Storing Data

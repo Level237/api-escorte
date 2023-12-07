@@ -8,11 +8,11 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-class AnnouncementController extends Controller 
+class AnnouncementController extends Controller
 {
     private AnnouncementRepository $annoucementRepository;
 
-    public function __construct(AnnouncementRepository $announcementRepository) 
+    public function __construct(AnnouncementRepository $announcementRepository)
     {
         $this->announcementRepository = $announcementRepository;
     }
@@ -32,7 +32,7 @@ class AnnouncementController extends Controller
         return AnnounceResource::collection(Announcement::where('user_id', $userId)->get());
     }
 
-    public function store(Request $request): JsonResponse 
+    public function store(Request $request): JsonResponse
     {
         $announcementDetails = $request->only([
             'client',
@@ -47,12 +47,12 @@ class AnnouncementController extends Controller
         );
     }
 
-    public function show(Announcement $announce) 
+    public function show(Announcement $announce)
     {
        return new AnnounceResource($announce);
     }
 
-    public function update(Request $request): JsonResponse 
+    public function update(Request $request): JsonResponse
     {
         $announcementId = $request->route('id');
         $announcementDetails = $request->only([
@@ -65,7 +65,7 @@ class AnnouncementController extends Controller
         ]);
     }
 
-    public function destroy(Request $request): JsonResponse 
+    public function destroy(Request $request): JsonResponse
     {
         $announcementId = $request->route('id');
         $this->announcementRepository->deleteAnnouncement($announcementId);
@@ -73,9 +73,9 @@ class AnnouncementController extends Controller
         return response()->json(null, Response::HTTP_NO_CONTENT);
     }
 
-    public function getAnnouncesByTown(): JsonResponse 
+    public function getAnnouncesByTown(): JsonResponse
     {
-       
+
         try{
                return response()->json($this->announcementRepository->getAnnouncementsByTown());
         }
@@ -87,7 +87,7 @@ class AnnouncementController extends Controller
 
     public function displayAdsImage($id, $path)
     {
-       return response()->download(storage_path('app\public\ads\\'.$id.'\\'. $path));
+       return response()->download(storage_path('app\public\ads//'.$id.'//'. $path));
 
     }
 }
