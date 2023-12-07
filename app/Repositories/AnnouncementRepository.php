@@ -3,6 +3,8 @@
 namespace App\Repositories;
 use App\Interfaces\AnnouncementInterface;
 use App\Models\Announcement;
+use App\Models\Town;
+use App\Http\Resources\TownResource;
 use Illuminate\Support\Facades\DB;
 
 class AnnouncementRepository implements AnnouncementInterface
@@ -45,7 +47,7 @@ class AnnouncementRepository implements AnnouncementInterface
     public function getAnnouncementsByTown()
     {
        $data = DB::table('announcements')
-         ->join('towns', 'towns.id', '=','announcements.town_id')
+         ->leftjoin('towns', 'towns.id', '=','announcements.town_id')
                             ->select('town_id','town_name', DB::raw('count(*) as totalAnnounces'))
                             ->groupBy('town_name')
                             ->orderBy('totalAnnounces', 'DESC')
@@ -56,7 +58,10 @@ class AnnouncementRepository implements AnnouncementInterface
             return $element;
 
         });
-        return $data;
+        $towns = TownResource::collection(Town::all());
+        $final[0] = $data;
+        $final[1] = $towns;
+        return $final;
 
     }
 
