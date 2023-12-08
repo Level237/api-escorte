@@ -33,18 +33,11 @@ class DatabaseSeeder extends Seeder
             RoleSeeder::class,
             CreditSeeder::class,
             UserSeeder::class,
-            ServiceSeeder::class,
             MemberShipSeeder::class,
-            SkinColorSeeder::class,
-            BodyShapeSeeder::class,
-            Weightseeder::class,
-            Heightseeder::class,
-            EscortSeeder::class,
             AnnouncementCategorySeeder::class,
             AnnouncementSeeder::class,
             QuestionSeeder::class,
             ImageSeeder::class,
-            EscortImageSeeder::class,
             AnnouncementImageSeeder::class
         ]);
     }
