@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Escort;
+use App\Models\Announcement;
 use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -20,7 +20,7 @@ return new class extends Migration
             ->constrained()
             ->restrictOnUpdate()
             ->restrictOnDelete();
-            $table->foreignIdFor(Escort::class)
+            $table->foreignIdFor(Announcement::class)
             ->constrained()
             ->restrictOnUpdate()
             ->restrictOnDelete();

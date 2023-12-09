@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\User;
 use App\Models\Image;
 use App\Models\Town;
+use App\Models\Quarter;
 use App\Models\AnnouncementCategory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -20,6 +21,10 @@ class Announcement extends Model implements Searchable
 
     public function town():BelongsTo{
         return $this->belongsTo(Town::class);
+    }
+
+    public function quarter():BelongsTo{
+        return $this->belongsTo(Quarter::class);
     }
 
     public function images():BelongsToMany{

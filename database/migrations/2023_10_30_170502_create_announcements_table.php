@@ -5,6 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use App\Models\User;
 use App\Models\Town;
+use App\Models\Quarter;
 use App\Models\AnnouncementCategory;
 
 return new class extends Migration
@@ -26,14 +27,23 @@ return new class extends Migration
             ->restrictOnUpdate()
             ->restrictOnDelete();
 
+             $table->foreignIdFor(Quarter::class)
+            ->constrained()
+            ->restrictOnUpdate()
+            ->restrictOnDelete();
+
             $table->foreignIdFor(AnnouncementCategory::class)
             ->constrained()
             ->restrictOnUpdate()
             ->restrictOnDelete();
             $table->boolean('status')->default(1);
             $table->boolean('isSubscribe')->default(0);
+            $table->boolean('gender');
+            $table->integer('age');
+            $table->string('whatsapp');
             $table->string('title');
-            $table->string('description');
+            $table->longText('description');
+            $table->longText('services');
             $table->string('accepted')->default('Hommes');
             $table->string('location')->default('Reçoit ou se déplace');
 

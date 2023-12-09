@@ -5,7 +5,6 @@ namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Models\Role;
 use App\Models\Memberships_user;
-use App\Models\Escort;
 use App\Models\Question;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
@@ -76,10 +75,6 @@ class User extends Authenticatable
 
     public function role():HasOne{
         return $this->hasOne(Role::class);
-    }
-
-    public function Escort():HasMany{
-        return $this->hasMany(Escort::class);
     }
 
     public function questions():BelongsToMany{

@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Resources;
-
 use App\Models\Memberships_user;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -18,10 +17,10 @@ class AnnounceResource extends JsonResource
          return [
             'id' => (string) $this->id,
             'user' => $this->user,
+            'age' => $this->age,
             'category' => $this->category,
-            'town' => $this->user->Escort[0]->quarter->town,
-            'quarter' => $this->user->Escort[0]->quarter,
-            'ethnie' => $this->user->Escort[0]->ethnic,
+            'town' => $this->town,
+            'quarter' => $this->quarter,
             'status' => $this->status,
             'isSubscribe'=>$this->isSubscribe,
             'title' => $this->title,
