@@ -28,6 +28,8 @@ class AnnounceResource extends JsonResource
             'accepted' => $this->accepted,
             'location' => $this->location,
             'images' => $this->images,
+            'whatsapp' => $this->whatsapp,
+            'gender' => $this->gender,
         ];
     }
 }

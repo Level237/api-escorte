@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Http\Resources\TownResource;
 use Illuminate\Http\Request;
-use App\Http\Models\Town;
+use App\Models\Town;
 class TownController extends Controller
 {
     /**

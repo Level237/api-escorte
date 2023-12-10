@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Models\Role;
+use App\Models\Town;
 use App\Models\Memberships_user;
 use App\Models\Question;
 use Laravel\Passport\HasApiTokens;
@@ -75,6 +76,10 @@ class User extends Authenticatable
 
     public function role():HasOne{
         return $this->hasOne(Role::class);
+    }
+
+     public function town():HasOne{
+        return $this->hasOne(Town::class);
     }
 
     public function questions():BelongsToMany{
