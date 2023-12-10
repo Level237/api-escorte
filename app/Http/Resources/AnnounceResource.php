@@ -27,6 +27,7 @@ class AnnounceResource extends JsonResource
             'description' => $this->description,
             'accepted' => $this->accepted,
             'location' => $this->location,
+            'services' => $this->services,
             'images' => $this->images,
             'whatsapp' => $this->whatsapp,
             'gender' => $this->gender,

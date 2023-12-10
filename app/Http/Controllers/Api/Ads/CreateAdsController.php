@@ -23,11 +23,16 @@ class CreateAdsController extends Controller
        
         $ads = new Announcement;
         $ads->user_id = $request->user_id;
-        $ads->town_id = User::find($request->user_id)->Escort[0]->quarter->town->id;
+        $ads->town_id = $request->town_id;
+        $ads->quarter_id = $request->quarter_id;
         $ads->announcement_category_id = $request->category_id;
         $ads->accepted= $request->accepted;
         $ads->location = $request->location;
         $ads->title = $request->title;
+        $ads->age = $request->age;
+        $ads->gender = $request->gender;
+        $ads->whatsapp = $request->phone;
+        $ads->services = $request->services;
         $ads->description = $request->description;
     
         if($ads->save()){

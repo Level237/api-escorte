@@ -11,7 +11,6 @@ class ListQuaterByTownController extends Controller
 {
     public function list($id){
         $listQuarter=ListQuaterByTownResource::collection(Quarter::where('town_id',$id)->get());
-
         return $listQuarter;
     }
 }

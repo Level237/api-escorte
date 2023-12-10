@@ -48,7 +48,7 @@ class UserRequest extends FormRequest
             'password' => ['required', 'string', 'min:6', 'max:30'],
             'role_id' =>['required','exists:App\Models\Role,id'],
             'town_id' =>['required','exists:App\Models\Town,id'],
-            'email' =>['nullable','email'],
+            'email' =>['nullable','email','unique:App\Models\User'],
         ];
     }
 }

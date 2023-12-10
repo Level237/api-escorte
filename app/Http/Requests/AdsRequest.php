@@ -34,11 +34,17 @@ class AdsRequest extends FormRequest
     {
         return [
             'user_id' => ['required', 'exists:App\Models\User,id'],
+            'town_id' => ['required', 'exists:App\Models\Town,id'],
+            'quarter_id' => ['required', 'exists:App\Models\Quarter,id'],
+            'gender' => ['required','string'],
+            'age' => ['required','string'],
+            'phone' => ['required','string'],
             'location' => ['required','string'],
             'category_id' => ['required','exists:App\Models\AnnouncementCategory,id'],
             'accepted' => ['required', 'string'],
             'title' => ['required', 'string'],
             'description' => ['required', 'string', 'max:1500'],
+            'services' => ['required', 'string', 'max:1500'],
         ];
     }
 }
