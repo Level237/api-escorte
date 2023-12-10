@@ -51,6 +51,8 @@ class CreateUserController extends Controller
         $user = new User;
         $user->username = $request->username;
         $user->role_id = $request->role_id;
+        $user->town_id = $request->town_id;
+        $user->email = $request->email;
         $user->phone_number = $request->phone_number;
         $user->password = Hash::make($request->password);
 

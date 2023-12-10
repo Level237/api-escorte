@@ -47,6 +47,8 @@ class UserRequest extends FormRequest
             'phone_number' => ['required', 'string','unique:App\Models\User'],
             'password' => ['required', 'string', 'min:6', 'max:30'],
             'role_id' =>['required','exists:App\Models\Role,id'],
+            'town_id' =>['required','exists:App\Models\Town,id'],
+            'email' =>['nullable','email'],
         ];
     }
 }
