@@ -54,10 +54,16 @@ class CreateAdsController extends Controller
                   ->header('Content-Type', 'application/json');
         else{
 
+            $ad->town_id = $request->town_id;
+            $ad->quarter_id = $request->quarter_id;
             $ad->announcement_category_id = $request->category_id;
             $ad->accepted= $request->accepted;
             $ad->location = $request->location;
             $ad->title = $request->title;
+            $ad->age = $request->age;
+            $ad->gender = $request->gender;
+            $ad->whatsapp = $request->phone;
+            $ad->services = $request->services;
             $ad->description = $request->description;
             $ad->save();
              return response($ad, 200)
