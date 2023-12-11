@@ -66,12 +66,11 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'gender'=>1,
                 'age'=>22,
                 'whatsapp'=>'678748596',
-                'subscribe_id'=>2,
                 'services'=>'Baisse',
                 'isSubscribe'=>1,
                 'announcement_category_id'=>1,
                  'status'=>1,
-                 'subscribe_id'=>1,
+                 'subscribe_id'=>2,
                 'title'=>'Ta lycéenne, viens jouer au prof',
                 'Description'=>'Envie de passer un bon moment en
                 compagnie d’une vraie salope très cochonne
@@ -89,10 +88,9 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'whatsapp'=>'675747972',
                 'services'=>'Baisse',
                 'isSubscribe'=>1,
-                'subscribe_id'=>3,
                 'announcement_category_id'=>2,
                  'status'=>1,
-                 'subscribe_id'=>1,
+                 'subscribe_id'=>3,
                 'title'=>'Une bassa fontaine',
                 'Description'=>'Envie de passer un bon moment en
                 compagnie d’une vraie salope très cochonne
@@ -107,7 +105,6 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'quarter_id'=>6,
                 'gender'=>1,
                 'age'=>19,
-                'subscribe_id'=>1,
                 'whatsapp'=>'655204185',
                 'services'=>'Baisse',
                 'announcement_category_id'=>2,
