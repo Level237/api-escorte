@@ -15,6 +15,7 @@ class AnnounceResource extends JsonResource
     public function toArray(Request $request): array
     {
          return [
+            "subscribe_id"=>$this->subscribe_id,
             'id' => (string) $this->id,
             'user' => $this->user,
             'age' => $this->age,
