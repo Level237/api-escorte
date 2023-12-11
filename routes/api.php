@@ -82,7 +82,7 @@ Route::get('/list/services',[ListServiceController::class,'list']);
 
 // Town GROUP ROUTES
 Route::apiResource('/towns', TownController::class);
-Route::get('/displayprofil/{id}/{path}',[EscortController::class,'displayProfil']);
+
 Route::get('/displayadsimage/{id}/{path}',[AnnouncementController::class,'displayAdsImage']);
 
 
@@ -103,8 +103,7 @@ Route::prefix('search')->group(function(){
 
 
 // ESCORTS GROUP ROUTES
-Route::apiResource('/escorts', EscortController::class);
-Route::get('escortByQuarter/{quarterID}', [EscortController::class,'escortByQuarter'] );
+
 
 // MEMBERSHIP GROUP ROUTES
 Route::apiResource('/memberships', MemberShipController::class);
@@ -181,7 +180,6 @@ Route::middleware(['auth:api','scopes:escort','ban'])->prefix('v1')->group(funct
     Route::post('/purchaseCredit/{price}',[PurchaseCreditController::class,'purchaseCredit']);
     Route::post('/addProfile',[ProfileCompleteController::class,'addProfile']);
     Route::post('/attach/services',[AttachEscortServiceController::class,'attach']);
-    Route::get('/CompleteOrNot',[EscortIsCompletedOrNotController::class,"isCompletedOrNot"]);
     Route::get('/getEscort',[GetEscortController::class,'getEscort']);
 
 });
