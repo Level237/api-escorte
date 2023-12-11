@@ -69,6 +69,7 @@ use App\Http\Controllers\TownController;
 |
 */
 
+Route::get('home/annonces',[AnnouncementController::class,"homepageAnnoncement"]);
 Route::get('list/reviews/{escortId}',[ReviewUserController::class,'getReview']);
 Route::get('/list/categories',[ListAdsCategoryController::class,'list']);
 Route::get('/list/ethnics',[ListEthnicController::class,'list']);
