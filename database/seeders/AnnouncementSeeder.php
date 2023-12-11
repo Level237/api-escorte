@@ -25,10 +25,10 @@ class AnnouncementSeeder extends Seeder
                 'age'=>20,
                 'whatsapp'=>'698748596',
                 'services'=>'Baisse',
-                'subscribe_id'=>1,
                 'isSubscribe'=>1,
                 'announcement_category_id'=>1,
                 'status'=>1,
+                'subscribe_id'=>1,
                 'title'=>'Baisseuse italienne',
                 'Description'=>'Envie de passer un bon moment en
                 compagnie d’une vraie salope très cochonne
@@ -43,13 +43,14 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'town_id'=>1,
                 'quarter_id'=>2,
                 'gender'=>1,
-                'subscribe_id'=>1,
+
                 'age'=>21,
                 'whatsapp'=>'698748595',
                 'services'=>'Baisse',
                 'isSubscribe'=>1,
                 'announcement_category_id'=>2,
                  'status'=>1,
+                 'subscribe_id'=>1,
                 'title'=>"J'ai été vilaine, ma fessé stp",
                 'Description'=>'Envie de passer un bon moment en
                 compagnie d’une vraie salope très cochonne
@@ -70,6 +71,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'isSubscribe'=>1,
                 'announcement_category_id'=>1,
                  'status'=>1,
+                 'subscribe_id'=>1,
                 'title'=>'Ta lycéenne, viens jouer au prof',
                 'Description'=>'Envie de passer un bon moment en
                 compagnie d’une vraie salope très cochonne
@@ -90,6 +92,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'subscribe_id'=>3,
                 'announcement_category_id'=>2,
                  'status'=>1,
+                 'subscribe_id'=>1,
                 'title'=>'Une bassa fontaine',
                 'Description'=>'Envie de passer un bon moment en
                 compagnie d’une vraie salope très cochonne
@@ -110,6 +113,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'announcement_category_id'=>2,
                  'status'=>1,
                 'isSubscribe'=>1,
+                'subscribe_id'=>1,
                 'title'=>'Ta bassa aux fesses douces',
                 'Description'=>'Envie de passer un bon moment en
                 compagnie d’une vraie salope très cochonne
@@ -528,6 +532,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'services'=>'Baisse',
                 'announcement_category_id'=>2,
                  'status'=>1,
+                 'subscribe_id'=>0,
                  'isSubscribe'=>0,
                 'title'=>'Viens conduire ta mercedez',
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
@@ -756,6 +761,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'announcement_category_id'=>2,
                  'status'=>1,
                  'isSubscribe'=>0,
+                 'subscribe_id'=>0,
                 'title'=>"Croqueuse de penis 🍆",
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.

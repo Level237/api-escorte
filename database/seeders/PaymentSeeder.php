@@ -27,7 +27,6 @@ class PaymentSeeder extends Seeder
             ],
             [
                 'payment_type'=>"Momo",
-                'credits_number'=>1,
                 'price'=>5000,
                 'user_id'=>7,
             ],

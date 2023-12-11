@@ -38,7 +38,9 @@ class DatabaseSeeder extends Seeder
             AnnouncementSeeder::class,
             QuestionSeeder::class,
             ImageSeeder::class,
-            AnnouncementImageSeeder::class
+            AnnouncementImageSeeder::class,
+            PaymentSeeder::class,
+            MembershipUserSeeder::class,
         ]);
     }
 }
