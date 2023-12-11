@@ -5,7 +5,6 @@ use Spatie\Searchable\Search;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Models\Escort;
 use App\Models\Town;
 use App\Models\Quarter;
 use App\Models\Announcement;
@@ -16,10 +15,6 @@ class ResearchController extends Controller
 
       $searchResults = (new Search())
         ->registerModel(Announcement::class, 'title')
-        ->registerModel(Escort::class, 'escort_name', 'sexuality')
-        ->registerModel(Town::class, 'town_name')
-        ->registerModel(Quarter::class, 'quarter_name')
-         
         ->search($term);
 
        return response($searchResults, 200)
