@@ -11,7 +11,6 @@ class Payment extends Model
 
     protected $fillable=[
         'payment_type',
-        'credits_number',
         'price',
         'user_id'
     ];

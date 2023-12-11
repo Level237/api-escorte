@@ -42,6 +42,7 @@ return new class extends Migration
             $table->integer('age');
             $table->string('whatsapp');
             $table->string('title');
+            $table->integer('subscribe_id')->default(0);
             $table->longText('description');
             $table->longText('services');
             $table->string('accepted')->default('Hommes');

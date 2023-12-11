@@ -92,7 +92,7 @@ class AnnouncementController extends Controller
 
     public function displayAdsImage($id, $path)
     {
-       return response()->download(storage_path('app\public\ads//'.$id.'//'. $path));
+       return response()->download(storage_path('app/public/ads//'.$id.'//'. $path));
 
     }
 }

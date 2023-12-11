@@ -2,8 +2,10 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class MembershipUserSeeder extends Seeder
 {
@@ -19,55 +21,45 @@ class MembershipUserSeeder extends Seeder
                 'membership_id'=>1,
                 'payment_id'=>1,
                 'announcement_id'=>1,
-                'expire_at'=>
-                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+                'status'=>1,
+                'expire_at'=>Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'height_name'=>'1.55',
-                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+                'user_id'=>6,
+                'membership_id'=>1,
+                'payment_id'=>2,
+                'announcement_id'=>2,
+                'status'=>1,
+                'expire_at'=>Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'height_name'=>'1.60',
-                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+                'user_id'=>7,
+                'membership_id'=>2,
+                'payment_id'=>3,
+                'announcement_id'=>3,
+                'status'=>1,
+                'expire_at'=>Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'height_name'=>'1.65',
-                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+                'user_id'=>8,
+                'membership_id'=>3,
+                'payment_id'=>4,
+                'announcement_id'=>4,
+                'status'=>1,
+                'expire_at'=>Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'height_name'=>'1.70',
-                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+                'user_id'=>9,
+                'membership_id'=>1,
+                'payment_id'=>5,
+                'announcement_id'=>5,
+                'status'=>1,
+                'expire_at'=>Carbon::now()->format('Y-m-d H:i:s')
             ],
-            [
-                'height_name'=>'1.75',
-                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
-            ],
-            [
-                'height_name'=>'1.80',
-                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
-            ],
-              [
-                'height_name'=>'1.85',
-                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
-            ],
-              [
-                'height_name'=>'1.90',
-                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
-            ],
-
 
         ];
 
         //Storing Data
-        DB::table('heights')->insert($data);
+        DB::table('memberships_users')->insert($data);
     }
 }

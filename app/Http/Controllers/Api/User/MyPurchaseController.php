@@ -72,17 +72,21 @@ class MyPurchaseController extends Controller
             $newDateTime->setTimezone('Africa/Douala');
             $announcement->status=1;
             $announcement->isSubscribe=1;
-            $announcement->save();
-            DB::table('memberships_users')->insert([
-                'user_id'=>$user->id,
-                'membership_id'=>$memberShip_id,
-                'payment_id'=>$payment[0]->id,
-                'expire_at'=>$newDateTime,
-                'announcement_id'=>$announcement_id,
-                'status'=>1
-            ]);
+            $announcement->subscribe_id=$memberShip_id;
+            if($announcement->save()){
+                DB::table('memberships_users')->insert([
+                    'user_id'=>$user->id,
+                    'membership_id'=>$memberShip_id,
+                    'payment_id'=>$payment[0]->id,
+                    'expire_at'=>$newDateTime,
+                    'announcement_id'=>$announcement_id,
+                    'status'=>1
+                ]);
+                return response()->json(["code"=>200,"message"=>"Soubscription au forfait $memberShip->membership_name avec success."]);
+            }else{
+                return response()->json(["message"=>"une erreur s'est produite"]);
+            }
 
-            return response()->json(["code"=>200,"message"=>"Soubscription au forfait $memberShip->membership_name avec success."]);
 
 
     }
