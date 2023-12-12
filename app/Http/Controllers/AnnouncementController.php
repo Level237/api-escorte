@@ -103,4 +103,8 @@ class AnnouncementController extends Controller
     public function vipAnnoncement(){
         return AnnounceResource::collection(Announcement::Where('subscribe_id',3)->get());
     }
+
+    public function goldAnnoncement(){
+        return AnnounceResource::collection(Announcement::Where('subscribe_id',2)->get());
+    }
 }
