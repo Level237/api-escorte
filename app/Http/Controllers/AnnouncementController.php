@@ -24,7 +24,7 @@ class AnnouncementController extends Controller
 
     public function getAdsByTown($townId)
     {
-        return AnnounceResource::collection(Announcement::where('town_id', $townId)->get());
+        return AnnounceResource::collection(Announcement::orderBy('subscribe_id','DESC')->where('status',1)->where('town_id', $townId)->get());
     }
 
     public function getAdsByCategory($categoryId)
