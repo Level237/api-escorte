@@ -124,13 +124,13 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'town_id'=>1,
                 'quarter_id'=>7,
                 'gender'=>1,
-                'subscribe_id'=>0,
+                'subscribe_id'=>1,
                 'age'=>23,
                 'whatsapp'=>'651749632',
                 'services'=>'Baisse',
                 'announcement_category_id'=>2,
                  'status'=>1,
-                   'isSubscribe'=>0,
+                   'isSubscribe'=>1,
                 'title'=>'Viens soumettre ta panthere',
                 'Description'=>'Envie de passer un bon moment en
                 compagnie d’une vraie salope très cochonne
@@ -147,10 +147,10 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'age'=>22,
                 'whatsapp'=>'695853214',
                 'services'=>'Baisse',
-                'subscribe_id'=>0,
+                'subscribe_id'=>2,
                 'announcement_category_id'=>2,
                  'status'=>1,
-                 'isSubscribe'=>0,
+                 'isSubscribe'=>1,
                 'title'=>'Jouissance vaginale',
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
@@ -163,13 +163,13 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'town_id'=>1,
                 'quarter_id'=>7,
                 'gender'=>1,
-                'subscribe_id'=>0,
+                'subscribe_id'=>2,
                 'age'=>21,
                 'whatsapp'=>'672368596',
                 'services'=>'Baisse',
                 'announcement_category_id'=>2,
                  'status'=>1,
-                 'isSubscribe'=>0,
+                 'isSubscribe'=>1,
                 'title'=>'Viens taper ta pute bassa',
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
@@ -182,13 +182,13 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'town_id'=>2,
                 'quarter_id'=>32,
                 'gender'=>1,
-                'subscribe_id'=>0,
+                'subscribe_id'=>3,
                 'age'=>23,
                 'whatsapp'=>'671967485',
                 'services'=>'Baisse',
                 'announcement_category_id'=>2,
                  'status'=>1,
-                 'isSubscribe'=>0,
+                 'isSubscribe'=>1,
                 'title'=>'Viens croquer une file brune Eton',
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
@@ -201,13 +201,13 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'town_id'=>2,
                 'quarter_id'=>32,
                 'gender'=>1,
-                'subscribe_id'=>0,
+                'subscribe_id'=>3,
                 'age'=>22,
                 'whatsapp'=>'698742535',
                 'services'=>'Baisse',
                 'announcement_category_id'=>2,
                  'status'=>1,
-                 'isSubscribe'=>0,
+                 'isSubscribe'=>1,
                 'title'=>'Ton chocolat blanc',
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
@@ -220,13 +220,13 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'town_id'=>2,
                 'quarter_id'=>33,
                 'gender'=>1,
-                'subscribe_id'=>0,
+                'subscribe_id'=>1,
                 'age'=>24,
                 'whatsapp'=>'681968520',
                 'services'=>'Baisse',
                 'announcement_category_id'=>1,
                  'status'=>1,
-                 'isSubscribe'=>0,
+                 'isSubscribe'=>1,
                 'title'=>'Baise annale',
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
@@ -239,13 +239,13 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'town_id'=>2,
                 'quarter_id'=>33,
                 'gender'=>1,
-                'subscribe_id'=>0,
+                'subscribe_id'=>2,
                 'age'=>21,
                 'whatsapp'=>'653200033',
                 'services'=>'Baisse',
                 'announcement_category_id'=>3,
                  'status'=>1,
-                 'isSubscribe'=>0,
+                 'isSubscribe'=>1,
                 'title'=>'Pipe avec léchage de noyaux',
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
@@ -258,13 +258,13 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'town_id'=>2,
                 'quarter_id'=>32,
                 'gender'=>1,
-                'subscribe_id'=>0,
+                'subscribe_id'=>3,
                 'age'=>25,
                 'whatsapp'=>'670020622',
                 'services'=>'Baisse',
                 'announcement_category_id'=>2,
                  'status'=>1,
-                 'isSubscribe'=>0,
+                 'isSubscribe'=>1,
                 'title'=>'Jouissance faciale',
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
@@ -276,14 +276,14 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'user_id'=>8,
                 'town_id'=>1,
                 'quarter_id'=>1,
-                'subscribe_id'=>0,
+                'subscribe_id'=>1,
                 'gender'=>1,
                 'age'=>20,
                 'whatsapp'=>'690910023',
                 'services'=>'Baisse',
                 'announcement_category_id'=>3,
                  'status'=>1,
-                 'isSubscribe'=>0,
+                 'isSubscribe'=>1,
                 'title'=>'Baiseuse ProMax',
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
@@ -295,14 +295,14 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'user_id'=>19,
                 'town_id'=>7,
                 'quarter_id'=>92,
-                'subscribe_id'=>0,
+                'subscribe_id'=>2,
                 'gender'=>1,
                 'age'=>23,
                 'whatsapp'=>'681250010',
                 'services'=>'Baisse',
                 'announcement_category_id'=>2,
                  'status'=>1,
-                 'isSubscribe'=>0,
+                 'isSubscribe'=>1,
                 'title'=>"Pipe jouissance buccale",
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
@@ -313,7 +313,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
             [
                 'user_id'=>20,
                 'town_id'=>7,
-                'subscribe_id'=>0,
+                'subscribe_id'=>3,
                  'quarter_id'=>92,
                 'gender'=>1,
                 'age'=>21,
@@ -321,7 +321,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'services'=>'Baisse',
                 'announcement_category_id'=>3,
                  'status'=>1,
-                 'isSubscribe'=>0,
+                 'isSubscribe'=>1,
                 'title'=>'Seins debout, fille brune à déguster',
                 'Description'=>"Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
@@ -334,13 +334,13 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'town_id'=>7,
                  'quarter_id'=>93,
                 'gender'=>1,
-                'subscribe_id'=>0,
+                'subscribe_id'=>1,
                 'age'=>22,
                 'whatsapp'=>'675241000',
                 'services'=>'Baisse',
                 'announcement_category_id'=>2,
                  'status'=>1,
-                 'isSubscribe'=>0,
+                 'isSubscribe'=>1,
                 'title'=>'La salope sim1 & sim2',
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
@@ -353,13 +353,13 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'town_id'=>1,
                  'quarter_id'=>22,
                 'gender'=>1,
-                'subscribe_id'=>0,
+                'subscribe_id'=>2,
                 'age'=>22,
                 'whatsapp'=>'671002563',
                 'services'=>'Baisse',
                 'announcement_category_id'=>2,
                  'status'=>1,
-                 'isSubscribe'=>0,
+                 'isSubscribe'=>1,
                 'title'=>'Baiseusse aux gros seins',
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
@@ -370,7 +370,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
             [
                 'user_id'=>6,
                 'town_id'=>1,
-                'subscribe_id'=>0,
+                'subscribe_id'=>3,
                  'quarter_id'=>22,
                 'gender'=>1,
                 'age'=>26,
@@ -378,7 +378,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'services'=>'Baisse',
                 'announcement_category_id'=>2,
                  'status'=>1,
-                 'isSubscribe'=>0,
+                 'isSubscribe'=>1,
                 'title'=>'Ta libelulle brune',
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
@@ -396,8 +396,8 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'services'=>'Baisse',
                 'announcement_category_id'=>2,
                  'status'=>1,
-                 'subscribe_id'=>0,
-                 'isSubscribe'=>0,
+                 'subscribe_id'=>1,
+                 'isSubscribe'=>1,
                 'title'=>'Un plasir a couper le souffle',
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.

@@ -19,7 +19,7 @@ class AnnouncementController extends Controller
 
     public function index()
     {
-        return AnnounceResource::collection(Announcement::orderBy('subscribe_id','DESC')->get());
+        return AnnounceResource::collection(Announcement::orderBy('subscribe_id','DESC')->where('status',1)->get());
     }
 
     public function getAdsByTown($townId)
