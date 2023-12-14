@@ -47,6 +47,7 @@ class SubscribeWithCreditController extends Controller
                     $newDateTime->setTimezone('Africa/Douala');
                     $announcement->status=1;
                     $announcement->isSubscribe=1;
+                    $announcement->expire=null;
                     $announcement->subscribe_id=$memberShip_id;
                     if($announcement->save()){
                         DB::table('memberships_users')->insert([
