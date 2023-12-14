@@ -52,6 +52,7 @@ use App\Http\Controllers\Api\PurchaseCreditController;
 use App\Http\Controllers\Api\User\MyPurchaseController;
 
 use App\Http\Controllers\Api\Contact\ContactController;
+use App\Http\Controllers\Api\Membership\CheckSubscriptionController;
 use App\Http\Controllers\Api\Report\ReportController;
 use App\Http\Controllers\Api\User\ReviewUserController;
 use App\Http\Controllers\Payment\PaymentCurrentUserController;
@@ -68,7 +69,7 @@ use App\Http\Controllers\TownController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-
+Route::get('/check-subscribe',[CheckSubscriptionController::class,"check"]);
 Route::get('home/annonces',[AnnouncementController::class,"homepageAnnoncement"]);
 Route::get('gold/annonces',[AnnouncementController::class,"goldAnnoncement"]);
 Route::get('vip/annonces',[AnnouncementController::class,"vipAnnoncement"]);
