@@ -20,9 +20,9 @@ class CreateAdsController extends Controller
         $validatedData=$request->validated();
 
         //Validation passed, processing with storage
-       
+
         $ads = new Announcement;
-        $ads->user_id = $request->user_id;
+        $ads->user_id = Auth::guard('api')->user()->id;
         $ads->town_id = $request->town_id;
         $ads->quarter_id = $request->quarter_id;
         $ads->announcement_category_id = $request->category_id;
@@ -34,9 +34,9 @@ class CreateAdsController extends Controller
         $ads->whatsapp = $request->phone;
         $ads->services = $request->services;
         $ads->description = $request->description;
-    
+        $ads->expire=Carbon::now()->addDay(14);
         if($ads->save()){
-           
+
              return response($ads, 200)
                   ->header('Content-Type', 'application/json');
         }
@@ -69,7 +69,7 @@ class CreateAdsController extends Controller
              return response($ad, 200)
                   ->header('Content-Type', 'application/json');
         }
-          
+
     }
 
 }
