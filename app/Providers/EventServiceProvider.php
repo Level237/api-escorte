@@ -2,9 +2,11 @@
 
 namespace App\Providers;
 
+use App\Events\EventCheckExpire;
 use App\Events\EventCheckSubscription;
 use App\Events\MakePayment;
 use App\Events\ProfileUserEvent;
+use App\Listeners\ListenerCheckExpire;
 use App\Listeners\ListenerCheckSubscription;
 use App\Listeners\MakePayment as ListenersMakePayment;
 use App\Listeners\ProfileUserListener;
@@ -30,9 +32,9 @@ class EventServiceProvider extends ServiceProvider
         EventCheckSubscription::class=>[
             ListenerCheckSubscription::class,
         ],
-        ProfileUserEvent::class =>[
-            ProfileUserListener::class
-        ]
+       EventCheckExpire::class=>[
+        ListenerCheckExpire::class
+       ]
     ];
 
     /**
