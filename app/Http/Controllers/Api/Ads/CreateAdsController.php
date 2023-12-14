@@ -1,14 +1,15 @@
 <?php
 
 namespace App\Http\Controllers\Api\Ads;
-use App\Http\Controllers\Controller;
-use App\Models\Announcement;
-use App\Models\User;
-use Illuminate\Http\Request;
-use App\Http\Requests\AdsRequest;
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Hash;
+use App\Models\User;
+use App\Models\Announcement;
+use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use App\Http\Requests\AdsRequest;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Http;
 use Symfony\Component\HttpFoundation\IpUtils;
 
