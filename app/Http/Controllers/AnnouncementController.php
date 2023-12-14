@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Http\Resources\AnnounceResource;
 use App\Models\Announcement;
-use App\Repositories\AnnouncementRepository;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Http\JsonResponse;
+use App\Events\EventCheckSubscription;
+use App\Http\Resources\AnnounceResource;
+use App\Repositories\AnnouncementRepository;
 
 class AnnouncementController extends Controller
 {
@@ -19,6 +20,7 @@ class AnnouncementController extends Controller
 
     public function index()
     {
+        event(new EventCheckSubscription());
         return AnnounceResource::collection(Announcement::orderBy('subscribe_id','DESC')->where('status',1)->get());
     }
 
