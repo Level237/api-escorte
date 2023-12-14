@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('phone');
             $table->string('message');
+            $table->string('path');
             $table->tinyInteger('status')->default(0);
             $table->timestamps();
         });

@@ -16,7 +16,8 @@ class Report extends Model
         "name",
         'phone',
         'message',
-        'status'
+        'status',
+        'path'
     ];
     public function escort():BelongsToMany{
         return $this->belongsToMany(Escort::class);

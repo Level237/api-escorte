@@ -30,18 +30,22 @@ class ReportController extends Controller
      */
     public function store(ReportRequest $request)
     {
+        $image = $request->file('myfile');
+
+        //Storing file in disk
+        $fileName = $request->id.'_'.time().'_'.$image->getClientOriginalName();
+        $image->storeAs('public/report/'.$request->id, $fileName);
+
         $validatedData=$request->validated();
         $report = Report::create([
             'name' => $request->name,
             'phone' => $request->phone,
             'message' => $request->message,
+            'path' => $fileName,
             'status' => 0,
         ]);
 
-        if($request->type=='ads')
-            $report->ads()->attach($request->id);
-        else
-            $report->escort()->attach($request->id);
+        $report->ads()->attach($request->id);
 
         return new ReportResource($report);
     }

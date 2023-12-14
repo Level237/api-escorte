@@ -3,6 +3,8 @@
 namespace App\Http\Requests;
 use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Http\Exceptions\HttpResponseException;
 
 class ReportRequest extends FormRequest
 {
@@ -13,6 +15,17 @@ class ReportRequest extends FormRequest
     {
         return true;
     }
+
+     /**
+     * Failed validation disable redirect
+     *
+     * @param Validator $validator
+     */
+
+    protected function failedValidation(Validator $validator) {
+        throw new HttpResponseException(response()->json($validator->errors(), 400));
+    }
+
 
     /**
      * Get the validation rules that apply to the request.
@@ -26,7 +39,7 @@ class ReportRequest extends FormRequest
             'name' => ['required', 'string'],
             'phone' => ['required','string'],
             'message' => ['required','string'], 
-            'type' => ['required','string', Rule::in(['escort', 'ads']),], 
+            'myfile' => ['required', 'image', 'max:20480','mimes:jpg,png,jpeg'],
         ];
     }
 }
