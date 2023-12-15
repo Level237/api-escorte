@@ -10,10 +10,10 @@ use Illuminate\Support\Facades\Auth;
 
 class ReviewUserController extends Controller
 {
-    public function addReview(Request $request,$escort_id){
+    public function addReview(Request $request,$annoncement_id){
         $newReview=new Review;
         $newReview->user_id=Auth::guard('api')->user()->id;
-        $newReview->escort_id=$escort_id;
+        $newReview->escort_id=$annoncement_id;
         $newReview->stars=$request->stars;
         $newReview->comment=$request->comment;
         $newReview->save();
@@ -21,8 +21,8 @@ class ReviewUserController extends Controller
         return response()->json(["code"=>200,"message"=>"reviews ajouté avec success"],200);
     }
 
-    public function getReview($escortId){
-        $getReview=ReviewResource::collection(Review::where('escort_id',$escortId)->get());
+    public function getReview($announcement_id){
+        $getReview=ReviewResource::collection(Review::where('announcement_id',$announcement_id)->get());
 
         return $getReview;
     }

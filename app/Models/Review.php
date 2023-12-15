@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use App\Models\User;
-use App\Models\Escort;
+use App\Models\Announcement;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -19,8 +19,8 @@ class Review extends Model
         'comment'
     ];
 
-    public function escort():BelongsTo{
-        return $this->belongsTo(Escort::class);
+    public function annoncement():BelongsTo{
+        return $this->belongsTo(Announcement::class);
     }
 
     public function user():BelongsTo{
