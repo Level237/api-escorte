@@ -120,6 +120,7 @@ Route::apiResource('/contact', ContactController::class);
 Route::apiResource('/announces', AnnouncementController::class);
 Route::get('/userAds/{id}', [AnnouncementController::class,'AdsByUser']);
 Route::get('/adstown/{id}', [AnnouncementController::class,'getAdsByTown']);
+Route::get('/adsquarter/{id}', [AnnouncementController::class,'getAdsByQuarter']);
 Route::get('/adscategory/{categoryId}', [AnnouncementController::class,'getAdsByCategory']);
 
 Route::delete('/ads/{id}', [DeleteAdsController::class, 'delete']);

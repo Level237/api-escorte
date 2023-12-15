@@ -26,18 +26,18 @@ class Quarter extends Model implements Searchable
         return $this->belongsTo(Town::class);
     }
 
-    public function escorts():HasMany{
-        return $this->hasMany(Escort::class);
+    public function ads():HasMany{
+        return $this->hasMany(Announcement::class);
     }
 
     public function result(){
-        $result = $this->quarter_name.'('.$this->escorts()->count().' Escorts)';
+        $result = $this->quarter_name.'('.$this->ads()->count().' Annonces)';
         return $result;
     }
 
     public function getSearchResult(): SearchResult
     {
-        $url = route('escorts.show', $this->id);
+        $url = "#";
      
          return new \Spatie\Searchable\SearchResult(
             $this,

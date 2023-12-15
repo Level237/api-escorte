@@ -6,6 +6,7 @@ namespace App\Models;
 use App\Models\Role;
 use App\Models\Town;
 use App\Models\Memberships_user;
+use App\Models\Announcement;
 use App\Models\Question;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
@@ -15,8 +16,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
 
-class User extends Authenticatable
+class User extends Authenticatable implements Searchable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -83,10 +86,28 @@ class User extends Authenticatable
     }
 
     public function questions():BelongsToMany{
-        return $this->belongsToMany(Question::class)->withPivot('answer');;
+        return $this->belongsToMany(Question::class)->withPivot('answer');
     }
 
     public function purchaseMembership():HasMany{
         return $this->hasMany(Memberships_user::class);
+    }
+
+    public function ads():HasMany{
+        return $this->hasMany(Announcement::class)
+        ->with('images')
+        ->with('town');
+    }
+
+
+    public function getSearchResult(): SearchResult
+    {
+        $url = "#";
+     
+        return new \Spatie\Searchable\SearchResult(
+            $this,
+            $this->username,
+            $url,
+        );
     }
 }

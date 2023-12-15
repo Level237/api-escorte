@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Models;
-
 use App\Models\User;
 use App\Models\Image;
 use App\Models\Town;
@@ -39,14 +38,14 @@ class Announcement extends Model implements Searchable
         return $this->belongsTo(User::class);
     }
 
+
     public function getSearchResult(): SearchResult
     {
         $url = route('announces.show', $this->id);
-     
          return new \Spatie\Searchable\SearchResult(
             $this,
             $this->title,
-            $url
+            $url,
          );
     }
 

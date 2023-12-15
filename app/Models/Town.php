@@ -47,7 +47,7 @@ class Town extends Model implements Searchable
 
     public function getSearchResult(): SearchResult
     {
-        $url = route('escorts.show', $this->id);
+        $url = "#";
      
          return new \Spatie\Searchable\SearchResult(
             $this,
