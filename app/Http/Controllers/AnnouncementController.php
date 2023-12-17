@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Announcement;
+use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Http\JsonResponse;
@@ -99,7 +100,16 @@ class AnnouncementController extends Controller
 
     public function displayAdsImage($id, $path)
     {
-       return response()->download(storage_path('app/public/ads//'.$id.'//'. $path));
+        $image = Image::make(storage_path('app/public/ads//'.$id.'//'. $path));
+        $i=Image::make(public_path("logo.png"));
+        $i->resize(300, 300);
+        $i->blur();
+
+        $image->insert($i,'center',2,2);
+        return $image->psrResponse($i);
+
+
+       //return response()->download(storage_path('app/public/ads//'.$id.'//'. $path));
 
     }
 
