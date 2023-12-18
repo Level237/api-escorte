@@ -33,7 +33,6 @@ class AdsRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'user_id' => ['required', 'exists:App\Models\User,id'],
             'town_id' => ['required', 'exists:App\Models\Town,id'],
             'quarter_id' => ['required', 'exists:App\Models\Quarter,id'],
             'gender' => ['required','string'],
