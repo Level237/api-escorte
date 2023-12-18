@@ -33,6 +33,7 @@ class ListenerCheckSubscription
         $announcement=Announcement::find($subscription->announcement_id);
         $announcement->status=0;
         $announcement->isSubscribe=0;
+        $announcement->subscribe_id=0;
         $announcement->save();
 
         // Envoyer un email ou une notification à l'utilisateur
