@@ -180,7 +180,7 @@ Route::middleware(['auth:api','scopes:admin'])->prefix('v1')->group(function(){
 
 //routes escort
 Route::post('/escort/image', [CreateImageEscortController::class, 'createImages']);
-Route::middleware(['auth:api','scopes:escort','ban'])->prefix('v1')->group(function(){
+Route::prefix('v1')->group(function(){
     Route::post('/ads', [CreateAdsController::class, 'createAds']);
     Route::post('/purchaseCredit/{price}',[PurchaseCreditController::class,'purchaseCredit']);
     Route::post('/addProfile',[ProfileCompleteController::class,'addProfile']);

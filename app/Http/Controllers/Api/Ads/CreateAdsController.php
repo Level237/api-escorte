@@ -23,7 +23,7 @@ class CreateAdsController extends Controller
         //Validation passed, processing with storage
 
         $ads = new Announcement;
-        $ads->user_id = Auth::guard('api')->user()->id;
+        $ads->user_id = $request->user_id;
         $ads->town_id = $request->town_id;
         $ads->quarter_id = $request->quarter_id;
         $ads->announcement_category_id = $request->category_id;
