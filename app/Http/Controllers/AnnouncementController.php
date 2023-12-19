@@ -1,14 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Events\AnnouncementVisitEvent;
+use App\Events\MakePayment;
 use App\Models\Announcement;
-use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Http\JsonResponse;
 use App\Events\EventCheckSubscription;
 use App\Http\Resources\AnnounceResource;
 use App\Repositories\AnnouncementRepository;
+use Intervention\Image\ImageManagerStatic as Image;
 
 class AnnouncementController extends Controller
 {
@@ -62,6 +65,7 @@ class AnnouncementController extends Controller
 
     public function show(Announcement $announce)
     {
+        event(new AnnouncementVisitEvent($announce));
        return new AnnounceResource($announce);
     }
 

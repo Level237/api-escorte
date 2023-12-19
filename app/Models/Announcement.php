@@ -1,17 +1,19 @@
 <?php
 
 namespace App\Models;
+use App\Models\Town;
 use App\Models\User;
 use App\Models\Image;
-use App\Models\Town;
 use App\Models\Quarter;
-use App\Models\AnnouncementCategory;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use App\Models\Announcement_visit;
 use Spatie\Searchable\Searchable;
 use Spatie\Searchable\SearchResult;
+use App\Models\AnnouncementCategory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 
 class Announcement extends Model implements Searchable
@@ -37,7 +39,9 @@ class Announcement extends Model implements Searchable
     public function User():BelongsTo{
         return $this->belongsTo(User::class);
     }
-
+    public function visits():HasMany{
+        return $this->hasMany(Announcement_visit::class);
+    }
 
     public function getSearchResult(): SearchResult
     {
@@ -48,6 +52,8 @@ class Announcement extends Model implements Searchable
             $url,
          );
     }
+
+
 
 
 }
