@@ -22,18 +22,20 @@ class ResearchController extends Controller
       $searchResults = (new Search())
         ->registerModel(Announcement::class, function(ModelSearchAspect $modelSearchAspect) {
             $modelSearchAspect
-                ->addSearchableAttribute('title') 
-                ->addSearchableAttribute('description') 
-                ->addSearchableAttribute('services') 
+                ->addSearchableAttribute('title')
+                ->addSearchableAttribute('description')
+                ->addSearchableAttribute('services')
                 ->with('User')
+                ->orderBy('subscribe_id','DESC')
+                ->where('status',1)
                 ->with('town')
                 ->with('images');
-        
+
       })
-      
+
       ->registerModel(User::class, function(ModelSearchAspect $modelSearchAspect) {
             $modelSearchAspect
-                ->addSearchableAttribute('username') 
+                ->addSearchableAttribute('username')
                 ->with('ads');
       })
 
@@ -41,10 +43,10 @@ class ResearchController extends Controller
       ->registerModel(Quarter::class, 'quarter_name')
       ->search($term);
 
-      
+
        return response(json_encode($searchResults), 200)
                   ->header('Content-Type', 'application/json');
     }
 
-   
+
 }
