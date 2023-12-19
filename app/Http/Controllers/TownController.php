@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 use App\Http\Resources\TownResource;
+use App\Http\Requests\TownRequest;
 use Illuminate\Http\Request;
 use App\Models\Town;
+
 class TownController extends Controller
 {
     /**
@@ -19,15 +21,24 @@ class TownController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(TownRequest $request)
     {
-        
+     
+        $validatedData=$request->validated();
+         $town = Town::create([
+            'town_name' => $request->town_name,
+            'code' => $request->code,
+            'country_id' => $request->country_id,
+
+        ]);
+
+        return new TownResource($town);
     }
 
     /**
