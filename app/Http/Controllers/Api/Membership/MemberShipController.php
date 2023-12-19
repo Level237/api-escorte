@@ -15,7 +15,7 @@ class MemberShipController extends Controller
     }
 
     public function show($id){
-        $membership=Membership::where('id',$id)->first();
+        $membership = Membership::where('id',$id)->first();
         return $membership;
     }
 

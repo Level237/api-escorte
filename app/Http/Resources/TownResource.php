@@ -17,7 +17,11 @@ class TownResource extends JsonResource
         return [
             'id' => (string) $this->id,
             'town_name' => $this->town_name,
-            'ads' => $this->ads()->count()
+            'code' =>$this->code,
+            'country' =>$this->country,
+            'ads' => $this->ads()->count(),
+            'quarters' => $this->quarters()->count()
+
         ];
     }
 }

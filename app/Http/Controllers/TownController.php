@@ -44,9 +44,9 @@ class TownController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Town $town)
     {
-        //
+        return new TownResource($town);
     }
 
     /**
@@ -60,16 +60,30 @@ class TownController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Town $town)
     {
-        //
+         $town->update([
+            'town_name' => $request->town_name,
+            'code' => $request->code,
+            'country_id' => $request->country_id,
+        ]);
+
+         return new TownResource($town);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Town $town)
     {
-        //
+        //Check if town has quarters and / or ads
+        $townR =  new TownResource($town);
+        if($townR->ads()->count() > 0 || $townR->quarters()->count() > 0)
+            return response("Impossible de supprimer, cette ville contient des quartiers et/ou des annonces", 400);
+        
+        else{
+            $town->delete();
+        return response(null, 204);
+        }    
     }
 }
