@@ -16,6 +16,7 @@ class Town extends Model implements Searchable
 
     protected $fillable=[
         'town_name',
+        'code',
         'country_id'
     ];
     /**

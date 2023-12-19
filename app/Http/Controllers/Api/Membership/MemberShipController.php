@@ -21,6 +21,7 @@ class MemberShipController extends Controller
 
     public function store(MemberShipRequest $request){
 
+        $validatedData=$request->validated();
         $membership = MemberShip::create([
             'membership_name' => $request->membership_name,
             'period' => $request->period,
