@@ -14,6 +14,7 @@ use App\Http\Controllers\VerifyCodeController;
 use App\Http\Controllers\NewPasswordController;
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\Api\Admin\NewUserController;
+use App\Http\Controllers\Api\Ads\AdsVisitController;
 use App\Http\Controllers\Api\auth\LoginController;
 use App\Http\Controllers\Escorts\EscortController;
 use App\Http\Controllers\Api\User\LogoutController;
@@ -70,6 +71,7 @@ use App\Http\Controllers\CountryController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+Route::get('visit/{id}',[AdsVisitController::class,'visit']);
 Route::get('/check-subscribe',[CheckSubscriptionController::class,"check"]);
 Route::get('home/annonces',[AnnouncementController::class,"homepageAnnoncement"]);
 Route::get('gold/annonces',[AnnouncementController::class,"goldAnnoncement"]);
