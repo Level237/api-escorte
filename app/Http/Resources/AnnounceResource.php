@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Resources;
+
+use App\Models\Announcement_visit;
 use App\Models\Memberships_user;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -32,6 +34,7 @@ class AnnounceResource extends JsonResource
             'images' => $this->images,
             'whatsapp' => $this->whatsapp,
             'gender' => $this->gender,
+            'visits'=>Announcement_visit::where('announcement_id',$this->id)->count()
         ];
     }
 }
