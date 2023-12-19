@@ -2,10 +2,12 @@
 
 namespace App\Providers;
 
+use App\Events\AnnouncementVisitEvent;
 use App\Events\EventCheckExpire;
 use App\Events\EventCheckSubscription;
 use App\Events\MakePayment;
 use App\Events\ProfileUserEvent;
+use App\Listeners\AnnouncementVisitListener;
 use App\Listeners\ListenerCheckExpire;
 use App\Listeners\ListenerCheckSubscription;
 use App\Listeners\MakePayment as ListenersMakePayment;
@@ -34,6 +36,9 @@ class EventServiceProvider extends ServiceProvider
         ],
        EventCheckExpire::class=>[
         ListenerCheckExpire::class
+       ],
+       AnnouncementVisitEvent::class=>[
+        AnnouncementVisitListener::class
        ]
     ];
 
