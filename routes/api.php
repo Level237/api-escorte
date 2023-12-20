@@ -59,6 +59,7 @@ use App\Http\Controllers\Api\User\ReviewUserController;
 use App\Http\Controllers\Payment\PaymentCurrentUserController;
 
 use App\Http\Controllers\TownController;
+use App\Http\Controllers\QuarterController;
 use App\Http\Controllers\CountryController;
 
 /*
@@ -89,6 +90,10 @@ Route::get('/list/services',[ListServiceController::class,'list']);
 
 // Town GROUP ROUTES
 Route::apiResource('/towns', TownController::class);
+
+
+// Quarter GROUP ROUTES
+Route::apiResource('/quarters', QuarterController::class);
 
 // Country GROUP ROUTES
 Route::apiResource('/countries', CountryController::class);
