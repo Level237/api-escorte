@@ -169,6 +169,7 @@ Route::post('/login',[LoginController::class,'login']);
 // endpoint simple user
 Route::middleware(['auth:api','ban'])->prefix('v1')->group(function(){
     Route::get('/currentUser',[CurrentUserController::class,'currentUser']);
+    Route::post('/purchaseCredit/{price}',[PurchaseCreditController::class,'purchaseCredit']);
     Route::post('/choice/questions',[ChoiceQuestionController::class,'choice']);
     Route::post('subscribe/withCredit/{id}/{announcement_id}',[SubscribeWithCreditController::class,'subscribe']);
     Route::post('/logout',[LogoutController::class,'logout']);
@@ -194,7 +195,7 @@ Route::middleware(['auth:api','scopes:admin'])->prefix('v1')->group(function(){
 Route::post('/escort/image', [CreateImageEscortController::class, 'createImages']);
 Route::prefix('v1')->group(function(){
     Route::post('/ads', [CreateAdsController::class, 'createAds']);
-    Route::post('/purchaseCredit/{price}',[PurchaseCreditController::class,'purchaseCredit']);
+
     Route::post('/addProfile',[ProfileCompleteController::class,'addProfile']);
     Route::post('/attach/services',[AttachEscortServiceController::class,'attach']);
     Route::get('/getEscort',[GetEscortController::class,'getEscort']);
