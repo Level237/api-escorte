@@ -206,4 +206,5 @@ Route::prefix('v1')->group(function(){
 //routes escort
 Route::middleware(['auth:api','scopes:customer'])->prefix('v1')->group(function(){
     Route::post('review/new/{escortId}',[ReviewUserController::class,'addReview']);
+    Route::post('/subscribe/member',[MyPurchaseController::class,'subscribeUserWithCredit']);
 });
