@@ -46,9 +46,9 @@ class ContactController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Contact $contact)
     {
-        //
+        return new ContactResource($contact);
     }
 
     /**
@@ -62,16 +62,22 @@ class ContactController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Contact $contact)
     {
-        //
+        $contact->update([
+            'status' => $request->status,
+        ]);
+
+         return new ContactResource($contact);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Contact $contact)
     {
-        //
+        $contact->delete();
+        return response(null, 204);
+    
     }
 }

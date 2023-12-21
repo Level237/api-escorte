@@ -88,6 +88,7 @@ Route::get('/list/height',[ListHeightController::class,'list']);
 Route::get('/list/weight',[ListWeightController::class,'list']);
 Route::get('/list/services',[ListServiceController::class,'list']);
 
+
 // Town GROUP ROUTES
 Route::apiResource('/towns', TownController::class);
 
