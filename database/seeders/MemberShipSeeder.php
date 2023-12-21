@@ -47,7 +47,13 @@ class MemberShipSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
 
-
+            [
+                'membership_name'=>'VIP',
+                'period'=>'30',
+                'price' => '1500',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
         ];
 
         //Storing Data
