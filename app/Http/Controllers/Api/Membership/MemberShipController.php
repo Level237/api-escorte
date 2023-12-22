@@ -11,7 +11,7 @@ class MemberShipController extends Controller
 {
     public function index()
     {
-        return MemberShipResource::collection(Membership::all());
+        return MemberShipResource::collection(Membership::where('id',"!=",4)->get());
     }
 
     public function show($id){
