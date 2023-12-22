@@ -99,23 +99,28 @@ class MyPurchaseController extends Controller
         if($user->balance < $memberShip->price){
             return response()->json(['code'=>500,'message'=>"votre nombre de crédit est insuffisant pour souscrire à cet abonnement"],500);
         }else{
-            $data=[
-                'payment_type'=>"credits",
-                'price'=>$memberShip->price,
-                'user_id'=>Auth::guard('api')->user()->id
-            ];
-            $payment=event(new MakePayment($data));
-            $newDateTime = Carbon::now()->addDay(30);
-            $newDateTime->setTimezone('Africa/Douala');
-            DB::table('members')->insert([
-                'user_id'=>$user->id,
-                'membership_id'=>$memberShip_id,
-                'payment_id'=>$payment[0]->id,
-                'expire_at'=>$newDateTime,
-                'status'=>1
-            ]);
+            $user->isSubscribe=1;
 
-            return response()->json(["code"=>200,"message"=>"Soubscription au forfait $memberShip->membership_name avec success."]);
+            if($user->save()){
+                $data=[
+                    'payment_type'=>"credits",
+                    'price'=>$memberShip->price,
+                    'user_id'=>Auth::guard('api')->user()->id
+                ];
+                $payment=event(new MakePayment($data));
+                $newDateTime = Carbon::now()->addDay(30);
+                $newDateTime->setTimezone('Africa/Douala');
+                DB::table('members')->insert([
+                    'user_id'=>$user->id,
+                    'membership_id'=>$memberShip_id,
+                    'payment_id'=>$payment[0]->id,
+                    'expire_at'=>$newDateTime,
+                    'status'=>1
+                ]);
+
+                return response()->json(["code"=>200,"message"=>"Soubscription au forfait $memberShip->membership_name avec success."]);
+            }
+
         }
 
     }
