@@ -122,10 +122,10 @@ class AnnouncementController extends Controller
     }
 
     public function vipAnnoncement(){
-        return AnnounceResource::collection(Announcement::Where('subscribe_id',3)->where('status',1)->get());
+        return AnnounceResource::collection(Announcement::Where('subscribe_id',3)->where('status',1)->inRandomOrder()->get());
     }
 
     public function goldAnnoncement(){
-        return AnnounceResource::collection(Announcement::Where('subscribe_id',2)->where('status',1)->get());
+        return AnnounceResource::collection(Announcement::Where('subscribe_id',2)->where('status',1)->inRandomOrder()->get());
     }
 }
