@@ -19,6 +19,9 @@ class ReportResource extends JsonResource
             'name' => $this->name,
             'phone' => $this->phone,
             'message' => $this->message,
+            'path' => $this->path,
+            'status' => $this->status,
+            'ads' => $this->ads
         ];
     }
 }

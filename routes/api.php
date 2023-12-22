@@ -100,6 +100,7 @@ Route::apiResource('/quarters', QuarterController::class);
 Route::apiResource('/countries', CountryController::class);
 
 Route::get('/displayadsimage/{id}/{path}',[AnnouncementController::class,'displayAdsImage']);
+Route::get('/displayreportimage/{id}/{path}',[ReportController::class,'displayReportImage']);
 
 
 Route::get('/test', function(Request $request){
