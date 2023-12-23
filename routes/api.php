@@ -206,5 +206,7 @@ Route::prefix('v1')->group(function(){
 //routes escort
 Route::middleware(['auth:api','scopes:customer'])->prefix('v1')->group(function(){
     Route::post('review/new/{escortId}',[ReviewUserController::class,'addReview']);
+    Route::get('get/premium',[MemberShipController::class,'showPremium']);
+    Route::post('/subscribe/member/momo',[MyPurchaseController::class,'subscribeUserWithMomo']);
     Route::post('/subscribe/member',[MyPurchaseController::class,'subscribeUserWithCredit']);
 });

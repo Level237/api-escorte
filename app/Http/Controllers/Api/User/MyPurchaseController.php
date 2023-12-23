@@ -92,9 +92,9 @@ class MyPurchaseController extends Controller
 
     }
 
-    public function subscribeUserWithCredit($memberShip_id){
+    public function subscribeUserWithCredit(){
         $user=User::find(Auth::guard('api')->user()->id);
-        $memberShip=Membership::find($memberShip_id);
+        $memberShip=Membership::find(4);
 
         if($user->balance < $memberShip->price){
             return response()->json(['code'=>500,'message'=>"votre nombre de crédit est insuffisant pour souscrire à cet abonnement"],500);
@@ -112,7 +112,7 @@ class MyPurchaseController extends Controller
                 $newDateTime->setTimezone('Africa/Douala');
                 DB::table('members')->insert([
                     'user_id'=>$user->id,
-                    'membership_id'=>$memberShip_id,
+                    'membership_id'=>4,
                     'payment_id'=>$payment[0]->id,
                     'expire_at'=>$newDateTime,
                     'status'=>1
@@ -120,6 +120,37 @@ class MyPurchaseController extends Controller
 
                 return response()->json(["code"=>200,"message"=>"Soubscription au forfait $memberShip->membership_name avec success."]);
             }
+
+        }
+
+    }
+
+    public function subscribeUserWithMomo(){
+        $user=User::find(Auth::guard('api')->user()->id);
+        $memberShip=Membership::find(4);
+
+
+            $user->isSubscribe=1;
+
+            if($user->save()){
+                $data=[
+                    'payment_type'=>"mobile money",
+                    'price'=>$memberShip->price,
+                    'user_id'=>Auth::guard('api')->user()->id
+                ];
+                $payment=event(new MakePayment($data));
+                $newDateTime = Carbon::now()->addDay(30);
+                $newDateTime->setTimezone('Africa/Douala');
+                DB::table('members')->insert([
+                    'user_id'=>$user->id,
+                    'membership_id'=>4,
+                    'payment_id'=>$payment[0]->id,
+                    'expire_at'=>$newDateTime,
+                    'status'=>1
+                ]);
+
+                return response()->json(["code"=>200,"message"=>"Soubscription au forfait $memberShip->membership_name avec success."]);
+
 
         }
 

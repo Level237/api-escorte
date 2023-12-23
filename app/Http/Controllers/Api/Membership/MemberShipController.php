@@ -14,6 +14,9 @@ class MemberShipController extends Controller
         return MemberShipResource::collection(Membership::where('id',"!=",4)->get());
     }
 
+    public function showPremium(){
+        return MemberShipResource::collection(Membership::where('id',"=",4)->get());
+    }
     public function show($id){
         $membership = Membership::where('id',$id)->first();
         return $membership;
