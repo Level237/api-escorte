@@ -5,11 +5,13 @@ namespace App\Providers;
 use App\Events\AnnouncementVisitEvent;
 use App\Events\EventCheckExpire;
 use App\Events\EventCheckSubscription;
+use App\Events\EventCheckUpgradePlan;
 use App\Events\MakePayment;
 use App\Events\ProfileUserEvent;
 use App\Listeners\AnnouncementVisitListener;
 use App\Listeners\ListenerCheckExpire;
 use App\Listeners\ListenerCheckSubscription;
+use App\Listeners\ListenerCheckUpgradePlan;
 use App\Listeners\MakePayment as ListenersMakePayment;
 use App\Listeners\ProfileUserListener;
 use Illuminate\Auth\Events\Registered;
@@ -36,6 +38,9 @@ class EventServiceProvider extends ServiceProvider
         ],
        EventCheckExpire::class=>[
         ListenerCheckExpire::class
+       ],
+       EventCheckUpgradePlan::class=>[
+        ListenerCheckUpgradePlan::class
        ],
        AnnouncementVisitEvent::class=>[
         AnnouncementVisitListener::class
