@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Report;
 use App\Http\Resources\ReportResource;
 use App\Http\Requests\ReportRequest;
-use App\Http\Requests\UpdateReportRequest;
+use Illuminate\Http\Request;
 
 class ReportController extends Controller
 {
@@ -14,7 +14,7 @@ class ReportController extends Controller
      */
     public function index()
     {
-        return ContactResource::collection(Report::all());
+        return ReportResource::collection(Report::all());
     }
 
     /**
@@ -55,7 +55,7 @@ class ReportController extends Controller
      */
     public function show(Report $report)
     {
-        //
+        return new ReportResource($report);
     }
 
     /**
@@ -69,9 +69,13 @@ class ReportController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateReportRequest $request, Report $report)
+    public function update(Request $request, Report $report)
     {
-        //
+         $report->update([
+            'status' => $request->status,
+        ]);
+
+         return new ReportResource($report);
     }
 
     /**
@@ -79,6 +83,16 @@ class ReportController extends Controller
      */
     public function destroy(Report $report)
     {
-        //
+        $report->delete();
+        return response(null, 204);
+    }
+
+    /***
+     * Display report
+     */
+    public function displayReportImage($id, $path)
+    {
+       return response()->download(storage_path('app\public\report\\'.$id.'\\'. $path));
+
     }
 }
