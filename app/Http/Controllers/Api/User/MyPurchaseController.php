@@ -100,7 +100,7 @@ class MyPurchaseController extends Controller
             return response()->json(['code'=>500,'message'=>"votre nombre de crédit est insuffisant pour souscrire à cet abonnement"],500);
         }else{
             $user->isSubscribe=1;
-
+            $user->balance=$user->balance - $memberShip->price;
             if($user->save()){
                 $data=[
                     'payment_type'=>"credits",

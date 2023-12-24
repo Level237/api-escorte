@@ -280,7 +280,7 @@ class UserSeeder extends Seeder
                 'email'=>'patrick@gmail.com',
                 'role_id' => 3,
                 'town_id' => 4,
-                "balance"=>0,
+                "balance"=>5000,
                 'phone_number' => "692524282",
                 'password' => Hash::make('password'),
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
