@@ -30,6 +30,7 @@ class ListenerCheckUpgradePlan
     foreach ($expiredSubscriptions as $subscription) {
         // Mettre à jour l'abonnement expiré
         $user=User::find($subscription->user_id);
+        Member::destroy($subscription->id);
         $subscription->update(['status' => 0]);
         $user->isSubscribe=0;
         $user->save();

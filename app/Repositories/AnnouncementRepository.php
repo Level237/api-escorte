@@ -21,7 +21,7 @@ class AnnouncementRepository implements AnnouncementInterface
 
     public function deleteAnnouncement($AnnouncementId)
     {
-        Annoucement::destroy($AnnouncementId);
+        Announcement::destroy($AnnouncementId);
     }
 
     public function createAnnouncement(array $AnnouncementDetails)
