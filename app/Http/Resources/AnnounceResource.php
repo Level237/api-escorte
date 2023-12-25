@@ -18,6 +18,7 @@ class AnnounceResource extends JsonResource
     {
          return [
             "subscribe_id"=>$this->subscribe_id,
+            "slug"=>$this->slug,
             'id' => (string) $this->id,
             'user' => $this->user,
             'age' => $this->age,

@@ -10,6 +10,7 @@ use Illuminate\Http\Response;
 use Illuminate\Http\JsonResponse;
 use App\Events\EventCheckSubscription;
 use App\Http\Resources\AnnounceResource;
+use App\Models\User;
 use App\Repositories\AnnouncementRepository;
 use Intervention\Image\ImageManagerStatic as Image;
 
@@ -67,6 +68,12 @@ class AnnouncementController extends Controller
     {
         event(new AnnouncementVisitEvent($announce));
        return new AnnounceResource($announce);
+    }
+
+    public function getAnnounce($name,$slug){
+        $user=User::where('username',$name)->first();
+        $announce=AnnounceResource::collection(Announcement::where("user_id",$user->id)->where('slug',$slug)->get());
+        return $announce;
     }
 
     public function update(Request $request): JsonResponse
