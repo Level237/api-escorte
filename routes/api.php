@@ -194,7 +194,7 @@ Route::middleware(['auth:api','scopes:admin'])->prefix('v1')->group(function(){
 
 //routes escort
 Route::post('/escort/image', [CreateImageEscortController::class, 'createImages']);
-Route::prefix('v1')->group(function(){
+Route::middleware(['auth:api','scopes:escort'])->prefix('v1')->group(function(){
     Route::post('/ads', [CreateAdsController::class, 'createAds']);
 
     Route::post('/addProfile',[ProfileCompleteController::class,'addProfile']);

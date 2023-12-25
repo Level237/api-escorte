@@ -23,12 +23,13 @@ class CreateAdsController extends Controller
         //Validation passed, processing with storage
 
         $ads = new Announcement;
-        $ads->user_id = $request->user_id;
+        $ads->user_id = Auth::guard('api')->user()->id;
         $ads->town_id = $request->town_id;
         $ads->quarter_id = $request->quarter_id;
         $ads->announcement_category_id = $request->category_id;
         $ads->accepted= $request->accepted;
         $ads->location = $request->location;
+        $ads->slug=$this->slugify($request->title);
         $ads->title = $request->title;
         $ads->age = $request->age;
         $ads->gender = $request->gender;
@@ -36,15 +37,28 @@ class CreateAdsController extends Controller
         $ads->services = $request->services;
         $ads->description = $request->description;
         $ads->expire=Carbon::now()->addDay(14);
+
         if($ads->save()){
 
-             return response($ads, 200)
-                  ->header('Content-Type', 'application/json');
-        }
-        else{
-            return response("{error:error}", 500)
-                  ->header('Content-Type', 'application/json');
-        }
+            return response($ads, 200)
+                 ->header('Content-Type', 'application/json');
+       }
+       else{
+           return response("{error:error}", 500)
+                 ->header('Content-Type', 'application/json');
+       }
+    }
+
+    function slugify($string, $delimiter = '-') {
+        $oldLocale = setlocale(LC_ALL, '0');
+        setlocale(LC_ALL, 'en_US.UTF-8');
+        $clean = iconv('UTF-8', 'ASCII//TRANSLIT', $string);
+        $clean = preg_replace("/[^a-zA-Z0-9\/_|+ -]/", '', $clean);
+        $clean = strtolower($clean);
+        $clean = preg_replace("/[\/_|+ -]+/", $delimiter, $clean);
+        $clean = trim($clean, $delimiter);
+        setlocale(LC_ALL, $oldLocale);
+        return $clean;
     }
 
     public function update(Request $request){
