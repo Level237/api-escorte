@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\User;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\ReviewResource;
+use App\Models\Announcement;
 use App\Models\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -21,8 +22,9 @@ class ReviewUserController extends Controller
         return response()->json(["code"=>200,"message"=>"reviews ajouté avec success"],200);
     }
 
-    public function getReview($announcement_id){
-        $getReview=ReviewResource::collection(Review::where('announcement_id',$announcement_id)->get());
+    public function getReview($slug){
+        $announce=Announcement::where('slug',$slug)->first();
+        $getReview=ReviewResource::collection(Review::where('announcement_id',$announce->id)->get());
 
         return $getReview;
     }
