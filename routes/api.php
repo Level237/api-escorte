@@ -62,6 +62,8 @@ use App\Http\Controllers\TownController;
 use App\Http\Controllers\QuarterController;
 use App\Http\Controllers\CountryController;
 
+use App\Http\Controllers\BannerController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -119,7 +121,9 @@ Route::prefix('search')->group(function(){
 });
 
 
-// ESCORTS GROUP ROUTES
+// BANNERS GROUP ROUTES
+Route::apiResource('/banners', BannerController::class);
+Route::get('/displaybanner/{id}/{path}',[BannerController::class,'displayBanner']);
 
 
 // MEMBERSHIP GROUP ROUTES
