@@ -4,65 +4,66 @@
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TownController;
+
+use App\Http\Controllers\BannerController;
+
+use App\Http\Controllers\CountryController;
+
+use App\Http\Controllers\QuarterController;
 use App\Http\Controllers\LocationController;
-
+use App\Http\Controllers\Api\SearchController;
 use App\Http\Controllers\CheckEmailController;
-
 use App\Http\Controllers\CreateUserController;
-
 use App\Http\Controllers\VerifyCodeController;
 use App\Http\Controllers\NewPasswordController;
 use App\Http\Controllers\AnnouncementController;
-use App\Http\Controllers\Api\Admin\NewUserController;
-use App\Http\Controllers\Api\Ads\AdsVisitController;
+use App\Http\Controllers\Api\FilterAdsController;
 use App\Http\Controllers\Api\auth\LoginController;
 use App\Http\Controllers\Escorts\EscortController;
 use App\Http\Controllers\Api\User\LogoutController;
+use App\Http\Controllers\Api\Ads\AdsVisitController;
+use App\Http\Controllers\Api\Admin\NewUserController;
 use App\Http\Controllers\Api\Ads\CreateAdsController;
 use App\Http\Controllers\Api\Ads\DeleteAdsController;
+use App\Http\Controllers\Api\List\ListRoleController;
 use App\Http\Controllers\Api\List\ListSkinController;
 use App\Http\Controllers\Api\List\ListTownController;
+use App\Http\Controllers\Api\List\ListUserController;
+use App\Http\Controllers\Api\Report\ReportController;
 use App\Http\Controllers\Api\List\ListShapeController;
+use App\Http\Controllers\Api\PurchaseCreditController;
+use App\Http\Controllers\Api\Contact\ContactController;
 use App\Http\Controllers\Api\List\ListEthnicController;
 use App\Http\Controllers\Api\List\ListHeightController;
 use App\Http\Controllers\Api\List\ListWeightController;
+use App\Http\Controllers\Api\Search\ResearchController;
+use App\Http\Controllers\Api\User\MyPurchaseController;
+use App\Http\Controllers\Api\User\ReviewUserController;
+use App\Http\Controllers\Api\Escort\GetEscortController;
 use App\Http\Controllers\Api\List\ListServiceController;
 use App\Http\Controllers\Api\User\CurrentUserController;
 use App\Http\Controllers\Api\List\ListQuestionController;
 use App\Http\Controllers\Api\User\VerifyAnswerController;
 use App\Http\Controllers\Api\Ads\CreateImageAdsController;
-use App\Http\Controllers\Api\Escort\CreateImageEscortController;
+use App\Http\Controllers\Api\User\ChangePasswordController;
 use App\Http\Controllers\Api\User\ChoiceQuestionController;
+use App\Http\Controllers\Api\User\SuspendAccountController;
 use App\Http\Controllers\Api\User\VerifyQuestionController;
 use App\Http\Controllers\Api\List\ListAdsCategoryController;
-use App\Http\Controllers\Api\List\ListQuaterByTownController;
-use App\Http\Controllers\Api\Escort\ProfileCompleteController;
-use App\Http\Controllers\Api\Escort\AttachEscortServiceController;
-use App\Http\Controllers\Api\Escort\EscortIsCompletedOrNotController;
-use App\Http\Controllers\Api\Escort\GetEscortController;
-use App\Http\Controllers\Api\List\ListRoleController;
-use App\Http\Controllers\Api\List\ListUserController;
-use App\Http\Controllers\Api\SearchController;
-use App\Http\Controllers\Api\Search\ResearchController;
-use App\Http\Controllers\Api\User\ActivateAccountController;
-use App\Http\Controllers\Api\User\ChangePasswordController;
-use App\Http\Controllers\Api\User\SubscribeWithCreditController;
-use App\Http\Controllers\Api\User\SuspendAccountController;
-use App\Http\Controllers\Api\Membership\MemberShipController;
-use App\Http\Controllers\Api\PurchaseCreditController;
-use App\Http\Controllers\Api\User\MyPurchaseController;
 
-use App\Http\Controllers\Api\Contact\ContactController;
-use App\Http\Controllers\Api\Membership\CheckSubscriptionController;
-use App\Http\Controllers\Api\Report\ReportController;
-use App\Http\Controllers\Api\User\ReviewUserController;
+use App\Http\Controllers\Api\User\ActivateAccountController;
+use App\Http\Controllers\Api\List\ListQuaterByTownController;
+use App\Http\Controllers\Api\Membership\MemberShipController;
+use App\Http\Controllers\Api\Escort\ProfileCompleteController;
 use App\Http\Controllers\Payment\PaymentCurrentUserController;
 
-use App\Http\Controllers\TownController;
-use App\Http\Controllers\QuarterController;
-use App\Http\Controllers\CountryController;
+use App\Http\Controllers\Api\Escort\CreateImageEscortController;
+use App\Http\Controllers\Api\User\SubscribeWithCreditController;
+use App\Http\Controllers\Api\Escort\AttachEscortServiceController;
 
-use App\Http\Controllers\BannerController;
+use App\Http\Controllers\Api\Membership\CheckSubscriptionController;
+use App\Http\Controllers\Api\Escort\EscortIsCompletedOrNotController;
 
 /*
 |--------------------------------------------------------------------------
@@ -89,7 +90,7 @@ Route::get('/list/shape',[ListShapeController::class,'list']);
 Route::get('/list/height',[ListHeightController::class,'list']);
 Route::get('/list/weight',[ListWeightController::class,'list']);
 Route::get('/list/services',[ListServiceController::class,'list']);
-
+Route::get('/filter/ads',[FilterAdsController::class,'filter']);
 
 // Town GROUP ROUTES
 Route::apiResource('/towns', TownController::class);
