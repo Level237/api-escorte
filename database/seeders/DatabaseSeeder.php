@@ -41,6 +41,7 @@ class DatabaseSeeder extends Seeder
             AnnouncementImageSeeder::class,
             PaymentSeeder::class,
             MembershipUserSeeder::class,
+            BannerSeeder::class,
         ]);
     }
 }
