@@ -43,6 +43,7 @@ use App\Http\Controllers\Api\User\ReviewUserController;
 use App\Http\Controllers\Api\Escort\GetEscortController;
 use App\Http\Controllers\Api\List\ListServiceController;
 use App\Http\Controllers\Api\User\CurrentUserController;
+use App\Http\Controllers\Api\User\UpdateUserController;
 use App\Http\Controllers\Api\List\ListQuestionController;
 use App\Http\Controllers\Api\User\VerifyAnswerController;
 use App\Http\Controllers\Api\Ads\CreateImageAdsController;
@@ -176,6 +177,7 @@ Route::post('/login',[LoginController::class,'login']);
 // endpoint simple user
 Route::middleware(['auth:api','ban'])->prefix('v1')->group(function(){
     Route::get('/currentUser',[CurrentUserController::class,'currentUser']);
+    Route::post('/updateUser',[UpdateUserController::class,'updateUser']);
     Route::post('/purchaseCredit/{price}',[PurchaseCreditController::class,'purchaseCredit']);
     Route::post('/choice/questions',[ChoiceQuestionController::class,'choice']);
     Route::post('subscribe/withCredit/{id}/{announcement_id}',[SubscribeWithCreditController::class,'subscribe']);
