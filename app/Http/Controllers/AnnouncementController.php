@@ -66,13 +66,16 @@ class AnnouncementController extends Controller
 
     public function show(Announcement $announce)
     {
-        event(new AnnouncementVisitEvent($announce));
+        //event(new AnnouncementVisitEvent($announce));
        return new AnnounceResource($announce);
     }
 
     public function getAnnounce($name,$slug){
         $user=User::where('username',$name)->first();
+
         $announce=AnnounceResource::collection(Announcement::where("user_id",$user->id)->where('slug',$slug)->get());
+        $a=Announcement::where("user_id",$user->id)->where('slug',$slug)->first();
+        $event=event(new AnnouncementVisitEvent($a));
         return $announce;
     }
 
@@ -120,7 +123,7 @@ class AnnouncementController extends Controller
         return $image->psrResponse($i);
 
 
-      
+
 
     }
 
