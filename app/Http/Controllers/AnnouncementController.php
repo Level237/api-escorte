@@ -128,7 +128,7 @@ class AnnouncementController extends Controller
     }
 
     public function homepageAnnoncement(){
-        return AnnounceResource::collection(Announcement::OrWhere('subscribe_id',2)->OrWhere('subscribe_id',3)->orderby('subscribe_id','DESC')->where('status',1)->limit(9)->get());
+        return AnnounceResource::collection(Announcement::OrWhere('subscribe_id',2)->OrWhere('subscribe_id',3)->orderby('subscribe_id','DESC')->where('status',1)->limit(9)->inRandomOrder()->get());
     }
 
     public function vipAnnoncement(){
