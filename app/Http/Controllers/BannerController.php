@@ -67,6 +67,7 @@ class BannerController extends Controller
     public function update(Request $request, Banners $banner)
     {
 
+            
             if($request->status == 1){
                 //check if the path is ok
                 
@@ -76,11 +77,17 @@ class BannerController extends Controller
                     $status = 0;
                 }
                 else
-                    $status = 1;
-               
+                
+                    $status = $request->status;
                     $banner->update([
                     'status' => $status,
                 ]);
+            }
+
+            else{
+               
+                    $banner->update([
+                    'status' => 0,]);
             }
            
 
