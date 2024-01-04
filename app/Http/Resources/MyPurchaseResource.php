@@ -24,6 +24,7 @@ class MyPurchaseResource extends JsonResource
             'membership_id'=>$this->membership->id,
             'membership_price'=>$this->membership->price,
             'announce_id'=>$this->announcement->id,
+            'slug'=>$this->annoucement->slug,
             'announce_title'=>$this->announcement->title,
             'expire_at'=> Carbon::parse($this->expire_at)->format('d-m-Y H:i'),
             'status'=>$this->status

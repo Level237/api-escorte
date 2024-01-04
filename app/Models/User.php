@@ -34,6 +34,7 @@ class User extends Authenticatable implements Searchable
         'phone_number',
         'role_id',
         'password',
+        'isVerify',
         'suspended_at',
         'balance'
     ];
