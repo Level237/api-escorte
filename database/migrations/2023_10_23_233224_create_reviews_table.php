@@ -24,7 +24,7 @@ return new class extends Migration
             ->constrained()
             ->restrictOnUpdate()
             ->restrictOnDelete();
-            $table->integer('stars')->default(0);
+            $table->integer('stars')->default(3);
 			$table->string('comment');
 			$table->boolean('state')->default(1);
             $table->timestamps();

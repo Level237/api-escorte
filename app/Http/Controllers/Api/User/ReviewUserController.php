@@ -15,7 +15,9 @@ class ReviewUserController extends Controller
         $newReview=new Review;
         $newReview->user_id=Auth::guard('api')->user()->id;
         $newReview->announcement_id=$announcement_id;
-        $newReview->stars=$request->stars;
+        if(isset($request->stars)){
+            $newReview->stars=$request->stars;
+        }
         $newReview->comment=$request->comment;
         $newReview->save();
 
