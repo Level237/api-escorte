@@ -29,6 +29,7 @@ class UserSeeder extends Seeder
                 'town_id' => 1,
                 'phone_number' => "675824349",
                 'password' => Hash::make('password'),
+                'isVerify' => 1,
                 "balance"=>0,
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
@@ -42,6 +43,7 @@ class UserSeeder extends Seeder
                 'phone_number' => "690394365",
                 "balance"=>0,
                 'password' => Hash::make('password'),
+                'isVerify' => 1,
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -54,6 +56,7 @@ class UserSeeder extends Seeder
                 'phone_number' => "693374160",
                 "balance"=>0,
                 'password' => Hash::make('password'),
+                'isVerify' => 1,
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -67,6 +70,7 @@ class UserSeeder extends Seeder
                 "balance"=>0,
                 'phone_number' => "698825366",
                 'password' => Hash::make('password'),
+                'isVerify' => 1,
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -79,6 +83,7 @@ class UserSeeder extends Seeder
                 "balance"=>3000,
                 'phone_number' => "694145298",
                 'password' => Hash::make('password'),
+                'isVerify' => 1,
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -91,6 +96,7 @@ class UserSeeder extends Seeder
                 'town_id' => 2,
                 'phone_number' => "671375860",
                 'password' => Hash::make('password'),
+                'isVerify' => 1,
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -103,6 +109,7 @@ class UserSeeder extends Seeder
                 "balance"=>10000,
                 'phone_number' => "654011210",
                 'password' => Hash::make('password'),
+                'isVerify' => 0,
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -115,6 +122,7 @@ class UserSeeder extends Seeder
                 "balance"=>1000,
                 'phone_number' => "655259632",
                 'password' => Hash::make('password'),
+                'isVerify' => 1,
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -127,6 +135,7 @@ class UserSeeder extends Seeder
                 "balance"=>0,
                 'phone_number' => "657011215",
                 'password' => Hash::make('password'),
+                'isVerify' => 0,
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -139,6 +148,7 @@ class UserSeeder extends Seeder
                 "balance"=>0,
                 'phone_number' => "658111210",
                 'password' => Hash::make('password'),
+                'isVerify' => 1,
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -151,6 +161,7 @@ class UserSeeder extends Seeder
                 "balance"=>0,
                 'phone_number' => "659579620",
                 'password' => Hash::make('password'),
+                'isVerify' => 0,
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -163,6 +174,7 @@ class UserSeeder extends Seeder
                 "balance"=>0,
                 'phone_number' => "650258734",
                 'password' => Hash::make('password'),
+                'isVerify' => 1,
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -175,6 +187,7 @@ class UserSeeder extends Seeder
                 "balance"=>0,
                 'phone_number' => "698744152",
                 'password' => Hash::make('password'),
+                'isVerify' => 0,
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -187,6 +200,7 @@ class UserSeeder extends Seeder
                 "balance"=>0,
                 'phone_number' => "675851400",
                 'password' => Hash::make('password'),
+                'isVerify' => 1,
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -199,6 +213,7 @@ class UserSeeder extends Seeder
                 "balance"=>0,
                 'phone_number' => "678902030",
                 'password' => Hash::make('password'),
+                'isVerify' => 0,
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -211,6 +226,7 @@ class UserSeeder extends Seeder
                 "balance"=>0,
                 'phone_number' => "690524185",
                 'password' => Hash::make('password'),
+                'isVerify' => 1,
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -223,6 +239,7 @@ class UserSeeder extends Seeder
                 "balance"=>0,
                 'phone_number' => "699663322",
                 'password' => Hash::make('password'),
+                'isVerify' => 0,
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -235,6 +252,7 @@ class UserSeeder extends Seeder
                 "balance"=>0,
                 'phone_number' => "670805020",
                 'password' => Hash::make('password'),
+                'isVerify' => 1,
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -247,6 +265,7 @@ class UserSeeder extends Seeder
                 "balance"=>0,
                 'phone_number' => "691141516",
                 'password' => Hash::make('password'),
+                'isVerify' => 0,
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -259,6 +278,7 @@ class UserSeeder extends Seeder
                 "balance"=>0,
                 'phone_number' => "671526302",
                 'password' => Hash::make('password'),
+                'isVerify' => 1,
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -271,6 +291,7 @@ class UserSeeder extends Seeder
                 "balance"=>0,
                 'phone_number' => "658605030",
                 'password' => Hash::make('password'),
+                'isVerify' => 0,
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
               'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
@@ -283,6 +304,7 @@ class UserSeeder extends Seeder
                 "balance"=>5000,
                 'phone_number' => "692524282",
                 'password' => Hash::make('password'),
+                'isVerify' => 1,
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -295,6 +317,7 @@ class UserSeeder extends Seeder
                 "balance"=>0,
                 'phone_number' => "692835363",
                 'password' => Hash::make('password'),
+                'isVerify' => 0,
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -307,6 +330,7 @@ class UserSeeder extends Seeder
                 "balance"=>0,
                 'phone_number' => "697585962",
                 'password' => Hash::make('password'),
+                'isVerify' => 1,
                 'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')

@@ -31,6 +31,7 @@ return new class extends Migration
             $table->string('password');
             $table->boolean('isSecure')->default(0);
             $table->boolean('isSubscribe')->default(0);
+            $table->boolean('isVerify')->default(0);
             $table->rememberToken();
             $table->integer('balance')->default(0);
             $table->timestamp('suspended_at')->nullable();
