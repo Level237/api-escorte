@@ -36,7 +36,7 @@ class User extends Authenticatable implements Searchable
         'password',
         'isVerify',
         'suspended_at',
-        'balance'
+        'balance',
     ];
 
     /**
@@ -104,7 +104,7 @@ class User extends Authenticatable implements Searchable
     public function getSearchResult(): SearchResult
     {
         $url = "#";
-     
+
         return new \Spatie\Searchable\SearchResult(
             $this,
             $this->username,
