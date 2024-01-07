@@ -24,6 +24,7 @@ use App\Http\Controllers\Escorts\EscortController;
 use App\Http\Controllers\Api\User\LogoutController;
 use App\Http\Controllers\Api\Ads\AdsVisitController;
 use App\Http\Controllers\Api\Admin\NewUserController;
+use App\Http\Controllers\Api\Admin\VerifyEscortController;
 use App\Http\Controllers\Api\Ads\CreateAdsController;
 use App\Http\Controllers\Api\Ads\DeleteAdsController;
 use App\Http\Controllers\Api\List\ListRoleController;
@@ -198,6 +199,7 @@ Route::middleware(['auth:api','scopes:admin'])->prefix('v1')->group(function(){
     Route::post('suspend/user/{id}',[SuspendAccountController::class,'ban']);
     Route::post('activate/user/{id}',[ActivateAccountController::class,'activate']);
     Route::post('user/new',[NewUserController::class,'newUser']);
+    Route::post('escort/verify',[VerifyEscortController::class,'verifyEscort']);
 });
 
 //routes escort
