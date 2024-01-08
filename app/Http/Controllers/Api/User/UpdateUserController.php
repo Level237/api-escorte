@@ -10,10 +10,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 class UpdateUserController extends Controller
 {
-    public function updateUser(Request $request){
+    public function updateUser(UpdateUserRequest $request){
         $input=$request->all();
         $user=User::find(Auth::guard('api')->user()->id);
         $update=$user->update($input);
+        if($request->town_id){
+            $user->town_id=$request->town_id;
+            $user->save();
+        }
         return response()->json(['message'=>'User update'],200);
     }
 }

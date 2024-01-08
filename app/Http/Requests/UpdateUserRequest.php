@@ -34,8 +34,8 @@ class UpdateUserRequest extends FormRequest
     {
          return [
             'username' => ['required','string'],
-            'town' => ['required','string'],
-            'phone' => ['required','string'],
+            'town_id' => ['required','string'],
+            'phone_number' => ['required','string'],
         ];
     }
 }
