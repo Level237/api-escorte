@@ -4,19 +4,16 @@ namespace App\Http\Controllers\Api\User;
 use App\Models\Town;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UpdateUserRequest;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
 class UpdateUserController extends Controller
 {
-    public function updateUser(UpdateUserRequest $request){
-        $request->validated();
-        $User=Auth::guard('api')->user();
-        $User->username = $request->username;
-        $User->town_id = $request->town;
-        $User->phone_number = $request->phone;
-        $User->save();
-        $User->town = Town::find($User->town_id);
-        return $User;
+    public function updateUser(Request $request){
+        $input=$request->all();
+        $user=User::find(Auth::guard('api')->user()->id);
+        $update=$user->update($input);
+        return response()->json(['message'=>'User update'],200);
     }
 }
