@@ -78,6 +78,7 @@ use App\Http\Controllers\Api\FaqController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+Route::get('faqs',[FaqController::class,'faqs']);
 Route::get('visit/{id}',[AdsVisitController::class,'visit']);
 Route::get('/check-subscribe',[CheckSubscriptionController::class,"check"]);
 Route::get('home/annonces',[AnnouncementController::class,"homepageAnnoncement"]);
@@ -192,7 +193,7 @@ Route::middleware(['auth:api','ban'])->prefix('v1')->group(function(){
 
 //route admin
 Route::middleware(['auth:api','scopes:admin'])->prefix('v1')->group(function(){
-    Route::apiResource('faqs',[FaqController::class]);
+    Route::apiResource('faqs',FaqController::class);
     Route::get('users',[ListUserController::class,'listUser']);
     Route::get('users/ban',[ListUserController::class,'listUserSuspend']);
     Route::get('users/role/{id}',[ListUserController::class,'listUserByRole']);

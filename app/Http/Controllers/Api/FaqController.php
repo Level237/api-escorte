@@ -32,7 +32,7 @@ class FaqController extends Controller
     public function store(Request $request)
     {
         $faq=new Faq;
-        $faq->question=$request->question;
+        $faq->questions=$request->questions;
         $faq->answer=$request->answer;
         $faq->save();
 
@@ -44,7 +44,9 @@ class FaqController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $faq=Faq::find($id);
+
+        return $faq;
     }
 
     /**
@@ -60,7 +62,12 @@ class FaqController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $faq=Faq::find($id);
+         $faq->questions=$request->questions;
+        $faq->answer=$request->answer;
+        $faq->save();
+
+        return response()->json(['message'=>'faq updated successfully'],200);
     }
 
     /**
@@ -68,6 +75,16 @@ class FaqController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $faq=Faq::find($id);
+        $faq->delete();
+
+        return response()->json(['message'=>"faq deleted successfully"],200);
+    }
+
+    public function faqs(){
+
+        $faqs=Faq::all();
+
+        return $faqs;
     }
 }
