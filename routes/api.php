@@ -66,6 +66,7 @@ use App\Http\Controllers\Api\Escort\AttachEscortServiceController;
 
 use App\Http\Controllers\Api\Membership\CheckSubscriptionController;
 use App\Http\Controllers\Api\Escort\EscortIsCompletedOrNotController;
+use App\Http\Controllers\Api\FaqController;
 
 /*
 |--------------------------------------------------------------------------
@@ -191,7 +192,7 @@ Route::middleware(['auth:api','ban'])->prefix('v1')->group(function(){
 
 //route admin
 Route::middleware(['auth:api','scopes:admin'])->prefix('v1')->group(function(){
-
+    Route::apiResource('faqs',[FaqController::class]);
     Route::get('users',[ListUserController::class,'listUser']);
     Route::get('users/ban',[ListUserController::class,'listUserSuspend']);
     Route::get('users/role/{id}',[ListUserController::class,'listUserByRole']);
