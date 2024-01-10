@@ -35,6 +35,8 @@ class FaqController extends Controller
         $faq->question=$request->question;
         $faq->answer=$request->answer;
         $faq->save();
+
+        return response()->json(['message'=>'faq created successfully'],201);
     }
 
     /**
