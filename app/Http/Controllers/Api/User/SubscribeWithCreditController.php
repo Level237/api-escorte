@@ -43,7 +43,7 @@ class SubscribeWithCreditController extends Controller
                     ];
                     $payment=event(new MakePayment($data));
                     //$currentDateTime = Carbon::now();
-                    $newDateTime = Carbon::now()->addDay(30);
+                    $newDateTime = Carbon::now()->addDay(21);
                     $newDateTime->setTimezone('Africa/Douala');
                     $announcement->status=1;
                     $announcement->isSubscribe=1;
