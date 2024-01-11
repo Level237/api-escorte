@@ -71,12 +71,23 @@ class AnnouncementController extends Controller
     }
 
     public function getAnnounce($name,$slug){
+       
         $user=User::where('username',$name)->first();
 
         $announce=AnnounceResource::collection(Announcement::where("user_id",$user->id)->where('slug',$slug)->get());
         $a=Announcement::where("user_id",$user->id)->where('slug',$slug)->first();
         $event=event(new AnnouncementVisitEvent($a));
         return $announce;
+    }
+
+     public function getSimilarAds($name,$slug){
+        $user=User::where('username',$name)->first();
+
+        $announce = (Announcement::where("user_id",$user->id)->where('slug',$slug)->get())[0];
+        $announces = AnnounceResource::collection(Announcement::where("town_id",$announce->town_id)
+        ->where("accepted", $announce->accepted)
+         ->where("location", $announce->location)->get());
+        return $announces;
     }
 
     public function update(Request $request): JsonResponse
