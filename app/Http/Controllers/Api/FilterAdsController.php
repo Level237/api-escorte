@@ -12,8 +12,7 @@ class FilterAdsController extends Controller
 {
     public function filter(Request $request){
 
-        $results=AnnounceResource::collection(Announcement::where('town_id','=',$request->town)
-        ->where('quarter_id','=',$request->quarter)
+        $results=AnnounceResource::collection(Announcement::where('quarter_id','=',$request->quarter)
         ->where('subscribe_id','=',$request->subscribe_id)
 
         ->where('status',1)
