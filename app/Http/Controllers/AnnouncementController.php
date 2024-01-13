@@ -133,8 +133,14 @@ class AnnouncementController extends Controller
         $image->insert($i,'center',2,2);
         return $image->psrResponse($i);
 
+    }
 
-
+     /***
+     * Display ads video
+     */
+    public function displayAdsVideo($id, $path)
+    {
+       return response()->download(storage_path('app\public\ads\\'.$id.'\\videos\\'. $path));
 
     }
 

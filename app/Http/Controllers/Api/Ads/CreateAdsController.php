@@ -38,7 +38,25 @@ class CreateAdsController extends Controller
         $ads->description = $request->description;
         $ads->expire=Carbon::now()->addDay(14);
 
+        
+
         if($ads->save()){
+
+            //Check if video is uploaded and save it
+
+            if($request->file('video') != null){
+
+        
+                $video = $request->file('video');
+
+                //Storing file in disk
+                $fileName = $ads->id.'_'.time().'_'.$video->getClientOriginalName();
+                $video->storeAs('public/ads/'.$ads->id.'/videos', $fileName);
+
+                //Update path in ads tables
+                $ads->video_path = $fileName;
+                $ads->save();
+            }
 
             return response($ads, 200)
                  ->header('Content-Type', 'application/json');
