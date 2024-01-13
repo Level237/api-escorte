@@ -48,6 +48,7 @@ return new class extends Migration
             $table->longText('services');
             $table->string('accepted')->default('Hommes');
             $table->string('location')->default('Reçoit ou se déplace');
+            $table->string('video-path')->default('null');
             $table->timestamp('expire')->nullable();
             $table->timestamps();
         });
