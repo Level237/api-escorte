@@ -31,10 +31,12 @@ class AnnouncementSeeder extends Seeder
                 'subscribe_id'=>1,
                 'title'=>'Baisseuse italienne',
                 'slug'=>'baisseuse-italienne',
+                
                 'Description'=>'Envie de passer un bon moment en
                 compagnie d’une vraie salope très cochonne
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'1.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -58,6 +60,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 compagnie d’une vraie salope très cochonne
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'2.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -79,6 +82,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 compagnie d’une vraie salope très cochonne
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                 'video_path'=>'3.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -100,6 +104,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 compagnie d’une vraie salope très cochonne
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'4.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -121,6 +126,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 compagnie d’une vraie salope très cochonne
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'5.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -142,6 +148,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 compagnie d’une vraie salope très cochonne
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>null,
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -162,6 +169,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'7.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -182,6 +190,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'8.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -202,6 +211,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'9.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -222,6 +232,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'10.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -242,6 +253,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'11.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -262,6 +274,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'12.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -282,6 +295,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'13.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -302,6 +316,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'14.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -322,6 +337,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'15.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -342,6 +358,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>"Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘",
+                'video_path'=>'16.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -362,6 +379,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'17.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -382,6 +400,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>null,
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -402,6 +421,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'19.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -422,6 +442,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'20.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -442,6 +463,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'21.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -462,6 +484,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>null,
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -482,6 +505,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'23.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -502,6 +526,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'24.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -522,6 +547,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>null,
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -542,6 +568,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'26.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -562,6 +589,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>null,
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -582,6 +610,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'28.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -602,6 +631,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>null,
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -622,6 +652,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'30.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -642,6 +673,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'31.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -662,6 +694,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'32.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -682,6 +715,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>null,
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -702,6 +736,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'34.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -722,6 +757,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'35.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -742,6 +778,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'36.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -762,6 +799,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>null,
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -782,6 +820,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'38.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -802,6 +841,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>null,
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -822,6 +862,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'40.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -842,6 +883,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'41.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -862,6 +904,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'42.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -882,6 +925,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'43.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -902,6 +946,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>null,
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -922,6 +967,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'45.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -942,6 +988,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'46.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -962,6 +1009,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'47.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -982,6 +1030,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'48.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -1002,6 +1051,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'49.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
@@ -1022,6 +1072,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'Description'=>'Envie de passer un bon moment en compagnie d’une vraie salope très cochonne ?
 Je suis une petite salope au cul serré disponible pour toi.
 Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte moi😘',
+                'video_path'=>'50.mp4',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
