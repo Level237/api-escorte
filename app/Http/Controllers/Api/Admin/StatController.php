@@ -32,14 +32,15 @@ class StatController extends Controller
                 return response()->json(['monthly'=>$monthly,'percent'=>number_format($percent)]);
             } else {
                 (int) $percent = 100;
-
+                return response()->json(['monthly'=>$monthly,'percent'=>number_format($percent)]);
             }
         } else {
             $percent_from = $previousMonthly - $monthly;
-            (int) $percent = $percent_from / $previousMonthly * 100;
-            return $percent;
+            (int) $percent = ($previousMonthly * 100)/$percent_from ;
+
+            return response()->json(['monthly'=>$monthly,'percent'=>number_format($percent)]);
         }
 
-        return $previousMonthly;
+
     }
 }
