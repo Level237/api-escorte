@@ -118,4 +118,13 @@ class StatController extends Controller
         }
 
     }
+
+    public function statCurrentWeek(){
+        $currentWeek=Payment::where('created_at', '>', Carbon::now()->startOfWeek())
+     ->where('created_at', '<', Carbon::now()->endOfWeek())
+     ->get();
+     $total=$currentWeek->sum('price');
+
+     return $total;
+    }
 }
