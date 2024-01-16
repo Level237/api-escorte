@@ -66,8 +66,29 @@ class StatController extends Controller
     }
 
     public function statIncomes(){
-        $incomes=Payment::all();
+        $dateFrom = Carbon::now()->subDays(30);
+        $dateTo = Carbon::now();
+        $incomes=Payment::whereBetween('created_at', [$dateFrom, $dateTo])->get();
+        $monthly=Payment::whereBetween('created_at', [$dateFrom, $dateTo])->count();
+        $total=$incomes->sum('price');
+        $previousDateFrom = Carbon::now()->subDays(60);
+        $previousDateTo = Carbon::now()->subDays(31);
+        $previousMonthly = User::where('role_id',2)->whereBetween('created_at', [$previousDateFrom, $previousDateTo])->count();
+        if ($previousMonthly < $monthly) {
+            if ($previousMonthly > 0) {
+                $percent_from = $monthly - $previousMonthly;
+                (int)  $percent = ($previousMonthly * 100)/$percent_from ; //increase percent
+                return response()->json(['monthly'=>$monthly,'percent'=>number_format($percent),'total'=>$total]);
+            } else {
+                (int) $percent = 100;
+                return response()->json(['monthly'=>$monthly,'percent'=>number_format($percent),'total'=>$total]);
+            }
+        } else {
+            $percent_from = $previousMonthly - $monthly;
+            (int) $percent = ($previousMonthly * 100)/$percent_from ;
 
-        return $incomes;
+            return response()->json(['monthly'=>$monthly,'percent'=>number_format($percent),'total'=>$total]);
+        }
+
     }
 }
