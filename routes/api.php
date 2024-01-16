@@ -24,6 +24,7 @@ use App\Http\Controllers\Escorts\EscortController;
 use App\Http\Controllers\Api\User\LogoutController;
 use App\Http\Controllers\Api\Ads\AdsVisitController;
 use App\Http\Controllers\Api\Admin\NewUserController;
+use App\Http\Controllers\Api\Admin\StatController;
 use App\Http\Controllers\Api\Admin\VerifyEscortController;
 use App\Http\Controllers\Api\Ads\CreateAdsController;
 use App\Http\Controllers\Api\Ads\DeleteAdsController;
@@ -78,6 +79,8 @@ use App\Http\Controllers\Api\FaqController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+
+Route::get('stats/users',[StatController::class,'users']);
 Route::get('faqs',[FaqController::class,'faqs']);
 Route::get('visit/{id}',[AdsVisitController::class,'visit']);
 Route::get('/check-subscribe',[CheckSubscriptionController::class,"check"]);
