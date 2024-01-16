@@ -82,6 +82,7 @@ use App\Http\Controllers\Api\FaqController;
 
 Route::get('stats/users',[StatController::class,'users']);
 Route::get('stats/escorts',[StatController::class,'escorts']);
+Route::get('stats/incomes',[StatController::class,'statIncomes']);
 Route::get('faqs',[FaqController::class,'faqs']);
 Route::get('visit/{id}',[AdsVisitController::class,'visit']);
 Route::get('/check-subscribe',[CheckSubscriptionController::class,"check"]);

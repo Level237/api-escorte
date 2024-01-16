@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Payment;
 
 class StatController extends Controller
 {
@@ -62,5 +63,11 @@ class StatController extends Controller
         }
 
 
+    }
+
+    public function statIncomes(){
+        $incomes=Payment::all();
+
+        return $incomes;
     }
 }
