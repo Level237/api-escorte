@@ -112,6 +112,7 @@ Route::apiResource('/quarters', QuarterController::class);
 Route::apiResource('/countries', CountryController::class);
 
 Route::get('/displayadsimage/{id}/{path}',[AnnouncementController::class,'displayAdsImage']);
+Route::get('/displayVideo/{id}/{path}',[AnnouncementController::class,'displayAdsVideo']);
 Route::get('/displayreportimage/{id}/{path}',[ReportController::class,'displayReportImage']);
 
 
@@ -146,6 +147,7 @@ Route::apiResource('/contact', ContactController::class);
 // ANNOUNCEMENT GROUP ROUTES
 Route::apiResource('/announces', AnnouncementController::class);
 Route::get('/announce/{name}/{slug}',[AnnouncementController::class,'getAnnounce']);
+Route::get('/announce/similar/{name}/{slug}',[AnnouncementController::class,'getSimilarAds']);
 Route::get('/userAds/{id}', [AnnouncementController::class,'AdsByUser']);
 Route::get('/adstown/{id}', [AnnouncementController::class,'getAdsByTown']);
 Route::get('/adsquarter/{id}', [AnnouncementController::class,'getAdsByQuarter']);

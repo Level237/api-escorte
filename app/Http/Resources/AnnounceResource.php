@@ -37,6 +37,7 @@ class AnnounceResource extends JsonResource
             'images' => $this->images,
             'whatsapp' => $this->whatsapp,
             'gender' => $this->gender,
+            'video' => $this->video_path,
             'visits'=>Announcement_visit::where('announcement_id',$this->id)->count()
         ];
     }
