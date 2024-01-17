@@ -41,6 +41,15 @@ class AnnouncementController extends Controller
         return $ads->all();
     }
 
+    public function recents()
+    {
+        event(new EventCheckSubscription());
+        $collection = AnnounceResource::collection(Announcement::orderBy('created_at','DESC')->where('status',1)->get());
+        
+        $ads = $collection->take(10);
+        return $ads->all();
+    }
+
     public function getAdsByTown($townId)
     {
         return AnnounceResource::collection(Announcement::orderBy('subscribe_id','DESC')->where('status',1)->where('town_id', $townId)->get());
