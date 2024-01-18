@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Resources;
-
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -20,8 +20,9 @@ class TownResource extends JsonResource
             'code' =>$this->code,
             'country' =>$this->country,
             'ads' => $this->ads()->count(),
-            'quarters' => $this->quarters()->count()
-
+            'quarters' => $this->quarters()->count(),
+            'users' => $this->users()->count(),
+            'escorts'=>User::where('role_id',2)->count()
         ];
     }
 }

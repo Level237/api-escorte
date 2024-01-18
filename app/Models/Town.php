@@ -3,6 +3,7 @@
 namespace App\Models;
 use App\Models\Country;
 use App\Models\Quarter;
+use App\Models\User;
 use App\Models\Announcement;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -33,6 +34,14 @@ class Town extends Model implements Searchable
     public function ads()
     {
         return $this->hasMany(Announcement::class);
+    }
+
+    /**
+     * Get the users for the current town.
+     */
+    public function users()
+    {
+        return $this->hasMany(User::class);
     }
 
 

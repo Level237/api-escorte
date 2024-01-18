@@ -86,6 +86,7 @@ Route::get('stats/incomes',[StatController::class,'statIncomes']);
 Route::get('stats/announces',[StatController::class,'statAnnounces']);
 Route::get('stats/currentWeek',[StatController::class,'statCurrentWeek']);
 Route::get('stats/PreviousWeek',[StatController::class,'statPreviousWeek']);
+Route::get('stats/statTown',[StatController::class,'statTown']);
 Route::get('faqs',[FaqController::class,'faqs']);
 Route::get('visit/{id}',[AdsVisitController::class,'visit']);
 Route::get('/check-subscribe',[CheckSubscriptionController::class,"check"]);

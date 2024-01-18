@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Api\Admin;
 
 use Carbon\Carbon;
 use App\Models\User;
+use App\Models\Town;
+use App\Http\Resources\TownResource;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Announcement;
@@ -137,4 +139,15 @@ class StatController extends Controller
 
      //return Carbon::now()->startOfWeek()->subDays(1);
     }
+
+    public function statTown(){
+        
+        $towns = TownResource::collection(Town::all());
+        $towns = $towns->sortBy([
+                            ['ads', 'desc'],
+                        ]);
+        $towns = $towns->take(5);
+        return $towns;
+    }
+  
 }
