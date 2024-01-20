@@ -22,6 +22,18 @@ class CreateAdsController extends Controller
 
         //Validation passed, processing with storage
 
+        //Checking number format
+        $array = str_split($request->phone);
+        if($array[0] == 6){
+            $phone = '237'.$request->phone;
+        }
+        elseif($array[0] == 2){
+            $phone = $request->phone;
+        }
+        else{
+            $phone = substr($request->phone,1) ;
+        }
+
         $ads = new Announcement;
         $ads->user_id = Auth::guard('api')->user()->id;
         $ads->town_id = $request->town_id;
@@ -33,7 +45,7 @@ class CreateAdsController extends Controller
         $ads->title = $request->title;
         $ads->age = $request->age;
         $ads->gender = $request->gender;
-        $ads->whatsapp = $request->phone;
+        $ads->whatsapp = $phone;
         $ads->services = $request->services;
         $ads->description = $request->description;
         $ads->expire=Carbon::now()->addDay(14);
