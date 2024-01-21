@@ -18,6 +18,7 @@ use App\Http\Controllers\CreateUserController;
 use App\Http\Controllers\VerifyCodeController;
 use App\Http\Controllers\NewPasswordController;
 use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\Api\Admin\GiveCreditUserController;
 use App\Http\Controllers\Api\FilterAdsController;
 use App\Http\Controllers\Api\auth\LoginController;
 use App\Http\Controllers\Escorts\EscortController;
@@ -207,6 +208,7 @@ Route::middleware(['auth:api','ban'])->prefix('v1')->group(function(){
 //route admin
 Route::middleware(['auth:api','scopes:admin'])->prefix('v1')->group(function(){
     Route::apiResource('faqs',FaqController::class);
+    Route::post('give/credit',[GiveCreditUserController::class,'giveCredit']);
     Route::get('users',[ListUserController::class,'listUser']);
     Route::get('users/ban',[ListUserController::class,'listUserSuspend']);
     Route::get('users/role/{id}',[ListUserController::class,'listUserByRole']);
