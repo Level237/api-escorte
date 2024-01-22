@@ -24,6 +24,7 @@ class ListUserResource extends JsonResource
             'isVerify'=>$this->isVerify,
             'town'=>Town::where('id',$this->town_id)->get('town_name')->first(),
             'suspended_at'=>$this->suspended_at,
+            'balance'=>$this->balance,
             'role'=>Role::where('id',$this->role_id)->get('role_name')->first(),
         ];
     }
