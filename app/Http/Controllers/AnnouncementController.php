@@ -11,8 +11,9 @@ use Illuminate\Http\JsonResponse;
 use App\Events\EventCheckSubscription;
 use App\Http\Resources\AnnounceResource;
 use App\Models\User;
+use App\Models\Image;
 use App\Repositories\AnnouncementRepository;
-use Intervention\Image\ImageManagerStatic as Image;
+use Intervention\Image\ImageManagerStatic as ImageIntervention;
 
 class AnnouncementController extends Controller
 {
@@ -146,8 +147,10 @@ class AnnouncementController extends Controller
 
     public function displayAdsImage($id, $path)
     {
-        $image = Image::make(storage_path('app/public/ads/'.$id.'/'. $path));
-        $i=Image::make(public_path("logo.png"));
+        $imageDisplay = Image::find($path);
+        //return $imageDisplay;
+        $image = ImageIntervention::make(storage_path('app/public/ads/'.$id.'/'. $imageDisplay->path));
+        $i=ImageIntervention::make(public_path("logo.png"));
         $i->resize(300, 300);
         $i->blur();
 

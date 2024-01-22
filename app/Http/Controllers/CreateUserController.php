@@ -47,23 +47,13 @@ class CreateUserController extends Controller
         $validatedData=$request->validated();
 
         //Validation passed, processing with storage
-        //Checking number format
-        $array = str_split($request->phone_number);
-        if($array[0] == 6){
-            $phone = '237'.$request->phone_number;
-        }
-        elseif($array[0] == 2){
-            $phone = $request->phone_number;
-        }
-        else{
-            $phone = substr($request->phone_number,1) ;
-        }
+      
         $user = new User;
         $user->username = $request->username;
         $user->role_id = $request->role_id;
         $user->town_id = $request->town_id;
         $user->email = $request->email;
-        $user->phone_number = $phone;
+        $user->phone_number = $request->phone_number;
         $user->password = Hash::make($request->password);
 
         if($user->save()){

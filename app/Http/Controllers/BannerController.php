@@ -102,8 +102,10 @@ class BannerController extends Controller
         //
     }
 
-    public function displayBanner($id, $path)
+    public function displayBanner($id)
     {
-        return response()->download(storage_path('app\public\banners\\'.$id.'\\'. $path));
+        $banner = Banners::find($id);
+        //return $banner;
+        return response()->download(storage_path('app\public\banners\\'.$id.'\\'. $banner->path));
     }
 }

@@ -138,7 +138,7 @@ Route::prefix('search')->group(function(){
 
 // BANNERS GROUP ROUTES
 Route::apiResource('/banners', BannerController::class);
-Route::get('/displaybanner/{id}/{path}',[BannerController::class,'displayBanner']);
+Route::get('/displaybanner/{id}',[BannerController::class,'displayBanner']);
 
 
 // MEMBERSHIP GROUP ROUTES
