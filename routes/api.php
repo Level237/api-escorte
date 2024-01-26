@@ -118,7 +118,7 @@ Route::apiResource('/countries', CountryController::class);
 
 Route::get('/displayadsimage/{id}/{path}',[AnnouncementController::class,'displayAdsImage']);
 Route::get('/displayVideo/{id}/{path}',[AnnouncementController::class,'displayAdsVideo']);
-Route::get('/displayreportimage/{id}/{path}',[ReportController::class,'displayReportImage']);
+Route::get('/displayreportimage/{id}/{adsId}',[ReportController::class,'displayReportImage']);
 
 
 Route::get('/test', function(Request $request){
