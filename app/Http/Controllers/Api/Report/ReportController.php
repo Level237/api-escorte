@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Api\Report;
 use App\Http\Controllers\Controller;
 use App\Models\Report;
+use App\Models\Announcement;
 use App\Http\Resources\ReportResource;
 use App\Http\Requests\ReportRequest;
 use Illuminate\Http\Request;
+
 
 class ReportController extends Controller
 {
@@ -90,9 +92,12 @@ class ReportController extends Controller
     /***
      * Display report
      */
-    public function displayReportImage($id, $path)
+    public function displayReportImage($id, $adsId)
     {
-       return response()->download(storage_path('app\public\report\\'.$id.'\\'. $path));
+       $report = Report::find($id);
+       $ads = Announcement::find($adsId);
+       //return $ads;
+       return response()->download(storage_path('app\public\report\\'.$ads->id.'\\'.$report->path));
 
     }
 }

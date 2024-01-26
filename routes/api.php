@@ -118,7 +118,7 @@ Route::apiResource('/countries', CountryController::class);
 
 Route::get('/displayadsimage/{id}/{path}',[AnnouncementController::class,'displayAdsImage']);
 Route::get('/displayVideo/{id}/{path}',[AnnouncementController::class,'displayAdsVideo']);
-Route::get('/displayreportimage/{id}/{path}',[ReportController::class,'displayReportImage']);
+Route::get('/displayreportimage/{id}/{adsId}',[ReportController::class,'displayReportImage']);
 
 
 Route::get('/test', function(Request $request){
@@ -139,7 +139,7 @@ Route::prefix('search')->group(function(){
 
 // BANNERS GROUP ROUTES
 Route::apiResource('/banners', BannerController::class);
-Route::get('/displaybanner/{id}/{path}',[BannerController::class,'displayBanner']);
+Route::get('/displaybanner/{id}',[BannerController::class,'displayBanner']);
 
 
 // MEMBERSHIP GROUP ROUTES
@@ -151,6 +151,7 @@ Route::apiResource('/contact', ContactController::class);
 
 // ANNOUNCEMENT GROUP ROUTES
 Route::apiResource('/announces', AnnouncementController::class);
+Route::get('/nonvip-ads',[AnnouncementController::class,'nonVip']);
 Route::get('/populars',[AnnouncementController::class,'populars']);
 Route::get('/recents',[AnnouncementController::class,'recents']);
 Route::get('/announce/{name}/{slug}',[AnnouncementController::class,'getAnnounce']);
