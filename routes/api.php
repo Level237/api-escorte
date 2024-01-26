@@ -26,6 +26,7 @@ use App\Http\Controllers\Api\User\LogoutController;
 use App\Http\Controllers\Api\Ads\AdsVisitController;
 use App\Http\Controllers\Api\Admin\NewUserController;
 use App\Http\Controllers\Api\Admin\StatController;
+use App\Http\Controllers\Api\Admin\UpdatePriceController;
 use App\Http\Controllers\Api\Admin\VerifyEscortController;
 use App\Http\Controllers\Api\Ads\CreateAdsController;
 use App\Http\Controllers\Api\Ads\DeleteAdsController;
@@ -209,6 +210,7 @@ Route::middleware(['auth:api','ban'])->prefix('v1')->group(function(){
 //route admin
 Route::middleware(['auth:api','scopes:admin'])->prefix('v1')->group(function(){
     Route::apiResource('faqs',FaqController::class);
+    Route::post('update/price',[UpdatePriceController::class]);
     Route::post('give/credit/{id}',[GiveCreditUserController::class,'giveCredit']);
     Route::get('users',[ListUserController::class,'listUser']);
     Route::get('users/ban',[ListUserController::class,'listUserSuspend']);
