@@ -108,7 +108,7 @@ class MyPurchaseController extends Controller
                     'user_id'=>Auth::guard('api')->user()->id
                 ];
                 $payment=event(new MakePayment($data));
-                $newDateTime = Carbon::now()->addDay(21);
+                $newDateTime = Carbon::now()->addDay(intval($memberShip->period));
                 $newDateTime->setTimezone('Africa/Douala');
                 DB::table('members')->insert([
                     'user_id'=>$user->id,
@@ -139,7 +139,7 @@ class MyPurchaseController extends Controller
                     'user_id'=>Auth::guard('api')->user()->id
                 ];
                 $payment=event(new MakePayment($data));
-                $newDateTime = Carbon::now()->addDay(21);
+                $newDateTime = Carbon::now()->addDay(intval($memberShip->period));
                 $newDateTime->setTimezone('Africa/Douala');
                 DB::table('members')->insert([
                     'user_id'=>$user->id,

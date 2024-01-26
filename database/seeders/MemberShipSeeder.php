@@ -25,7 +25,7 @@ class MemberShipSeeder extends Seeder
         $data = [
             [
                 'membership_name'=>'PREMIUM',
-                'period'=>'30',
+                'period'=>'21',
                 'price' => '3000',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -33,7 +33,7 @@ class MemberShipSeeder extends Seeder
 
               [
                 'membership_name'=>'GOLD',
-                'period'=>'30',
+                'period'=>'21',
                 'price' => '5000',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -41,7 +41,7 @@ class MemberShipSeeder extends Seeder
 
               [
                 'membership_name'=>'ULTRA VIP',
-                'period'=>'30',
+                'period'=>'21',
                 'price' => '10000',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -49,7 +49,7 @@ class MemberShipSeeder extends Seeder
 
             [
                 'membership_name'=>'VIP',
-                'period'=>'30',
+                'period'=>'21',
                 'price' => '1500',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')

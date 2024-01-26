@@ -141,7 +141,7 @@ class StatController extends Controller
     }
 
     public function statTown(){
-        
+
         $towns = TownResource::collection(Town::all());
         $towns = $towns->sortBy([
                             ['ads', 'desc'],
@@ -149,5 +149,5 @@ class StatController extends Controller
         $towns = $towns->take(5);
         return $towns;
     }
-  
+
 }
