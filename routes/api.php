@@ -151,6 +151,7 @@ Route::apiResource('/contact', ContactController::class);
 
 // ANNOUNCEMENT GROUP ROUTES
 Route::apiResource('/announces', AnnouncementController::class);
+Route::get('/nonvip-ads',[AnnouncementController::class,'nonVip']);
 Route::get('/populars',[AnnouncementController::class,'populars']);
 Route::get('/recents',[AnnouncementController::class,'recents']);
 Route::get('/announce/{name}/{slug}',[AnnouncementController::class,'getAnnounce']);

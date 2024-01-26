@@ -31,6 +31,13 @@ class AnnouncementController extends Controller
        
     }
 
+    public function nonVip()
+    {
+        event(new EventCheckSubscription());
+        return AnnounceResource::collection(Announcement::orderBy('subscribe_id','DESC')->where('subscribe_id','!=',3)->where('status',1)->get());
+       
+    }
+
     public function populars()
     {
         event(new EventCheckSubscription());
