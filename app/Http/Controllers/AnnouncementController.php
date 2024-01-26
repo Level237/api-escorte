@@ -27,7 +27,7 @@ class AnnouncementController extends Controller
     {
         event(new EventCheckSubscription());
         return AnnounceResource::collection(Announcement::orderBy('subscribe_id','DESC')->where('status',1)->get());
-       
+
     }
 
     public function populars()
@@ -45,7 +45,7 @@ class AnnouncementController extends Controller
     {
         event(new EventCheckSubscription());
         $collection = AnnounceResource::collection(Announcement::orderBy('created_at','DESC')->where('status',1)->get());
-        
+
         $ads = $collection->take(10);
         return $ads->all();
     }
@@ -92,7 +92,7 @@ class AnnouncementController extends Controller
     }
 
     public function getAnnounce($name,$slug){
-       
+
         $user=User::where('username',$name)->first();
 
         $announce=AnnounceResource::collection(Announcement::where("user_id",$user->id)->where('slug',$slug)->get());
