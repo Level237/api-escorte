@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\Membership;
 
+use App\Events\DeleteAnnounceBanAccountEvent;
 use App\Events\EventCheckExpire;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -14,6 +15,7 @@ class CheckSubscriptionController extends Controller
         event(new EventCheckSubscription());
         event(new EventCheckExpire());
         event(new EventCheckUpgradePlan());
+        event(new DeleteAnnounceBanAccountEvent());
         return response()->json(['message'=>"ok"]);
     }
 }
