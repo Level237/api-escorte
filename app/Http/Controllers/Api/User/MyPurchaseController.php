@@ -114,7 +114,7 @@ class MyPurchaseController extends Controller
                     'payment_type'=>"MOBILE_MONEY",
                     'price'=>$memberShip->price,
                     'transaction_id'=>$transaction_id,
-                    'status'=>"1",
+                    'status'=>"0",
                     'user_id'=>$user_id
                 ];
                 $payment=event(new MakePayment($data));
@@ -219,7 +219,7 @@ class MyPurchaseController extends Controller
                     'payment_type'=>"MOBILE_MONEY",
                     'price'=>$memberShip->price,
                     'transaction_id'=>$transaction_id,
-                    'status'=>"1",
+                    'status'=>"0",
                     'user_id'=>$user_id
                 ];
                 $payment=event(new MakePayment($data));
