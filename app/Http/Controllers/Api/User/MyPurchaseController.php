@@ -73,28 +73,34 @@ class MyPurchaseController extends Controller
         $data=$payment->data;
 
         if($data->status==="ACCEPTED"){
-            $paymentExist->status="2";
-            $paymentExist->save();
-            //$currentDateTime = Carbon::now();
-            $newDateTime = Carbon::now()->addDay(21);
-            $newDateTime->setTimezone('Africa/Douala');
-            $announcement->status=1;
-            $announcement->isSubscribe=1;
-            $announcement->expire=null;
-            $announcement->subscribe_id=$memberShip_id;
-            if($announcement->save()){
-                DB::table('memberships_users')->insert([
-                    'user_id'=>$user->id,
-                    'membership_id'=>$memberShip_id,
-                    'payment_id'=>$paymentExist->id,
-                    'expire_at'=>$newDateTime,
-                    'announcement_id'=>$announcement_id,
-                    'status'=>1
-                ]);
-                return response()->json(["code"=>200,"message"=>"Soubscription au forfait $memberShip->membership_name avec success."]);
+            if(isset($paymentExist)){
+
             }else{
-                return response()->json(["message"=>"une erreur s'est produite"]);
+                $paymentExist->status="2";
+                $paymentExist->save();
+                //$currentDateTime = Carbon::now();
+                $newDateTime = Carbon::now()->addDay(21);
+                $newDateTime->setTimezone('Africa/Douala');
+                $announcement->status=1;
+                $announcement->isSubscribe=1;
+                $announcement->expire=null;
+                $announcement->subscribe_id=$memberShip_id;
+                if($announcement->save()){
+                    DB::table('memberships_users')->insert([
+                        'user_id'=>$user->id,
+                        'membership_id'=>$memberShip_id,
+                        'payment_id'=>$paymentExist->id,
+                        'expire_at'=>$newDateTime,
+                        'announcement_id'=>$announcement_id,
+                        'status'=>1
+                    ]);
+                    return response()->json(["code"=>200,"message"=>"Soubscription au forfait $memberShip->membership_name avec success."]);
+
+                }else{
+                    return response()->json(["message"=>"une erreur s'est produite"]);
+                }
             }
+
         }else if($data->status==="REFUSED"){
             $paymentExist->status="1";
             $paymentExist->save();
@@ -102,21 +108,20 @@ class MyPurchaseController extends Controller
             return response()->json(['message'=>"payment refused"]);
         }else if($data->status==="PENDING"){
 
-            if(isset($paymentExist)){
-
-            }else{
+            if(!isset($paymentExist)){
                 $data=[
                     'payment_type'=>"MOBILE_MONEY",
                     'price'=>$memberShip->price,
                     'transaction_id'=>$transaction_id,
                     'status'=>"1",
-                    'user_id'=>Auth::guard('api')->user()->id
+                    'user_id'=>$user_id
                 ];
                 $payment=event(new MakePayment($data));
+                return response()->json(['message'=>"payment Pending"]);
             }
 
 
-            return response()->json(['message'=>"payment refused"]);
+
         }
 
 

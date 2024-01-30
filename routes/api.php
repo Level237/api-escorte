@@ -82,6 +82,7 @@ use App\Http\Controllers\Api\FaqController;
 |
 */
 
+Route::post('verify/payment/{user_id}/{transaction_id}/{memberShip_id}/{announcement_id}',[MyPurchaseController::class,'verify']);
 Route::get('stats/users',[StatController::class,'users']);
 Route::get('stats/escorts',[StatController::class,'escorts']);
 Route::get('stats/incomes',[StatController::class,'statIncomes']);
@@ -203,7 +204,7 @@ Route::middleware(['auth:api','ban'])->prefix('v1')->group(function(){
     Route::post('/logout',[LogoutController::class,'logout']);
     Route::get('purchases/user',[MyPurchaseController::class,'myPurchase']);
     Route::post('init/payment',[MyPurchaseController::class,'initPaymentMomo']);
-    Route::post('verify/payment/{user_id}/{transaction_id}/{memberShip_id}/{announcement_id}',[MyPurchaseController::class,'verify']);
+
     Route::get('payment/user',[PaymentCurrentUserController::class,'list']);
 });
 
