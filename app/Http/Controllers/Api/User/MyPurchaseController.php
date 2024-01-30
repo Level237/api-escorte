@@ -15,6 +15,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 use App\Http\Resources\MyPurchaseResource;
+use App\Models\Payment;
 
 class MyPurchaseController extends Controller
 {
@@ -56,7 +57,7 @@ class MyPurchaseController extends Controller
         $user=User::find(Auth::guard('api')->user()->id);
         $memberShip=Membership::find($memberShip_id);
         $announcement=Announcement::where('id',$announcement_id)->where('user_id',$user->id)->first();
-
+        $paymentExist=Payment::where('transaction_id',$transaction_id)->first();
 
         $response=Http::acceptJson()->withBody(
             json_encode(
@@ -72,14 +73,8 @@ class MyPurchaseController extends Controller
         $data=$payment->data;
 
         if($data->status==="ACCEPTED"){
-            $data=[
-                'payment_type'=>"MOBILE_MONEY",
-                'price'=>$memberShip->price,
-                'transaction_id'=>$transaction_id,
-                'status'=>"2",
-                'user_id'=>Auth::guard('api')->user()->id
-            ];
-            $payment=event(new MakePayment($data));
+            $paymentExist->status="2";
+            $paymentExist->save();
             //$currentDateTime = Carbon::now();
             $newDateTime = Carbon::now()->addDay(21);
             $newDateTime->setTimezone('Africa/Douala');
@@ -91,7 +86,7 @@ class MyPurchaseController extends Controller
                 DB::table('memberships_users')->insert([
                     'user_id'=>$user->id,
                     'membership_id'=>$memberShip_id,
-                    'payment_id'=>$payment[0]->id,
+                    'payment_id'=>$paymentExist->id,
                     'expire_at'=>$newDateTime,
                     'announcement_id'=>$announcement_id,
                     'status'=>1
@@ -100,6 +95,28 @@ class MyPurchaseController extends Controller
             }else{
                 return response()->json(["message"=>"une erreur s'est produite"]);
             }
+        }else if($data->status==="REFUSED"){
+            $paymentExist->status="1";
+            $paymentExist->save();
+
+            return response()->json(['message'=>"payment refused"]);
+        }else if($data->status==="PENDING"){
+
+            if(isset($paymentExist)){
+
+            }else{
+                $data=[
+                    'payment_type'=>"MOBILE_MONEY",
+                    'price'=>$memberShip->price,
+                    'transaction_id'=>$transaction_id,
+                    'status'=>"1",
+                    'user_id'=>Auth::guard('api')->user()->id
+                ];
+                $payment=event(new MakePayment($data));
+            }
+
+
+            return response()->json(['message'=>"payment refused"]);
         }
 
 
