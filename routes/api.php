@@ -82,7 +82,7 @@ use App\Http\Controllers\Api\FaqController;
 |
 */
 
-Route::post('verify/payment/{user_id}/{transaction_id}/{memberShip_id}/{announcement_id}',[MyPurchaseController::class,'verify']);
+Route::get('verify/payment/{user_id}/{transaction_id}/{memberShip_id}/{announcement_id}',[MyPurchaseController::class,'verify']);
 Route::get('stats/users',[StatController::class,'users']);
 Route::get('stats/escorts',[StatController::class,'escorts']);
 Route::get('stats/incomes',[StatController::class,'statIncomes']);
