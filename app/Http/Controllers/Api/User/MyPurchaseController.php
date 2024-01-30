@@ -52,9 +52,9 @@ class MyPurchaseController extends Controller
         return json_decode($response);
     }
 
-    public function verify($transaction_id,$memberShip_id,$announcement_id){
+    public function verify($user_id,$transaction_id,$memberShip_id,$announcement_id){
 
-        $user=User::find(Auth::guard('api')->user()->id);
+        $user=User::find($user_id);
         $memberShip=Membership::find($memberShip_id);
         $announcement=Announcement::where('id',$announcement_id)->where('user_id',$user->id)->first();
         $paymentExist=Payment::where('transaction_id',$transaction_id)->first();

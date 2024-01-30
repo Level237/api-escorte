@@ -203,7 +203,7 @@ Route::middleware(['auth:api','ban'])->prefix('v1')->group(function(){
     Route::post('/logout',[LogoutController::class,'logout']);
     Route::get('purchases/user',[MyPurchaseController::class,'myPurchase']);
     Route::post('init/payment',[MyPurchaseController::class,'initPaymentMomo']);
-    Route::post('verify/payment/{transaction_id}/{memberShip_id}/{announcement_id}',[MyPurchaseController::class,'verify']);
+    Route::post('verify/payment/{user_id}/{transaction_id}/{memberShip_id}/{announcement_id}',[MyPurchaseController::class,'verify']);
     Route::get('payment/user',[PaymentCurrentUserController::class,'list']);
 });
 
