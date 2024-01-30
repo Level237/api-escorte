@@ -14,12 +14,14 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->string('payment_type');
+            $table->string('payment_type')->nullable();
             $table->string('price')->nullable();
             $table->foreignIdFor(User::class)
             ->constrained()
             ->restrictOnUpdate()
             ->restrictOnDelete();
+            $table->string('transaction_id');
+            $table->string("status");
             $table->timestamps();
         });
     }

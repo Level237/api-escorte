@@ -51,19 +51,32 @@ class MyPurchaseController extends Controller
         return json_decode($response);
     }
 
-    public function verify($memberShip_id,$announcement_id){
+    public function verify($transaction_id,$memberShip_id,$announcement_id){
 
         $user=User::find(Auth::guard('api')->user()->id);
         $memberShip=Membership::find($memberShip_id);
         $announcement=Announcement::where('id',$announcement_id)->where('user_id',$user->id)->first();
 
 
+        $response=Http::acceptJson()->withBody(
+            json_encode(
+                [
+                    "apikey"=>"108089145655d2b949d7a99.42080516",
+                    "site_id"=>"5866009",
+                    "transaction_id"=>$transaction_id
+                  ]),'application/json')->post('https://api-checkout.cinetpay.com/v2/payment/check',[
 
+        ]);
 
+        $payment=json_decode($response);
+        $data=$payment->data;
 
+        if($data->status==="ACCEPTED"){
             $data=[
                 'payment_type'=>"MOBILE_MONEY",
                 'price'=>$memberShip->price,
+                'transaction_id'=>$transaction_id,
+                'status'=>"2",
                 'user_id'=>Auth::guard('api')->user()->id
             ];
             $payment=event(new MakePayment($data));
@@ -87,7 +100,7 @@ class MyPurchaseController extends Controller
             }else{
                 return response()->json(["message"=>"une erreur s'est produite"]);
             }
-
+        }
 
 
     }
@@ -154,6 +167,55 @@ class MyPurchaseController extends Controller
 
         }
 
+    }
+
+    public function notifyAnnouncement($transaction_id,$memberShip_id,$announcement_id){
+        $user=User::find(Auth::guard('api')->user()->id);
+        $memberShip=Membership::find($memberShip_id);
+        $announcement=Announcement::where('id',$announcement_id)->where('user_id',$user->id)->first();
+
+
+        $response=Http::acceptJson()->withBody(
+            json_encode(
+                [
+                    "apikey"=>"108089145655d2b949d7a99.42080516",
+                    "site_id"=>"5866009",
+                    "transaction_id"=>$transaction_id
+                  ]),'application/json')->post('https://api-checkout.cinetpay.com/v2/payment/check',[
+
+        ]);
+
+        $payment=json_decode($response);
+        $data=$payment->data;
+
+        if($data->status==="ACCEPTED"){
+            $data=[
+                'payment_type'=>"MOBILE_MONEY",
+                'price'=>$memberShip->price,
+                'user_id'=>Auth::guard('api')->user()->id
+            ];
+            $payment=event(new MakePayment($data));
+            //$currentDateTime = Carbon::now();
+            $newDateTime = Carbon::now()->addDay(21);
+            $newDateTime->setTimezone('Africa/Douala');
+            $announcement->status=1;
+            $announcement->isSubscribe=1;
+            $announcement->expire=null;
+            $announcement->subscribe_id=$memberShip_id;
+            if($announcement->save()){
+                DB::table('memberships_users')->insert([
+                    'user_id'=>$user->id,
+                    'membership_id'=>$memberShip_id,
+                    'payment_id'=>$payment[0]->id,
+                    'expire_at'=>$newDateTime,
+                    'announcement_id'=>$announcement_id,
+                    'status'=>1
+                ]);
+                return response()->json(["code"=>200,"message"=>"Soubscription au forfait $memberShip->membership_name avec success."]);
+            }else{
+                return response()->json(["message"=>"une erreur s'est produite"]);
+            }
+        }
     }
 
 }
