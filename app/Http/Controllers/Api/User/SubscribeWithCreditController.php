@@ -39,6 +39,8 @@ class SubscribeWithCreditController extends Controller
                     $data=[
                         'payment_type'=>"credits",
                         'price'=>$memberShip->price,
+                        'transaction_id'=>null,
+                        'status'=>null,
                         'user_id'=>Auth::guard('api')->user()->id
                     ];
                     $payment=event(new MakePayment($data));

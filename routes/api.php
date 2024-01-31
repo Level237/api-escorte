@@ -82,6 +82,8 @@ use App\Http\Controllers\Api\FaqController;
 |
 */
 
+Route::post('purchaseCredit/{price}/{user_id}/{transaction_id}',[PurchaseCreditController::class,'purchaseCredit']);
+Route::post('verify/payment/{user_id}/{transaction_id}/{memberShip_id}/{announcement_id}',[MyPurchaseController::class,'verify']);
 Route::get('stats/users',[StatController::class,'users']);
 Route::get('stats/escorts',[StatController::class,'escorts']);
 Route::get('stats/incomes',[StatController::class,'statIncomes']);
@@ -197,13 +199,13 @@ Route::post('/login',[LoginController::class,'login']);
 Route::middleware(['auth:api','ban'])->prefix('v1')->group(function(){
     Route::get('/currentUser',[CurrentUserController::class,'currentUser']);
     Route::post('/updateUser',[UpdateUserController::class,'updateUser']);
-    Route::post('/purchaseCredit/{price}',[PurchaseCreditController::class,'purchaseCredit']);
+
     Route::post('/choice/questions',[ChoiceQuestionController::class,'choice']);
     Route::post('subscribe/withCredit/{id}/{announcement_id}',[SubscribeWithCreditController::class,'subscribe']);
     Route::post('/logout',[LogoutController::class,'logout']);
     Route::get('purchases/user',[MyPurchaseController::class,'myPurchase']);
     Route::post('init/payment',[MyPurchaseController::class,'initPaymentMomo']);
-    Route::post('verify/payment/{memberShip_id}/{announcement_id}',[MyPurchaseController::class,'verify']);
+
     Route::get('payment/user',[PaymentCurrentUserController::class,'list']);
 });
 

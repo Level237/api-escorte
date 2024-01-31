@@ -11,7 +11,7 @@ class ActivateAccountController extends Controller
     public function activate($id){
         $user = User::find($id);
         $user->activate();
-
+        
         return response()->json(['code'=>100,'message'=>"Account Activate successfully"],200);
     }
 }
