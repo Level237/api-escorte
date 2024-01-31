@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('price')->nullable();
             $table->foreignIdFor(User::class)
             ->constrained()
-            ->restrictOnUpdate()
-            ->restrictOnDelete();
+           ->onUpdate('cascade')
+            ->onDelete('cascade');
             $table->string('transaction_id');
             $table->string("status");
             $table->timestamps();

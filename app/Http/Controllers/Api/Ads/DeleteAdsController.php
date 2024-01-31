@@ -26,7 +26,6 @@ class DeleteAdsController extends Controller
         else{
             //Deleting ads's image
             $images = $ad->images()->getResults();
-            //return $images;
             foreach($images as $image){
                 Image::find($image['id'])->delete();
             }
