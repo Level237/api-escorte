@@ -19,20 +19,20 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(User::class)
             ->constrained()
-            ->restrictOnUpdate()
-            ->restrictOnDelete();
+           ->onUpdate('cascade')
+            ->onDelete('cascade');
             $table->foreignIdFor(Membership::class)
             ->constrained()
-            ->restrictOnUpdate()
-            ->restrictOnDelete();
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
             $table->foreignIdFor(Payment::class)
             ->constrained()
-            ->restrictOnUpdate()
-            ->restrictOnDelete();
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
             $table->foreignIdFor(Announcement::class)
             ->constrained()
-            ->restrictOnUpdate()
-            ->restrictOnDelete();
+           ->onUpdate('cascade')
+             ->onDelete('cascade');
             $table->timestamp('expire_at');
             $table->boolean('status')->default(0);
             $table->timestamps();
