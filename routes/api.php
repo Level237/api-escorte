@@ -54,6 +54,7 @@ use App\Http\Controllers\Api\Ads\CreateImageAdsController;
 use App\Http\Controllers\Api\User\ChangePasswordController;
 use App\Http\Controllers\Api\User\ChoiceQuestionController;
 use App\Http\Controllers\Api\User\SuspendAccountController;
+use App\Http\Controllers\Api\User\DeleteUserController;
 use App\Http\Controllers\Api\User\VerifyQuestionController;
 use App\Http\Controllers\Api\List\ListAdsCategoryController;
 
@@ -166,6 +167,7 @@ Route::get('/adsquarter/{id}', [AnnouncementController::class,'getAdsByQuarter']
 Route::get('/adscategory/{categoryId}', [AnnouncementController::class,'getAdsByCategory']);
 
 Route::delete('/ads/{id}', [DeleteAdsController::class, 'delete']);
+Route::delete('users/{id}',[DeleteUserController::class,'delete']);
 Route::post('/ads/update', [CreateAdsController::class, 'update']);
 Route::post('/ads/image', [CreateImageAdsController::class, 'createImages']);
 Route::get('/announcementsTown',[AnnouncementController::class, 'getAnnouncesByTown']);

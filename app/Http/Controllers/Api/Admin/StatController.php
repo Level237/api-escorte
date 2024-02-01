@@ -25,7 +25,10 @@ class StatController extends Controller
         if ($previousMonthly < $monthly) {
             if ($previousMonthly > 0) {
                 $percent_from = $monthly - $previousMonthly;
-                (int)  $percent = ($previousMonthly * 100)/$percent_from ; //increase percent
+                if($percent_from != 0)
+                  (int)  $percent = ($previousMonthly * 100)/$percent_from ; //increase percent
+                else 
+                    $percent = 0;
                 return response()->json(['monthly'=>$monthly,'percent'=>number_format($percent)]);
             } else {
                 (int) $percent = 100;
@@ -33,7 +36,10 @@ class StatController extends Controller
             }
         } else {
             $percent_from = $previousMonthly - $monthly;
-            (int) $percent = ($previousMonthly * 100)/$percent_from ;
+             if($percent_from != 0)
+              (int) $percent = ($previousMonthly * 100)/$percent_from ;
+            else
+              $percent = 0;
 
             return response()->json(['monthly'=>$monthly,'percent'=>number_format($percent)]);
         }
@@ -52,7 +58,10 @@ class StatController extends Controller
         if ($previousMonthly < $monthly) {
             if ($previousMonthly > 0) {
                 $percent_from = $monthly - $previousMonthly;
-                (int)  $percent = ($previousMonthly * 100)/$percent_from ; //increase percent
+                  if($percent_from != 0)
+                        (int)  $percent = ($previousMonthly * 100)/$percent_from ; //increase percent
+                else
+                    $percent = 0;
                 return response()->json(['monthly'=>$monthly,'percent'=>number_format($percent)]);
             } else {
                 (int) $percent = 100;
@@ -60,7 +69,10 @@ class StatController extends Controller
             }
         } else {
             $percent_from = $previousMonthly - $monthly;
-            (int) $percent = ($previousMonthly * 100)/$percent_from ;
+             if($percent_from != 0)
+              (int) $percent = ($previousMonthly * 100)/$percent_from ;
+            else
+                $percent = 0;
 
             return response()->json(['monthly'=>$monthly,'percent'=>number_format($percent)]);
         }
@@ -80,7 +92,10 @@ class StatController extends Controller
         if ($previousMonthly < $monthly) {
             if ($previousMonthly > 0) {
                 $percent_from = $monthly - $previousMonthly;
-                (int)  $percent = ($previousMonthly * 100)/$percent_from ; //increase percent
+                 if($percent_from != 0)
+                    (int)  $percent = ($previousMonthly * 100)/$percent_from ; //increase percent
+                 else
+                    $percent = 0;
                 return response()->json(['monthly'=>$monthly,'percent'=>number_format($percent),'total'=>$total]);
             } else {
                 (int) $percent = 100;
@@ -88,7 +103,10 @@ class StatController extends Controller
             }
         } else {
             $percent_from = $previousMonthly - $monthly;
-            (int) $percent = ($previousMonthly * 100)/$percent_from ;
+             if($percent_from != 0)
+                (int) $percent = ($previousMonthly * 100)/$percent_from ;
+             else
+                $percent = 0;
 
             return response()->json(['monthly'=>$monthly,'percent'=>number_format($percent),'total'=>$total]);
         }
@@ -106,7 +124,10 @@ class StatController extends Controller
         if ($previousMonthly < $monthly) {
             if ($previousMonthly > 0) {
                 $percent_from = $monthly - $previousMonthly;
-                (int)  $percent = ($previousMonthly * 100)/$percent_from ; //increase percent
+                 if($percent_from != 0)
+                    (int)  $percent = ($previousMonthly * 100)/$percent_from ; //increase percent
+                 else 
+                  $percent = 0;
                 return response()->json(['monthly'=>$monthly,'percent'=>number_format($percent)]);
             } else {
                 (int) $percent = 100;
@@ -114,7 +135,10 @@ class StatController extends Controller
             }
         } else {
             $percent_from = $previousMonthly - $monthly;
-            (int) $percent = ($previousMonthly * 100)/$percent_from ;
+             if($percent_from != 0)
+                (int) $percent = ($previousMonthly * 100)/$percent_from ;
+             else 
+              $percent = 0;
 
             return response()->json(['monthly'=>$monthly,'percent'=>number_format($percent)]);
         }
