@@ -82,8 +82,9 @@ use App\Http\Controllers\Api\FaqController;
 |
 */
 
-Route::post('purchaseCredit/{price}/{user_id}/{transaction_id}',[PurchaseCreditController::class,'purchaseCredit']);
-Route::post('verify/payment/{user_id}/{transaction_id}/{memberShip_id}/{announcement_id}',[MyPurchaseController::class,'verify']);
+Route::get('purchaseCredit/{price}/{user_id}/{transaction_id}',[PurchaseCreditController::class,'purchaseCredit']);
+Route::get('/subscribe/member/momo/{user_id}/{transaction_id}',[MyPurchaseController::class,'subscribeUserWithMomo']);
+Route::get('verify/payment/{user_id}/{transaction_id}/{memberShip_id}/{announcement_id}',[MyPurchaseController::class,'verify']);
 Route::get('stats/users',[StatController::class,'users']);
 Route::get('stats/escorts',[StatController::class,'escorts']);
 Route::get('stats/incomes',[StatController::class,'statIncomes']);
@@ -240,6 +241,6 @@ Route::middleware(['auth:api','scopes:escort'])->prefix('v1')->group(function(){
 Route::middleware(['auth:api','scopes:customer'])->prefix('v1')->group(function(){
     Route::post('review/new/{escortId}',[ReviewUserController::class,'addReview']);
     Route::get('get/premium',[MemberShipController::class,'showPremium']);
-    Route::post('/subscribe/member/momo',[MyPurchaseController::class,'subscribeUserWithMomo']);
+
     Route::post('/subscribe/member',[MyPurchaseController::class,'subscribeUserWithCredit']);
 });
