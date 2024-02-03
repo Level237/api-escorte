@@ -16,6 +16,7 @@ class Payment extends Model
         'status',
         'membership_id',
         'announcement_id',
+        "payment_of",
         'user_id'
     ];
 

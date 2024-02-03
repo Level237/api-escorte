@@ -26,8 +26,7 @@ class ListenerCheckAdsSubscribe
      */
     public function handle(object $event)
     {
-        $payments=Payment::where('transaction_id',"!=",null)
-        ->where('payment_of',"=","Ads")
+        $payments=Payment::where('payment_of',"=","Ads")
         ->get();
 
         if(isset($payments)){
@@ -46,9 +45,9 @@ class ListenerCheckAdsSubscribe
                 ]);
 
                 $paymentStatus=json_decode($response);
-                $data=$paymentStatus->data ?? null;
-
-                if($data->status==="ACCEPTED" && $data!==null){
+                $data=$paymentStatus->data;
+                $status=$data->status ?? null;
+                if($status==="ACCEPTED"){
 
 
                         $payment->status="2";
@@ -69,18 +68,14 @@ class ListenerCheckAdsSubscribe
                                 'announcement_id'=>$announcement->id,
                                 'status'=>1
                             ]);
-                            return response()->json(["code"=>200,"message"=>"Soubscription au forfait $membership->membership_name avec success."]);
+
 
                         }
-                }else if($data->status==="REFUSED" && $data!==null){
+                }else if($status==="REFUSED"){
                     $payment->status="1";
                     $payment->save();
-
-                    return response()->json(['message'=>"payment refused"]);
                 }
             }
         }
-
-
     }
 }
