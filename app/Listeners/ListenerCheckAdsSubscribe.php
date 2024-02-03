@@ -26,7 +26,9 @@ class ListenerCheckAdsSubscribe
      */
     public function handle(object $event)
     {
-        $payments=Payment::where('transaction_id',"!=",NULL)->get();
+        $payments=Payment::where('transaction_id',"!=",null)
+        ->where('announcement_id',"!=",null)
+        ->where('membership_id',"!=",null)->get();
 
         if(isset($payments)){
             foreach($payments as $payment){
@@ -70,12 +72,6 @@ class ListenerCheckAdsSubscribe
                             return response()->json(["code"=>200,"message"=>"Soubscription au forfait $membership->membership_name avec success."]);
 
                         }
-
-                    else{
-                            return response()->json(["message"=>"une erreur s'est produite"]);
-                        }
-
-
                 }else if($data->status==="REFUSED" && $data!==null){
                     $payment->status="1";
                     $payment->save();
