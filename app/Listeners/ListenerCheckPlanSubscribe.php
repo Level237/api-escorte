@@ -71,8 +71,6 @@ class ListenerCheckPlanSubscribe
 
 
                     }
-
-
                 }else if($data->status==="REFUSED" && $data!==null){
                     $payment->status="1";
                     $payment->save();
