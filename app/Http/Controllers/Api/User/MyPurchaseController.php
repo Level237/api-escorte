@@ -107,11 +107,11 @@ class MyPurchaseController extends Controller
             $paymentExist->save();
 
             return response()->json(['message'=>"payment refused"]);
-        }else if($data->status==="PENDING"){
+        }
 
             if(!isset($paymentExist)){
                 $data=[
-                    'payment_type'=>"MOBILE_MONEY",
+                    'payment_type'=>"Momo",
                     'price'=>$memberShip->price,
                     'transaction_id'=>$transaction_id,
                     'status'=>"0",
@@ -119,10 +119,6 @@ class MyPurchaseController extends Controller
                 ];
                 $payment=event(new MakePayment($data));
                 return response()->json(['message'=>"payment Pending"]);
-            }
-
-
-
         }
 
 
