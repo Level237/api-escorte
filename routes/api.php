@@ -83,6 +83,9 @@ use App\Http\Controllers\Api\FaqController;
 |
 */
 
+Route::get('check/pay/ads',[CheckSubscriptionController::class,'checkPayAds']);
+Route::get('check/pay/credits',[CheckSubscriptionController::class,'checkPayCredit']);
+Route::get('check/pay/plan',[CheckSubscriptionController::class,'checkPayPlan']);
 Route::post('purchaseCredit/{price}/{user_id}/{transaction_id}',[PurchaseCreditController::class,'purchaseCredit']);
 Route::post('/subscribe/member/momo/{user_id}/{transaction_id}',[MyPurchaseController::class,'subscribeUserWithMomo']);
 Route::post('verify/payment/{user_id}/{transaction_id}/{memberShip_id}/{announcement_id}',[MyPurchaseController::class,'verify']);

@@ -26,12 +26,24 @@ class CheckSubscriptionController extends Controller
         event(new EventCheckExpire());
         event(new EventCheckUpgradePlan());
         event(new DeleteAnnounceBanAccountEvent());
-        $this->checkAds();
-        $this->checkCreditSubscribe();
-        $this->checkPlan();
+
         event(new EventCheckPlanSubscribe());
 
     }
+    public function checkPayAds(){
+        $this->checkAds();
+
+    }
+
+    public function checkPayCredit(){
+        $this->checkCreditSubscribe();
+
+    }
+
+    public function checkPayPlan(){
+        $this->checkPlan();
+    }
+
 
     public function checkAds(){
         $payments=Payment::where('payment_of',"=","Ads")
