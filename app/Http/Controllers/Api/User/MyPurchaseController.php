@@ -65,6 +65,7 @@ class MyPurchaseController extends Controller
                 $data=[
                     'payment_type'=>"Momo",
                     'price'=>$memberShip->price,
+                    'payment_of'=>"Ads",
                     'transaction_id'=>$transaction_id,
                     'membership_id'=>$memberShip_id,
                     'announcement_id'=>$announcement_id,

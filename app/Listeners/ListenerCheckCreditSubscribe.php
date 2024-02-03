@@ -26,6 +26,7 @@ class ListenerCheckCreditSubscribe
         $payments=Payment::where('transaction_id',"!=",null)
         ->where('announcement_id',"=",null)
         ->where('membership_id',"=",null)
+        ->where('payment_of',"=","credit")
         ->get();
         if(isset($payments)){
             foreach($payments as $payment){

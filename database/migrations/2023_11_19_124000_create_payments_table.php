@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('transaction_id');
             $table->integer('membership_id')->nullable();
             $table->integer('announcement_id')->nullable();
+            $table->string('payment_of')->nullable();
             $table->string("status");
             $table->timestamps();
         });

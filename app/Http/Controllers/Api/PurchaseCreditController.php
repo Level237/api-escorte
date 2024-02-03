@@ -19,6 +19,7 @@ class PurchaseCreditController extends Controller
             $data=[
                 'payment_type'=>"Momo",
                 'price'=>$price,
+                "payment_of"=>"credit",
                 'transaction_id'=>$transaction_id,
                 'membership_id'=>null,
                 'announcement_id'=>null,
