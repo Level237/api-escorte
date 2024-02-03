@@ -6,6 +6,7 @@ use App\Events\AnnouncementVisitEvent;
 use App\Events\DeleteAnnounceBanAccountEvent;
 use App\Events\EventActivateAnnouncement;
 use App\Events\EventCheckAdsSubscribe;
+use App\Events\EventCheckCreditSubscribe;
 use App\Events\EventCheckExpire;
 use App\Events\EventCheckSubscription;
 use App\Events\EventCheckUpgradePlan;
@@ -15,6 +16,7 @@ use App\Listeners\AnnouncementVisitListener;
 use App\Listeners\DeleteAnnounceBanAccountListener;
 use App\Listeners\ListenerActivateAnnouncement;
 use App\Listeners\ListenerCheckAdsSubscribe;
+use App\Listeners\ListenerCheckCreditSubscribe;
 use App\Listeners\ListenerCheckExpire;
 use App\Listeners\ListenerCheckSubscription;
 use App\Listeners\ListenerCheckUpgradePlan;
@@ -59,6 +61,9 @@ class EventServiceProvider extends ServiceProvider
        ],
        EventCheckAdsSubscribe::class=>[
         ListenerCheckAdsSubscribe::class
+       ],
+       EventCheckCreditSubscribe::class=>[
+        ListenerCheckCreditSubscribe::class
        ]
     ];
 
