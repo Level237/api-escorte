@@ -47,8 +47,8 @@ class ListenerCheckAdsSubscribe
 
                 ]);
 
-                $payment=json_decode($response);
-                $data=$payment->data ?? null;
+                $paymentStatus=json_decode($response);
+                $data=$paymentStatus->data ?? null;
 
                 if($data->status==="ACCEPTED" && $data!==null){
 

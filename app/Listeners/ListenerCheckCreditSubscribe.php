@@ -41,9 +41,11 @@ class ListenerCheckCreditSubscribe
 
                 ]);
 
-                        $payment=json_decode($response);
-                        $data=$payment->data ?? null;
+                        $paymentStatus=json_decode($response);
+                        $data=$paymentStatus->data ?? null;
                         if($data->status==="ACCEPTED" && $data!==null){
+                            $payment->status="1";
+                            $payment->save();
                             $user=User::find($payment->user_id);
                             $user->balance=$user->balance+$payment->price;
                             $user->save();

@@ -117,69 +117,25 @@ class MyPurchaseController extends Controller
     public function subscribeUserWithMomo($user_id,$transaction_id){
         $user=User::find($user_id);
         $memberShip=Membership::find(4);
-        $paymentExist=Payment::where('transaction_id',$transaction_id)->first();
-        $response=Http::acceptJson()->withBody(
-            json_encode(
-                [
-                    "apikey"=>"108089145655d2b949d7a99.42080516",
-                    "site_id"=>"5866009",
-                    "transaction_id"=>$transaction_id
-                  ]),'application/json')->post('https://api-checkout.cinetpay.com/v2/payment/check',[
-
-        ]);
-
-        $payment=json_decode($response);
-        $data=$payment->data;
-
-        if($data==="ACCEPTED"){
-
-            if(isset($paymentExist)){
-                $user->isSubscribe=1;
-                $paymentExist->status="2";
-                $paymentExist->save();
-            if($user->save()){
 
 
-                $newDateTime = Carbon::now()->addDay(intval($memberShip->period));
-                $newDateTime->setTimezone('Africa/Douala');
-                DB::table('members')->insert([
-                    'user_id'=>$user->id,
-                    'membership_id'=>4,
-                    'payment_id'=>$paymentExist->id,
-                    'expire_at'=>$newDateTime,
-                    'status'=>1
-                ]);
-
-                return response()->json(["code"=>200,"message"=>"Soubscription au forfait $memberShip->membership_name avec success."]);
-
-
-
-            }
-            }
-
-
-        }else if($data->status==="REFUSED"){
-            $paymentExist->status="1";
-            $paymentExist->save();
-
-            return response()->json(['message'=>"payment refused"]);
-        }else if($data->status==="PENDING"){
-
-            if(!isset($paymentExist)){
-                $data=[
-                    'payment_type'=>"MOBILE_MONEY",
-                    'price'=>$memberShip->price,
-                    'transaction_id'=>$transaction_id,
-                    'status'=>"0",
-                    'user_id'=>$user_id
-                ];
+               $data=[
+                'payment_type'=>"Momo",
+                'price'=>$memberShip->price,
+                "payment_of"=>"premium",
+                'transaction_id'=>$transaction_id,
+                'membership_id'=>$memberShip->id,
+                'announcement_id'=>null,
+                'status'=>"0",
+                'user_id'=>$user_id
+            ];
                 $payment=event(new MakePayment($data));
                 return response()->json(['message'=>"payment Pending"]);
-            }
 
 
 
-        }
+
+
 
 
     }
