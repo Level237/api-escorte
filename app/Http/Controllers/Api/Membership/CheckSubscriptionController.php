@@ -6,6 +6,7 @@ use App\Events\DeleteAnnounceBanAccountEvent;
 use App\Events\EventCheckAdsSubscribe;
 use App\Events\EventCheckCreditSubscribe;
 use App\Events\EventCheckExpire;
+use App\Events\EventCheckPlanSubscribe;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Events\EventCheckSubscription;
@@ -20,6 +21,7 @@ class CheckSubscriptionController extends Controller
         event(new DeleteAnnounceBanAccountEvent());
         event(new EventCheckAdsSubscribe());
         event(new EventCheckCreditSubscribe());
+        event(new EventCheckPlanSubscribe());
         return response()->json(['message'=>"ok"]);
     }
 }
