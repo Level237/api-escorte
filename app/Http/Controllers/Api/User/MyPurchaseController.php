@@ -132,12 +132,6 @@ class MyPurchaseController extends Controller
                 $payment=event(new MakePayment($data));
                 return response()->json(['message'=>"payment Pending"]);
 
-
-
-
-
-
-
     }
 
     public function notifyAnnouncement($transaction_id,$memberShip_id,$announcement_id){
