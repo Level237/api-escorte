@@ -14,6 +14,8 @@ class Payment extends Model
         'price',
         'transaction_id',
         'status',
+        'membership_id',
+        'announcement_id',
         'user_id'
     ];
 
