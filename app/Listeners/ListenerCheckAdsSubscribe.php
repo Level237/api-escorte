@@ -28,7 +28,8 @@ class ListenerCheckAdsSubscribe
     {
         $payments=Payment::where('transaction_id',"!=",null)
         ->where('announcement_id',"!=",null)
-        ->where('membership_id',"!=",null)->get();
+        ->where('membership_id',"!=",null)
+        ->get();
 
         if(isset($payments)){
             foreach($payments as $payment){
