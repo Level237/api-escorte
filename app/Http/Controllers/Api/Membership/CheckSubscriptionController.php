@@ -171,18 +171,10 @@ class CheckSubscriptionController extends Controller
                             'expire_at'=>$newDateTime,
                             'status'=>1
                         ]);
-
-                        return response()->json(["code"=>200,"message"=>"Soubscription au forfait $memberShip->membership_name avec success."]);
-
-
-
-
                     }
                 }else if($status==="REFUSED"){
                     $payment->status="1";
                     $payment->save();
-
-                    return response()->json(['message'=>"payment refused"]);
                 }
             }
         }
