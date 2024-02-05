@@ -83,7 +83,7 @@ use App\Http\Controllers\Api\FaqController;
 |
 */
 
-Route::get('check/pay/ads',[CheckSubscriptionController::class,'checkPayAds']);
+
 Route::get('check/pay/credits',[CheckSubscriptionController::class,'checkPayCredit']);
 Route::get('check/pay/plan',[CheckSubscriptionController::class,'checkPayPlan']);
 Route::post('purchaseCredit/{price}/{user_id}/{transaction_id}',[PurchaseCreditController::class,'purchaseCredit']);
@@ -211,7 +211,7 @@ Route::middleware(['auth:api','ban'])->prefix('v1')->group(function(){
     Route::post('/logout',[LogoutController::class,'logout']);
     Route::get('purchases/user',[MyPurchaseController::class,'myPurchase']);
     Route::post('init/payment',[MyPurchaseController::class,'initPaymentMomo']);
-
+    Route::get('check/pay/ads',[CheckSubscriptionController::class,'checkPayAds']);
     Route::get('payment/user',[PaymentCurrentUserController::class,'list']);
 });
 

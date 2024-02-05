@@ -27,10 +27,12 @@ class CheckSubscriptionController extends Controller
         event(new EventCheckUpgradePlan());
         event(new DeleteAnnounceBanAccountEvent());
 
-        $this->checkAds();
+
 
     }
     public function checkPayAds(){
+        $this->checkPlan();
+        $this->checkCreditSubscribe();
         $this->checkAds();
 
     }
@@ -47,6 +49,7 @@ class CheckSubscriptionController extends Controller
 
     public function checkAds(){
         $payments=Payment::where('payment_of',"=","Ads")
+        ->where('user_id','=',Auth()->guard('api')->user()->id)
         ->get();
         if(isset($payments)){
             foreach($payments as $payment){
@@ -67,9 +70,7 @@ class CheckSubscriptionController extends Controller
                 $data=$paymentStatus->data;
                 $status=$data->status ?? null;
 
-                if($status==="ACCEPTED" && $payment->status!=="2"){
-
-
+                if($status==="ACCEPTED" && $payment->status=="0"){
                     $payment->status="2";
                     $payment->save();
                     //$currentDateTime = Carbon::now();
@@ -91,10 +92,12 @@ class CheckSubscriptionController extends Controller
 
 
                     }
-                }else if($status==="REFUSED"){
+
+
+                }else if($status==="REFUSED" && $payment->status=="0"){
+
                     $payment->status="1";
                     $payment->save();
-
                 }
             }
         }
@@ -102,6 +105,7 @@ class CheckSubscriptionController extends Controller
 
     public function checkCreditSubscribe(){
         $payments=Payment::where('payment_of',"=","credit")
+        ->where('user_id','=',Auth()->guard('api')->user()->id)
         ->get();
         if(isset($payments)){
             foreach($payments as $payment){
@@ -112,19 +116,20 @@ class CheckSubscriptionController extends Controller
                             "apikey"=>"108089145655d2b949d7a99.42080516",
                             "site_id"=>"5866009",
                             "transaction_id"=>$payment->transaction_id
-                        ]),'application/json')->post('https://api-checkout.cinetpay.com/v2/payment/check',[3
+                          ]),'application/json')->post('https://api-checkout.cinetpay.com/v2/payment/check',[
+
                 ]);
 
                 $paymentStatus=json_decode($response);
                 $data=$paymentStatus->data;
                 $status=$data->status ?? null;
-                        if($status==="ACCEPTED"){
+                        if($status==="ACCEPTED" && $payment->status=="0"){
                             $payment->status="2";
                             $payment->save();
                             $user=User::find($payment->user_id);
                             $user->balance=$user->balance+$payment->price;
                             $user->save();
-                }else if($status==="REFUSED"){
+                }else if($status==="REFUSED" && $payment->status=="0"){
                     $payment->status="1";
                     $payment->save();
                 }
@@ -134,6 +139,7 @@ class CheckSubscriptionController extends Controller
 
     public function checkPlan(){
         $payments=Payment::where('payment_of',"=","premium")
+        ->where('user_id','=',Auth()->guard('api')->user()->id)
         ->get();
 
         if(isset($payments)){
@@ -155,7 +161,7 @@ class CheckSubscriptionController extends Controller
                 $data=$paymentStatus->data;
                 $status=$data->status ?? null;
 
-                if($status==="ACCEPTED"){
+                if($status==="ACCEPTED" && $payment->status=="0"){
                         $user->isSubscribe=1;
                         $payment->status="2";
                         $payment->save();
@@ -172,7 +178,7 @@ class CheckSubscriptionController extends Controller
                             'status'=>1
                         ]);
                     }
-                }else if($status==="REFUSED"){
+                }else if($status==="REFUSED" && $payment->status=="0"){
                     $payment->status="1";
                     $payment->save();
                 }
