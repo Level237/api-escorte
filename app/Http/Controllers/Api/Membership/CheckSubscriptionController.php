@@ -67,8 +67,14 @@ class CheckSubscriptionController extends Controller
                 ]);
 
                 $paymentStatus=json_decode($response);
-                $data=$paymentStatus->data;
-                $status=$data->status ?? null;
+                if(isset($code)){
+                    if($code==="404"){
+                        $payment->delete();
+                    }
+                }else{
+                    $data=$paymentStatus->data ?? null;
+                    $status=$data->status ?? null;
+                }
 
                 if($status==="ACCEPTED" && $payment->status=="0"){
                     $payment->status="2";
@@ -89,8 +95,6 @@ class CheckSubscriptionController extends Controller
                             'announcement_id'=>$announcement->id,
                             'status'=>1
                         ]);
-
-
                     }
 
 
