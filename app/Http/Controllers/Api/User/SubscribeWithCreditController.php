@@ -39,6 +39,7 @@ class SubscribeWithCreditController extends Controller
                     $data=[
                         'payment_type'=>"credits",
                         'price'=>$memberShip->price,
+                        'payment_of'=>"Ads",
                         'transaction_id'=>null,
                         'status'=>null,
                         'user_id'=>Auth::guard('api')->user()->id

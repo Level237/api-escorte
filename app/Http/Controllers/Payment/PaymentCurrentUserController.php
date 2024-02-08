@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 class PaymentCurrentUserController extends Controller
 {
     public function list(){
-        $payment=Payment::where('user_id',Auth::guard('api')->user()->id)->get();
+        $payment=Payment::orderBy('id','DESC')->where('user_id',Auth::guard('api')->user()->id)->get();
 
         return $payment;
     }
