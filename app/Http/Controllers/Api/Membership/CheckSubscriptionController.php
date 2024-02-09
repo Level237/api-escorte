@@ -50,6 +50,7 @@ class CheckSubscriptionController extends Controller
     public function checkAds(){
         $payments=Payment::where('payment_of',"=","Ads")
         ->where('user_id','=',Auth()->guard('api')->user()->id)
+        ->where('status','=',"0")
         ->get();
         if(isset($payments)){
             foreach($payments as $payment){
@@ -110,6 +111,7 @@ class CheckSubscriptionController extends Controller
     public function checkCreditSubscribe(){
         $payments=Payment::where('payment_of',"=","credit")
         ->where('user_id','=',Auth()->guard('api')->user()->id)
+        ->where('status','=',"0")
         ->get();
         if(isset($payments)){
             foreach($payments as $payment){
@@ -151,6 +153,7 @@ class CheckSubscriptionController extends Controller
     public function checkPlan(){
         $payments=Payment::where('payment_of',"=","premium")
         ->where('user_id','=',Auth()->guard('api')->user()->id)
+        ->where('status','=',"0")
         ->get();
 
         if(isset($payments)){
