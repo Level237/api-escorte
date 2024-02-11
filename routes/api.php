@@ -85,6 +85,8 @@ use App\Http\Controllers\Api\Escort\EscortIsCompletedOrNotController;
 */
 
 
+Route::post('callback/ads',[CoolPayPaymentController::class,'callbackAds']);
+
 Route::get('check/pay/credits',[CheckSubscriptionController::class,'checkPayCredit']);
 Route::get('check/pay/plan',[CheckSubscriptionController::class,'checkPayPlan']);
 Route::post('purchaseCredit/{price}/{user_id}/{transaction_id}',[PurchaseCreditController::class,'purchaseCredit']);

@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers\Api\Payment;
 
+use Carbon\Carbon;
+use App\Models\Payment;
+use App\Models\Membership;
+use App\Models\Announcement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
@@ -26,5 +31,35 @@ class CoolPayPaymentController extends Controller
         ]);
 
         return json_decode($response);
+    }
+
+    public function callbackAds(Request $request){
+        $payment=Payment::where('transaction_id',$request->app_transaction_ref)->first();
+        if($request->transaction_status==="SUCCESS"){
+
+           $payment->status="2";
+           $payment->save();
+           $membership=Membership::find($payment->membership_id);
+            $announcement=Announcement::find($payment->announcement_id);
+            $newDateTime = Carbon::now()->addDay(intval($membership->period));
+            $newDateTime->setTimezone('Africa/Douala');
+            $announcement->status=1;
+            $announcement->isSubscribe=1;
+            $announcement->expire=null;
+            $announcement->subscribe_id=$membership->id;
+            if($announcement->save()){
+                DB::table('memberships_users')->insert([
+                    'user_id'=>$payment->user_id,
+                    'membership_id'=>$membership->id,
+                    'payment_id'=>$payment->id,
+                    'expire_at'=>$newDateTime,
+                    'announcement_id'=>$announcement->id,
+                    'status'=>1
+                ]);
+            }
+        }else if($request->transaction_status==="FAILED"){
+            $payment->status="1";
+            $payment->save();
+        }
     }
 }
