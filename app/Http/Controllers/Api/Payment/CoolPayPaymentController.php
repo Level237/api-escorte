@@ -21,7 +21,7 @@ class CoolPayPaymentController extends Controller
                     "customer_name"=>Auth::guard('api')->user()->username,
                     "customer_email"=>Auth::guard('api')->user()->email,
                     "customer_lang"=>"fr",
-                  ]),'application/json')->post('https://my-coolpay.com/api/118a4852-7df8-46d9-834b-23b4ef25aaab/paylink',[
+                  ]),'application/json')->post('https://my-coolpay.com/api/058196db-98d7-4fc2-9988-82e2e14b2b8e/paylink',[
 
         ]);
 
