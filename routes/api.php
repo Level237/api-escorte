@@ -92,6 +92,7 @@ Route::get('check/pay/plan',[CheckSubscriptionController::class,'checkPayPlan'])
 Route::post('purchaseCredit/{price}/{user_id}/{transaction_id}',[PurchaseCreditController::class,'purchaseCredit']);
 Route::post('/subscribe/member/momo/{user_id}/{transaction_id}',[MyPurchaseController::class,'subscribeUserWithMomo']);
 Route::post('verify/payment/{user_id}/{transaction_id}/{memberShip_id}/{announcement_id}',[MyPurchaseController::class,'verify']);
+Route::post('init/payment/coolpay/{user_id}/{transaction_ref}/{memberShip_id}/{announcement_id}',[MyPurchaseController::class,'initCoolpay']);
 Route::get('stats/users',[StatController::class,'users']);
 Route::get('stats/escorts',[StatController::class,'escorts']);
 Route::get('stats/incomes',[StatController::class,'statIncomes']);

@@ -35,8 +35,7 @@ class CoolPayPaymentController extends Controller
     }
 
     public function callbackAds(Request $request){
-        $user=User::where('phone_number',$request->customer_phone_number)->first();
-        $payment=Payment::where('user_id',$user->id)->latest('id')->first();
+        $payment=Payment::where('transaction_ref',$request->transaction_ref)->first();
 
         if($request->transaction_status==="SUCCESS"){
 
