@@ -8,8 +8,9 @@ use App\Http\Controllers\TownController;
 
 use App\Http\Controllers\BannerController;
 
-use App\Http\Controllers\CountryController;
+use App\Http\Controllers\Api\FaqController;
 
+use App\Http\Controllers\CountryController;
 use App\Http\Controllers\QuarterController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\Api\SearchController;
@@ -18,16 +19,13 @@ use App\Http\Controllers\CreateUserController;
 use App\Http\Controllers\VerifyCodeController;
 use App\Http\Controllers\NewPasswordController;
 use App\Http\Controllers\AnnouncementController;
-use App\Http\Controllers\Api\Admin\GiveCreditUserController;
 use App\Http\Controllers\Api\FilterAdsController;
+use App\Http\Controllers\Api\Admin\StatController;
 use App\Http\Controllers\Api\auth\LoginController;
 use App\Http\Controllers\Escorts\EscortController;
 use App\Http\Controllers\Api\User\LogoutController;
 use App\Http\Controllers\Api\Ads\AdsVisitController;
 use App\Http\Controllers\Api\Admin\NewUserController;
-use App\Http\Controllers\Api\Admin\StatController;
-use App\Http\Controllers\Api\Admin\UpdatePriceController;
-use App\Http\Controllers\Api\Admin\VerifyEscortController;
 use App\Http\Controllers\Api\Ads\CreateAdsController;
 use App\Http\Controllers\Api\Ads\DeleteAdsController;
 use App\Http\Controllers\Api\List\ListRoleController;
@@ -42,35 +40,38 @@ use App\Http\Controllers\Api\List\ListEthnicController;
 use App\Http\Controllers\Api\List\ListHeightController;
 use App\Http\Controllers\Api\List\ListWeightController;
 use App\Http\Controllers\Api\Search\ResearchController;
+use App\Http\Controllers\Api\User\DeleteUserController;
 use App\Http\Controllers\Api\User\MyPurchaseController;
 use App\Http\Controllers\Api\User\ReviewUserController;
+use App\Http\Controllers\Api\User\UpdateUserController;
 use App\Http\Controllers\Api\Escort\GetEscortController;
 use App\Http\Controllers\Api\List\ListServiceController;
 use App\Http\Controllers\Api\User\CurrentUserController;
-use App\Http\Controllers\Api\User\UpdateUserController;
+use App\Http\Controllers\Api\Admin\UpdatePriceController;
 use App\Http\Controllers\Api\List\ListQuestionController;
 use App\Http\Controllers\Api\User\VerifyAnswerController;
+use App\Http\Controllers\Api\Admin\VerifyEscortController;
 use App\Http\Controllers\Api\Ads\CreateImageAdsController;
 use App\Http\Controllers\Api\User\ChangePasswordController;
 use App\Http\Controllers\Api\User\ChoiceQuestionController;
 use App\Http\Controllers\Api\User\SuspendAccountController;
-use App\Http\Controllers\Api\User\DeleteUserController;
 use App\Http\Controllers\Api\User\VerifyQuestionController;
-use App\Http\Controllers\Api\List\ListAdsCategoryController;
+use App\Http\Controllers\Api\Admin\GiveCreditUserController;
 
+use App\Http\Controllers\Api\List\ListAdsCategoryController;
 use App\Http\Controllers\Api\User\ActivateAccountController;
 use App\Http\Controllers\Api\List\ListQuaterByTownController;
 use App\Http\Controllers\Api\Membership\MemberShipController;
 use App\Http\Controllers\Api\Escort\ProfileCompleteController;
-use App\Http\Controllers\Payment\PaymentCurrentUserController;
 
+use App\Http\Controllers\Api\Payment\CoolPayPaymentController;
+use App\Http\Controllers\Payment\PaymentCurrentUserController;
 use App\Http\Controllers\Api\Escort\CreateImageEscortController;
+
 use App\Http\Controllers\Api\User\SubscribeWithCreditController;
 use App\Http\Controllers\Api\Escort\AttachEscortServiceController;
-
 use App\Http\Controllers\Api\Membership\CheckSubscriptionController;
 use App\Http\Controllers\Api\Escort\EscortIsCompletedOrNotController;
-use App\Http\Controllers\Api\FaqController;
 
 /*
 |--------------------------------------------------------------------------
@@ -83,6 +84,8 @@ use App\Http\Controllers\Api\FaqController;
 |
 */
 
+
+Route::post('callback/ads',[CoolPayPaymentController::class,'callbackAds']);
 
 Route::get('check/pay/credits',[CheckSubscriptionController::class,'checkPayCredit']);
 Route::get('check/pay/plan',[CheckSubscriptionController::class,'checkPayPlan']);
@@ -234,7 +237,7 @@ Route::middleware(['auth:api','scopes:admin'])->prefix('v1')->group(function(){
 Route::post('/escort/image', [CreateImageEscortController::class, 'createImages']);
 Route::middleware(['auth:api','scopes:escort'])->prefix('v1')->group(function(){
     Route::post('/ads', [CreateAdsController::class, 'createAds']);
-
+    Route::post('init/cool-pay',[CoolPayPaymentController::class,'payAds']);
     Route::post('/addProfile',[ProfileCompleteController::class,'addProfile']);
     Route::post('/attach/services',[AttachEscortServiceController::class,'attach']);
     Route::get('/getEscort',[GetEscortController::class,'getEscort']);
