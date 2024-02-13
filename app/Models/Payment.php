@@ -13,6 +13,7 @@ class Payment extends Model
         'payment_type',
         'price',
         'transaction_id',
+        'transaction_ref',
         'status',
         'membership_id',
         'announcement_id',

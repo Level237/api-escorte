@@ -78,7 +78,33 @@ class MyPurchaseController extends Controller
 
 
     }
+    public function initCoolpay($user_id,$transaction_ref,$memberShip_id,$announcement_id){
 
+        $user=User::find($user_id);
+        $memberShip=Membership::find($memberShip_id);
+        $announcement=Announcement::where('id',$announcement_id)->where('user_id',$user->id)->first();
+        $paymentExist=Payment::where('transaction_ref',$transaction_ref)->first();
+
+
+
+            if(!isset($paymentExist)){
+                $data=[
+                    'payment_type'=>"Momo",
+                    'price'=>$memberShip->price,
+                    'payment_of'=>"Ads",
+                    'transaction_ref'=>$transaction_ref,
+                    'transaction_id'=>null,
+                    'membership_id'=>$memberShip_id,
+                    'announcement_id'=>$announcement_id,
+                    'status'=>"0",
+                    'user_id'=>$user_id
+                ];
+                $payment=event(new MakePayment($data));
+                return response()->json(['message'=>"payment Pending"]);
+        }
+
+
+    }
     public function subscribeUserWithCredit(){
         $user=User::find(Auth::guard('api')->user()->id);
         $memberShip=Membership::find(4);

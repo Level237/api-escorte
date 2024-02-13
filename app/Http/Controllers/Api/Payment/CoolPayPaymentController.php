@@ -9,6 +9,7 @@ use App\Models\Announcement;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 
@@ -34,7 +35,8 @@ class CoolPayPaymentController extends Controller
     }
 
     public function callbackAds(Request $request){
-        $payment=Payment::where('transaction_id',$request->app_transaction_ref)->first();
+        $payment=Payment::where('transaction_ref',$request->transaction_ref)->first();
+
         if($request->transaction_status==="SUCCESS"){
 
            $payment->status="2";
