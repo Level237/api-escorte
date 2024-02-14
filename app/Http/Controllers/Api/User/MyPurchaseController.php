@@ -105,6 +105,30 @@ class MyPurchaseController extends Controller
 
 
     }
+    public function initCoolpayCredit($user_id,$price,$transaction_ref){
+
+
+
+
+
+
+                $data=[
+                    'payment_type'=>"Momo",
+                    'price'=>$price,
+                    'payment_of'=>"credits",
+                    'transaction_ref'=>$transaction_ref,
+                    'transaction_id'=>null,
+                    'membership_id'=>null,
+                    'announcement_id'=>null,
+                    'status'=>"0",
+                    'user_id'=>$user_id
+                ];
+                $payment=event(new MakePayment($data));
+                return response()->json(['message'=>"payment Pending"]);
+
+
+
+    }
     public function subscribeUserWithCredit(){
         $user=User::find(Auth::guard('api')->user()->id);
         $memberShip=Membership::find(4);
@@ -118,7 +142,7 @@ class MyPurchaseController extends Controller
                 $data=[
                     'payment_type'=>"credits",
                     'price'=>$memberShip->price,
-                    'payment_of'=>'Ads',
+                    'payment_of'=>'premium',
                     'transaction_id'=>null,
                     "status"=>null,
                     'user_id'=>Auth::guard('api')->user()->id

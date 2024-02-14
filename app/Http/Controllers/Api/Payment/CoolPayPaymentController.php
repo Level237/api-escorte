@@ -35,7 +35,8 @@ class CoolPayPaymentController extends Controller
     }
 
     public function callbackAds(Request $request){
-        $payment=Payment::where('transaction_ref',$request->transaction_ref)->first();
+        $payment=Payment::where('transaction_ref',$request->transaction_ref)
+        ->where('payment_of','=',"Ads")->first();
 
         if($request->transaction_status==="SUCCESS"){
 
@@ -59,6 +60,21 @@ class CoolPayPaymentController extends Controller
                     'status'=>1
                 ]);
             }
+        }else if($request->transaction_status==="FAILED"){
+            $payment->status="1";
+            $payment->save();
+        }
+    }
+    public function callbackCredits(Request $request){
+        $payment=Payment::where('transaction_ref',$request->transaction_ref)
+        ->where('payment_of','=',"credits")->first();
+
+        if($request->transaction_status==="SUCCESS"){
+            $payment->status="2";
+            $payment->save();
+            $user=User::find($payment->user_id);
+            $user->balance=$user->balance+$payment->price;
+            $user->save();
         }else if($request->transaction_status==="FAILED"){
             $payment->status="1";
             $payment->save();
