@@ -214,6 +214,7 @@ Route::middleware(['auth:api','ban'])->prefix('v1')->group(function(){
     Route::post('/choice/questions',[ChoiceQuestionController::class,'choice']);
     Route::post('subscribe/withCredit/{id}/{announcement_id}',[SubscribeWithCreditController::class,'subscribe']);
     Route::post('/logout',[LogoutController::class,'logout']);
+    Route::post('init/cool-pay/credit',[CoolPayPaymentController::class,'payCredit']);
     Route::get('purchases/user',[MyPurchaseController::class,'myPurchase']);
     Route::post('init/payment',[MyPurchaseController::class,'initPaymentMomo']);
     Route::get('check/pay/ads',[CheckSubscriptionController::class,'checkPayAds']);

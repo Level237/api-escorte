@@ -34,6 +34,25 @@ class CoolPayPaymentController extends Controller
         return json_decode($response);
     }
 
+    public function payCredit(Request $request){
+        $response=Http::acceptJson()->withBody(
+            json_encode(
+                [
+                    "transaction_amount"=>$request->price,
+                    "transaction_currency"=>"XAF",
+                    "transaction_reason"=> "Abonnement Annonce",
+                    "app_transaction_ref"=>$request->transaction_id,
+                    "customer_phone_number"=>Auth::guard('api')->user()->phone_number,
+                    "customer_name"=>Auth::guard('api')->user()->username,
+                    "customer_email"=>Auth::guard('api')->user()->email,
+                    "customer_lang"=>"fr",
+                  ]),'application/json')->post('https://my-coolpay.com/api/929cc610-94ba-40ff-9970-56e1f6e891ac/paylink',[
+
+        ]);
+
+        return json_decode($response);
+    }
+
     public function callbackAds(Request $request){
         $payment=Payment::where('transaction_ref',$request->transaction_ref)
         ->where('payment_of','=',"Ads")->first();
