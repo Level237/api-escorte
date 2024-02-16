@@ -129,20 +129,19 @@ class MyPurchaseController extends Controller
 
 
     }
-    public function initCoolpayPlan($user_id,$price,$transaction_ref){
+    public function initCoolpayPlan($user_id,$transaction_ref){
 
-
-
+        $memberShip=Membership::find(4);
 
 
 
         $data=[
             'payment_type'=>"Momo",
-            'price'=>$price,
+            'price'=>$memberShip->price,
             'payment_of'=>"premium",
             'transaction_ref'=>$transaction_ref,
             'transaction_id'=>null,
-            'membership_id'=>null,
+            'membership_id'=>$memberShip->id,
             'announcement_id'=>null,
             'status'=>"0",
             'user_id'=>$user_id
