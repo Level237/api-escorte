@@ -49,6 +49,7 @@ class UserRequest extends FormRequest
             'role_id' =>['required','exists:App\Models\Role,id'],
             'town_id' =>['required','exists:App\Models\Town,id'],
             'email' =>['nullable','email','unique:App\Models\User'],
+            'cgu'=>['accepted']
         ];
     }
 }
