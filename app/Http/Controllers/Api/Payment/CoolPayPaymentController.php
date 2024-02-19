@@ -34,6 +34,43 @@ class CoolPayPaymentController extends Controller
         return json_decode($response);
     }
 
+    public function payCredit(Request $request){
+        $response=Http::acceptJson()->withBody(
+            json_encode(
+                [
+                    "transaction_amount"=>$request->price,
+                    "transaction_currency"=>"XAF",
+                    "transaction_reason"=> "Abonnement Annonce",
+                    "app_transaction_ref"=>$request->transaction_id,
+                    "customer_phone_number"=>Auth::guard('api')->user()->phone_number,
+                    "customer_name"=>Auth::guard('api')->user()->username,
+                    "customer_email"=>Auth::guard('api')->user()->email,
+                    "customer_lang"=>"fr",
+                  ]),'application/json')->post('https://my-coolpay.com/api/929cc610-94ba-40ff-9970-56e1f6e891ac/paylink',[
+
+        ]);
+
+        return json_decode($response);
+    }
+    public function payPlan(Request $request){
+        $response=Http::acceptJson()->withBody(
+            json_encode(
+                [
+                    "transaction_amount"=>$request->price,
+                    "transaction_currency"=>"XAF",
+                    "transaction_reason"=> "Abonnement Annonce",
+                    "app_transaction_ref"=>$request->transaction_id,
+                    "customer_phone_number"=>Auth::guard('api')->user()->phone_number,
+                    "customer_name"=>Auth::guard('api')->user()->username,
+                    "customer_email"=>Auth::guard('api')->user()->email,
+                    "customer_lang"=>"fr",
+                  ]),'application/json')->post('https://my-coolpay.com/api/e2743f08-469a-4945-ae2b-d5a724ec75ae/paylink',[
+
+        ]);
+
+        return json_decode($response);
+    }
+
     public function callbackAds(Request $request){
         $payment=Payment::where('transaction_ref',$request->transaction_ref)
         ->where('payment_of','=',"Ads")->first();
@@ -67,7 +104,7 @@ class CoolPayPaymentController extends Controller
     }
     public function callbackCredits(Request $request){
         $payment=Payment::where('transaction_ref',$request->transaction_ref)
-        ->where('payment_of','=',"credits")->first();
+        ->where('payment_of','=',"credit")->first();
 
         if($request->transaction_status==="SUCCESS"){
             $payment->status="2";
@@ -75,6 +112,34 @@ class CoolPayPaymentController extends Controller
             $user=User::find($payment->user_id);
             $user->balance=$user->balance+$payment->price;
             $user->save();
+        }else if($request->transaction_status==="FAILED"){
+            $payment->status="1";
+            $payment->save();
+        }
+    }
+    public function callbackPlan(Request $request){
+        $payment=Payment::where('transaction_ref',$request->transaction_ref)
+        ->where('payment_of','=',"premium")->first();
+
+        if($request->transaction_status==="SUCCESS"){
+            $user=User::find($payment->user_id);
+            $memberShip=Membership::find($payment->membership_id);
+            $user->isSubscribe=1;
+            $payment->status="2";
+            $payment->save();
+        if($user->save()){
+
+
+            $newDateTime = Carbon::now()->addDay(intval($memberShip->period));
+            $newDateTime->setTimezone('Africa/Douala');
+            DB::table('members')->insert([
+                'user_id'=>$user->id,
+                'membership_id'=>4,
+                'payment_id'=>$payment->id,
+                'expire_at'=>$newDateTime,
+                'status'=>1
+            ]);
+        }
         }else if($request->transaction_status==="FAILED"){
             $payment->status="1";
             $payment->save();

@@ -87,12 +87,14 @@ use App\Http\Controllers\Api\Escort\EscortIsCompletedOrNotController;
 
 Route::post('callback/ads',[CoolPayPaymentController::class,'callbackAds']);
 Route::post('callback/credits',[CoolPayPaymentController::class,'callbackCredits']);
+Route::post('callback/plan',[CoolPayPaymentController::class,'callbackPlan']);
 Route::get('check/pay/credits',[CheckSubscriptionController::class,'checkPayCredit']);
 Route::get('check/pay/plan',[CheckSubscriptionController::class,'checkPayPlan']);
 Route::post('purchaseCredit/{price}/{user_id}/{transaction_id}',[PurchaseCreditController::class,'purchaseCredit']);
 Route::post('/subscribe/member/momo/{user_id}/{transaction_id}',[MyPurchaseController::class,'subscribeUserWithMomo']);
 Route::post('verify/payment/{user_id}/{transaction_id}/{memberShip_id}/{announcement_id}',[MyPurchaseController::class,'verify']);
 Route::post('init/payment/coolpay/{user_id}/{transaction_ref}/{memberShip_id}/{announcement_id}',[MyPurchaseController::class,'initCoolpay']);
+Route::post('init/payment/coolpay/plan/{user_id}/{transaction_ref}',[MyPurchaseController::class,'initCoolpayPlan']);
 Route::post('init/payment/credit/{user_id}/{price}/{transaction_ref}/',[MyPurchaseController::class,'initCoolpayCredit']);
 Route::get('stats/users',[StatController::class,'users']);
 Route::get('stats/escorts',[StatController::class,'escorts']);
@@ -214,6 +216,7 @@ Route::middleware(['auth:api','ban'])->prefix('v1')->group(function(){
     Route::post('/choice/questions',[ChoiceQuestionController::class,'choice']);
     Route::post('subscribe/withCredit/{id}/{announcement_id}',[SubscribeWithCreditController::class,'subscribe']);
     Route::post('/logout',[LogoutController::class,'logout']);
+    Route::post('init/cool-pay/credit',[CoolPayPaymentController::class,'payCredit']);
     Route::get('purchases/user',[MyPurchaseController::class,'myPurchase']);
     Route::post('init/payment',[MyPurchaseController::class,'initPaymentMomo']);
     Route::get('check/pay/ads',[CheckSubscriptionController::class,'checkPayAds']);
@@ -251,6 +254,6 @@ Route::middleware(['auth:api','scopes:escort'])->prefix('v1')->group(function(){
 Route::middleware(['auth:api','scopes:customer'])->prefix('v1')->group(function(){
     Route::post('review/new/{escortId}',[ReviewUserController::class,'addReview']);
     Route::get('get/premium',[MemberShipController::class,'showPremium']);
-
+    Route::post('init/cool-pay/plan',[CoolPayPaymentController::class,'payPlan']);
     Route::post('/subscribe/member',[MyPurchaseController::class,'subscribeUserWithCredit']);
 });

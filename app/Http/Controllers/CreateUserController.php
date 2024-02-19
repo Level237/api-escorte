@@ -47,7 +47,7 @@ class CreateUserController extends Controller
         $validatedData=$request->validated();
 
         //Validation passed, processing with storage
-      
+
         $user = new User;
         $user->username = $request->username;
         $user->role_id = $request->role_id;
