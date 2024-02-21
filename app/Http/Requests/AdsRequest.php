@@ -43,7 +43,6 @@ class AdsRequest extends FormRequest
             'accepted' => ['required', 'string'],
             'title' => ['required', 'string'],
             'description' => ['required', 'string', 'max:1500'],
-            'services' => ['required', 'string', 'max:1500'],
         ];
     }
 }
