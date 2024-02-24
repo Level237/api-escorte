@@ -45,7 +45,6 @@ return new class extends Migration
             $table->string('title');
             $table->integer('subscribe_id')->default(0);
             $table->longText('description');
-            $table->longText('services');
             $table->string('accepted')->default('Hommes');
             $table->string('location')->default('Reçoit ou se déplace');
             $table->string('video_path')->nullable()->default(null);
