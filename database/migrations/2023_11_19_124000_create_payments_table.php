@@ -20,12 +20,12 @@ return new class extends Migration
             ->constrained()
            ->onUpdate('cascade')
             ->onDelete('cascade');
-            $table->string('transaction_id');
+            $table->string('transaction_id')->nullable();
             $table->integer('membership_id')->nullable();
             $table->integer('announcement_id')->nullable();
             $table->string('transaction_ref')->nullable();
             $table->string('payment_of')->nullable();
-            $table->string("status");
+            $table->string("status")->nullable();
             $table->timestamps();
         });
     }

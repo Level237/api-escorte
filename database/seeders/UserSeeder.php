@@ -106,7 +106,7 @@ class UserSeeder extends Seeder
                 'email'=>'sheila@gmail.com',
                 'role_id' => 2,
                 'town_id' => 2,
-                "balance"=>10000,
+                "balance"=>100000,
                 'phone_number' => "654011210",
                 'password' => Hash::make('password'),
                 'isVerify' => 0,

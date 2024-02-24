@@ -20,6 +20,23 @@ class Announcement extends Model implements Searchable
 {
     use HasFactory;
 
+protected $fillable=[
+        'user_id',
+        'town_id',
+        'quarter_id',
+        'announcement_category_id',
+        'status',
+        'isSubscribe',
+        'gender',
+        "age",
+        'whatsapp',
+        'slug',
+        'title',
+        'subscribe_id',
+        'description',
+        'accepted',
+        'location'
+    ];
     public function town():BelongsTo{
         return $this->belongsTo(Town::class);
     }
