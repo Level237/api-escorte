@@ -27,7 +27,7 @@ class ListenerCheckExpire
         $expiredAnnoncement = Announcement::where('expire', '<', $today)->get();
         foreach ($expiredAnnoncement as $announcement) {
             // Mettre à jour l'abonnement expiré
-            $announcement->status=0;
+            $announcement->status=1;
             $announcement->isSubscribe=0;
             $announcement->expire=null;
             $announcement->save();

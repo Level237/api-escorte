@@ -31,7 +31,7 @@ class ListenerCheckSubscription
         // Mettre à jour l'abonnement expiré
         $subscription->update(['status' => 0]);
         $announcement=Announcement::find($subscription->announcement_id);
-        $announcement->status=0;
+        $announcement->status=1;
         $announcement->isSubscribe=0;
         $announcement->subscribe_id=0;
         $announcement->save();
