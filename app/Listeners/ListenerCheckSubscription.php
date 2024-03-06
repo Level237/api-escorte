@@ -34,6 +34,7 @@ class ListenerCheckSubscription
         $announcement->status=1;
         $announcement->isSubscribe=0;
         $announcement->subscribe_id=0;
+        $announcement->expire=Carbon::now()->addDay(14);
         $announcement->save();
 
         // Envoyer un email ou une notification à l'utilisateur
