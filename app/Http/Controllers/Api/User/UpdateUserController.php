@@ -18,6 +18,10 @@ class UpdateUserController extends Controller
             $user->town_id=$request->town_id;
             $user->save();
         }
+        if($request->password){
+            $user->password=$request->password;
+            $user->save();
+        }
         return response()->json(['message'=>'User update'],200);
     }
 }
