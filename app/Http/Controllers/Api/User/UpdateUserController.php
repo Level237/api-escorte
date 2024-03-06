@@ -5,6 +5,7 @@ use App\Models\Town;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UpdateUserRequest;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
@@ -19,7 +20,7 @@ class UpdateUserController extends Controller
             $user->save();
         }
         if($request->password){
-            $user->password=$request->password;
+            $user->password=Hash::make($request->password);
             $user->save();
         }
         return response()->json(['message'=>'User update'],200);
