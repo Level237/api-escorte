@@ -113,9 +113,7 @@ class AnnouncementController extends Controller
         $user=User::where('username',$name)->first();
 
         $announce = (Announcement::where("user_id",$user->id)->where('slug',$slug)->get())[0];
-        $announces = AnnounceResource::collection(Announcement::where("town_id",$announce->town_id)
-        ->where("accepted", $announce->accepted)
-         ->where("location", $announce->location)->get());
+        $announces = AnnounceResource::collection(Announcement::where("town_id",$announce->town_id)->get());
         return $announces;
     }
 
