@@ -30,7 +30,7 @@ class AnnouncementSeeder extends Seeder
                 'subscribe_id'=>1,
                 'title'=>'Baisseuse italienne',
                 'slug'=>'baisseuse-italienne',
-                
+
                 'Description'=>'Envie de passer un bon moment en
                 compagnie d’une vraie salope très cochonne
 Je suis une petite salope au cul serré disponible pour toi.
@@ -755,7 +755,7 @@ Tu aimes ce que tu vois et aimerais passer un moment en ma compagnie contacte mo
                 'subscribe_id'=>0,
                 'whatsapp'=>'237651426352',
                 'announcement_category_id'=>1,
-                 'status'=>1,
+                 'status'=>0,
                  'isSubscribe'=>0,
                 'title'=>'La nuit du sexe 2 🤤',
                 'slug'=>'La-nuit-du-sexe-2',
