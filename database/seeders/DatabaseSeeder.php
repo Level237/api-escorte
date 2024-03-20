@@ -29,19 +29,19 @@ class DatabaseSeeder extends Seeder
         $path = 'database/sql_files/client_oauth.sql';
         DB::unprepared(file_get_contents($path));
         $this->command->info('client table seeded!');
-         $this->call([
-            RoleSeeder::class,
-            CreditSeeder::class,
-            UserSeeder::class,
-            MemberShipSeeder::class,
-            AnnouncementCategorySeeder::class,
-            AnnouncementSeeder::class,
-            QuestionSeeder::class,
-            ImageSeeder::class,
-            AnnouncementImageSeeder::class,
-            PaymentSeeder::class,
-            MembershipUserSeeder::class,
-            BannerSeeder::class,
-        ]);
+        //  $this->call([
+        //     RoleSeeder::class,
+        //     CreditSeeder::class,
+        //     UserSeeder::class,
+        //     MemberShipSeeder::class,
+        //     AnnouncementCategorySeeder::class,
+        //     AnnouncementSeeder::class,
+        //     QuestionSeeder::class,
+        //     ImageSeeder::class,
+        //     AnnouncementImageSeeder::class,
+        //     PaymentSeeder::class,
+        //     MembershipUserSeeder::class,
+        //     BannerSeeder::class,
+        // ]);
     }
 }
