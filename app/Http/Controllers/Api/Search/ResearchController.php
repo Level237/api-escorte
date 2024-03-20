@@ -24,7 +24,6 @@ class ResearchController extends Controller
             $modelSearchAspect
                 ->addSearchableAttribute('title')
                 ->addSearchableAttribute('description')
-                ->addSearchableAttribute('services')
                 ->with('User')
                 ->orderBy('subscribe_id','DESC')
                 ->where('status',1)
