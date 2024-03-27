@@ -156,7 +156,7 @@ class AnnouncementController extends Controller
         //return $imageDisplay;
         $image = ImageIntervention::make(storage_path('app/public/ads/'.$id.'/'. $imageDisplay->path));
         $i=ImageIntervention::make(storage_path("app/public/logo.png"));
-        $i->resize(300, 300);
+        $i->resize(150, 150);
         $i->blur();
 
         $image->insert($i,'center',2,2);
