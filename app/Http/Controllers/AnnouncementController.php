@@ -164,6 +164,22 @@ class AnnouncementController extends Controller
 
     }
 
+    /**
+     * Delete ads's image
+     */
+    public function deleteAdsImage($id, $path)
+    {
+        $ad = Announcement::find($id);
+        $image = Image::find($path);
+        \Illuminate\Support\Facades\Storage::delete('public/ads/'.$id.'/'.$image->path);
+        $ad->images()->detach($image->id);
+        $image->delete();
+        
+        return response("Image deleted successfully", 200)
+                  ->header('Content-Type', 'application/json');
+
+    }
+
      /***
      * Display ads video
      */
