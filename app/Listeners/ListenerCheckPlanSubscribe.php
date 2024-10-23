@@ -26,6 +26,8 @@ class ListenerCheckPlanSubscribe
      */
     public function handle(object $event)
     {
+
+        //Subscription compte premium par un utilisateur
         $payments=Payment::where('transaction_id',"!=",null)
         ->where('payment_of',"=","premium")
         ->get();

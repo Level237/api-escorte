@@ -33,9 +33,9 @@ class MemberShipRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'membership_name' => ['required', 'string', 'unique:App\Models\MemberShip'],
-            'period' => ['required','integer'],
-            'price' => ['required','integer'], 
+            'membership_name' => ['required'],
+            'period' => ['required'],
+            'price' => ['required'],
         ];
     }
 }

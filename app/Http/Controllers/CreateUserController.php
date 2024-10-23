@@ -16,6 +16,7 @@ class CreateUserController extends Controller
     public function createUser(UserRequest $request){
 
 
+
         $recaptcha_response = $request->input('recaptcha');
 
 
@@ -39,7 +40,7 @@ class CreateUserController extends Controller
 
         if (!$response->successful() && $result->success == false) {
 
-           return response("{error:Please Complete the Recaptcha Again to proceed}", 400)
+          return response("{error:Please Complete the Recaptcha Again to proceed}", 400)
                   ->header('Content-Type', 'application/json');
 
         }

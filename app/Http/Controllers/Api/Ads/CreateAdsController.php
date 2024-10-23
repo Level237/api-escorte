@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Http;
 use Symfony\Component\HttpFoundation\IpUtils;
+use Illuminate\Http\Exceptions\HttpResponseException;
 
 class CreateAdsController extends Controller
 {
@@ -19,6 +20,18 @@ class CreateAdsController extends Controller
     public function createAds(AdsRequest $request){
 
         $validatedData=$request->validated();
+
+        //Checking if the title is already in use with the same user
+        $ad = Announcement::where('title', $request->title)
+        ->where('user_id', Auth::guard('api')->user()->id)
+        ->get();
+
+        if($ad->count()){
+             return response(['Titre','Vous avez déjà une annonce du même titre, ajoutez un emoji ou un mot pour varier'], 400)
+                 ->header('Content-Type', 'application/json');
+
+
+        }
 
         //Validation passed, processing with storage
 
@@ -47,9 +60,7 @@ class CreateAdsController extends Controller
         $ads->gender = $request->gender;
         $ads->whatsapp = $phone;
         $ads->description = $request->description;
-        $ads->expire=Carbon::now()->addDay(14);
-
-        
+        $ads->expire=Carbon::now()->addDay(7);
 
         if($ads->save()){
 
@@ -57,7 +68,7 @@ class CreateAdsController extends Controller
 
             if($request->file('video') != null){
 
-        
+
                 $video = $request->file('video');
 
                 //Storing file in disk

@@ -18,7 +18,8 @@ class StatController extends Controller
         $dateFrom = Carbon::now()->subDays(30);
         $dateTo = Carbon::now();
 
-        $monthly = User::where('suspended_at',"=",null)->whereBetween('created_at', [$dateFrom, $dateTo])->count();
+        //$monthly = User::where('suspended_at',"=",null)->whereBetween('created_at', [$dateFrom, $dateTo])->count();
+        $monthly=User::count();
         $previousDateFrom = Carbon::now()->subDays(60);
         $previousDateTo = Carbon::now()->subDays(31);
         $previousMonthly = User::where('suspended_at',"=",null)->whereBetween('created_at', [$previousDateFrom, $previousDateTo])->count();
@@ -27,7 +28,7 @@ class StatController extends Controller
                 $percent_from = $monthly - $previousMonthly;
                 if($percent_from != 0)
                   (int)  $percent = ($previousMonthly * 100)/$percent_from ; //increase percent
-                else 
+                else
                     $percent = 0;
                 return response()->json(['monthly'=>$monthly,'percent'=>number_format($percent)]);
             } else {
@@ -126,7 +127,7 @@ class StatController extends Controller
                 $percent_from = $monthly - $previousMonthly;
                  if($percent_from != 0)
                     (int)  $percent = ($previousMonthly * 100)/$percent_from ; //increase percent
-                 else 
+                 else
                   $percent = 0;
                 return response()->json(['monthly'=>$monthly,'percent'=>number_format($percent)]);
             } else {
@@ -137,7 +138,7 @@ class StatController extends Controller
             $percent_from = $previousMonthly - $monthly;
              if($percent_from != 0)
                 (int) $percent = ($previousMonthly * 100)/$percent_from ;
-             else 
+             else
               $percent = 0;
 
             return response()->json(['monthly'=>$monthly,'percent'=>number_format($percent)]);

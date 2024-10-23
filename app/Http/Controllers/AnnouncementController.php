@@ -26,21 +26,22 @@ class AnnouncementController extends Controller
 
     public function index()
     {
-        event(new EventCheckSubscription());
+        //event(new EventCheckSubscription());
         return AnnounceResource::collection(Announcement::orderBy('subscribe_id','DESC')->where('status',1)->get());
 
     }
 
     public function nonVip()
     {
-        event(new EventCheckSubscription());
+        //event(new EventCheckSubscription());
         return AnnounceResource::collection(Announcement::orderBy('subscribe_id','DESC')->where('subscribe_id','!=',3)->where('status',1)->get());
-       
+
     }
+
 
     public function populars()
     {
-        event(new EventCheckSubscription());
+        //event(new EventCheckSubscription());
         $collection = AnnounceResource::collection(Announcement::orderBy('subscribe_id','DESC')->where('status',1)->get());
         $sorted = $collection->sortBy([
                             ['visits', 'desc'],
@@ -51,7 +52,7 @@ class AnnouncementController extends Controller
 
     public function recents()
     {
-        event(new EventCheckSubscription());
+        //event(new EventCheckSubscription());
         $collection = AnnounceResource::collection(Announcement::orderBy('created_at','DESC')->where('status',1)->get());
 
         $ads = $collection->take(10);
@@ -156,11 +157,27 @@ class AnnouncementController extends Controller
         //return $imageDisplay;
         $image = ImageIntervention::make(storage_path('app/public/ads/'.$id.'/'. $imageDisplay->path));
         $i=ImageIntervention::make(storage_path("app/public/logo.png"));
-        $i->resize(300, 300);
+        $i->resize(150, 150);
         $i->blur();
 
         $image->insert($i,'center',2,2);
         return $image->psrResponse($i);
+
+    }
+
+    /**
+     * Delete ads's image
+     */
+    public function deleteAdsImage($id, $path)
+    {
+        $ad = Announcement::find($id);
+        $image = Image::find($path);
+        \Illuminate\Support\Facades\Storage::delete('public/ads/'.$id.'/'.$image->path);
+        $ad->images()->detach($image->id);
+        $image->delete();
+
+        return response("Image deleted successfully", 200)
+                  ->header('Content-Type', 'application/json');
 
     }
 
@@ -180,8 +197,18 @@ class AnnouncementController extends Controller
     public function vipAnnoncement(){
         return AnnounceResource::collection(Announcement::Where('subscribe_id',3)->where('status',1)->inRandomOrder()->get());
     }
+    public function nonAnnoncement(){
+        return AnnounceResource::collection(Announcement::Where('subscribe_id',0)->inRandomOrder()->get());
+    }
+    public function premiumAnnoncement(){
+        return AnnounceResource::collection(Announcement::Where('subscribe_id',1)->where('status',1)->inRandomOrder()->get());
+    }
 
     public function goldAnnoncement(){
         return AnnounceResource::collection(Announcement::Where('subscribe_id',2)->where('status',1)->inRandomOrder()->get());
+    }
+
+    public function all(){
+        return AnnounceResource::collection(Announcement::inRandomOrder()->get());
     }
 }

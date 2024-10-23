@@ -85,6 +85,9 @@ use App\Http\Controllers\Api\Escort\EscortIsCompletedOrNotController;
 */
 
 
+Route::middleware(['checkAdsDelete'])->group(function () {
+
+
 Route::post('callback/ads',[CoolPayPaymentController::class,'callbackAds']);
 Route::post('callback/credits',[CoolPayPaymentController::class,'callbackCredits']);
 Route::post('callback/plan',[CoolPayPaymentController::class,'callbackPlan']);
@@ -109,6 +112,8 @@ Route::get('/check-subscribe',[CheckSubscriptionController::class,"check"]);
 Route::get('home/annonces',[AnnouncementController::class,"homepageAnnoncement"]);
 Route::get('gold/annonces',[AnnouncementController::class,"goldAnnoncement"]);
 Route::get('vip/annonces',[AnnouncementController::class,"vipAnnoncement"]);
+Route::get('premium/annonces',[AnnouncementController::class,"premiumAnnoncement"]);
+Route::get('none/annonces',[AnnouncementController::class,"nonAnnoncement"]);
 Route::get('list/reviews/{escortId}',[ReviewUserController::class,'getReview']);
 Route::get('/list/categories',[ListAdsCategoryController::class,'list']);
 Route::get('/list/ethnics',[ListEthnicController::class,'list']);
@@ -132,6 +137,7 @@ Route::apiResource('/quarters', QuarterController::class);
 Route::apiResource('/countries', CountryController::class);
 
 Route::get('/displayadsimage/{id}/{path}',[AnnouncementController::class,'displayAdsImage']);
+Route::get('/deleteadsimage/{id}/{path}',[AnnouncementController::class,'deleteAdsImage']);
 Route::get('/displayVideo/{id}/{path}',[AnnouncementController::class,'displayAdsVideo']);
 Route::get('/displayreportimage/{id}/{adsId}',[ReportController::class,'displayReportImage']);
 
@@ -175,6 +181,7 @@ Route::get('/userAds/{id}', [AnnouncementController::class,'AdsByUser']);
 Route::get('/adstown/{id}', [AnnouncementController::class,'getAdsByTown']);
 Route::get('/adsquarter/{id}', [AnnouncementController::class,'getAdsByQuarter']);
 Route::get('/adscategory/{categoryId}', [AnnouncementController::class,'getAdsByCategory']);
+Route::get('/ads/all',[AnnouncementController::class,'all']);
 
 Route::delete('/ads/{id}', [DeleteAdsController::class, 'delete']);
 Route::delete('users/{id}',[DeleteUserController::class,'delete']);
@@ -256,4 +263,6 @@ Route::middleware(['auth:api','scopes:customer'])->prefix('v1')->group(function(
     Route::get('get/premium',[MemberShipController::class,'showPremium']);
     Route::post('init/cool-pay/plan',[CoolPayPaymentController::class,'payPlan']);
     Route::post('/subscribe/member',[MyPurchaseController::class,'subscribeUserWithCredit']);
+});
+
 });
