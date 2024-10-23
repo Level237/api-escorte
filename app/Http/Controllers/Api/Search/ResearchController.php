@@ -23,6 +23,10 @@ class ResearchController extends Controller
         ->registerModel(Announcement::class, function(ModelSearchAspect $modelSearchAspect) {
             $modelSearchAspect
                 ->addSearchableAttribute('title')
+<<<<<<< HEAD
+=======
+                ->addSearchableAttribute('description')
+>>>>>>> refs/remotes/origin/main
                 ->with('User')
                 ->orderBy('subscribe_id','DESC')
                 ->where('status',1)

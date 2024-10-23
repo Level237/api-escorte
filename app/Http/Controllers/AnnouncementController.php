@@ -175,7 +175,11 @@ class AnnouncementController extends Controller
         \Illuminate\Support\Facades\Storage::delete('public/ads/'.$id.'/'.$image->path);
         $ad->images()->detach($image->id);
         $image->delete();
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> refs/remotes/origin/main
         return response("Image deleted successfully", 200)
                   ->header('Content-Type', 'application/json');
 
