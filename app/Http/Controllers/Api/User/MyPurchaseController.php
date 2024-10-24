@@ -21,7 +21,7 @@ class MyPurchaseController extends Controller
 {
     public function myPurchase(){
 
-        event(new EventCheckSubscription());
+        //event(new EventCheckSubscription());
         $myPurchase=MyPurchaseResource::collection(Memberships_user::where('user_id',Auth::guard('api')->user()->id)->get());
 
         return $myPurchase;
